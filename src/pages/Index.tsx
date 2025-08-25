@@ -1,21 +1,159 @@
+import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
-import { About } from "@/components/About";
-import { Values } from "@/components/Values";
-import { Services } from "@/components/Services";
-import { WhyChooseUs } from "@/components/WhyChooseUs";
-import { Portfolio } from "@/components/Portfolio";
-import { Contact } from "@/components/Contact";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { ArrowRight, Code, Smartphone, Globe } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
+  const highlights = [
+    {
+      icon: Code,
+      title: "Custom Software",
+      description: "Tailored solutions for your unique business needs"
+    },
+    {
+      icon: Globe,
+      title: "Web Applications",
+      description: "Modern, responsive web solutions"
+    },
+    {
+      icon: Smartphone,
+      title: "Mobile Apps",
+      description: "iOS and Android applications"
+    }
+  ];
+
   return (
     <div className="min-h-screen">
+      <Navigation />
       <Hero />
-      <About />
-      <Values />
-      <Services />
-      <WhyChooseUs />
-      <Portfolio />
-      <Contact />
+      
+      {/* Quick Overview */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+              Technology Solutions for Africa
+            </h2>
+            <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              We are an innovative technology solutions provider committed to igniting digital 
+              transformation across Africa through cutting-edge AI, robust API development, 
+              and bespoke applications.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {highlights.map((item, index) => (
+              <Card key={index} className="p-6 text-center hover:shadow-card transition-all duration-300 border-0 bg-card group hover:scale-105">
+                <div className="w-12 h-12 rounded-lg bg-gradient-primary mb-4 flex items-center justify-center mx-auto group-hover:shadow-glow transition-all duration-300">
+                  <item.icon className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-foreground">{item.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+              </Card>
+            ))}
+          </div>
+          
+          <div className="text-center mt-12">
+            <Link to="/services">
+              <Button variant="hero" size="lg">
+                Explore All Services <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+      
+      {/* Featured Projects Teaser */}
+      <section className="py-20 bg-muted/30">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-6 text-foreground">
+              Featured Work
+            </h2>
+            <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Discover some of our successful projects that showcase our expertise 
+              in creating innovative digital solutions.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="overflow-hidden border-0 bg-card hover:shadow-card transition-all duration-300 group hover:scale-105">
+              <img 
+                src="/lovable-uploads/b945bafd-eeaa-47d9-b5cb-ca4debdfb7b1.png" 
+                alt="Package Delivery Platform"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2 text-foreground">Package Delivery Platform</h3>
+                <p className="text-muted-foreground text-sm">Logistics and delivery management</p>
+              </div>
+            </Card>
+            
+            <Card className="overflow-hidden border-0 bg-card hover:shadow-card transition-all duration-300 group hover:scale-105">
+              <img 
+                src="/lovable-uploads/b945bafd-eeaa-47d9-b5cb-ca4debdfb7b1.png" 
+                alt="Cozy Invoice"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2 text-foreground">Cozy Invoice</h3>
+                <p className="text-muted-foreground text-sm">Invoicing platform for businesses</p>
+              </div>
+            </Card>
+            
+            <Card className="overflow-hidden border-0 bg-card hover:shadow-card transition-all duration-300 group hover:scale-105">
+              <img 
+                src="/lovable-uploads/b945bafd-eeaa-47d9-b5cb-ca4debdfb7b1.png" 
+                alt="Vitabuz Inventory"
+                className="w-full h-48 object-cover"
+              />
+              <div className="p-6">
+                <h3 className="text-xl font-bold mb-2 text-foreground">Vitabuz Inventory</h3>
+                <p className="text-muted-foreground text-sm">Smart inventory management</p>
+              </div>
+            </Card>
+          </div>
+          
+          <div className="text-center mt-12">
+            <Link to="/portfolio">
+              <Button variant="outline" size="lg">
+                View All Projects <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+      
+      {/* CTA Section */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6">
+          <Card className="p-8 md:p-12 bg-gradient-hero text-center max-w-4xl mx-auto">
+            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Ready to Transform Your Business?
+            </h3>
+            <p className="text-white/90 text-lg leading-relaxed mb-8">
+              Join businesses across Africa who trust EspiraNova to deliver innovative 
+              technology solutions that drive growth and success.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link to="/portfolio">
+                <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary">
+                  View Our Work
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button variant="accent" size="lg">
+                  Start Your Project
+                </Button>
+              </Link>
+            </div>
+          </Card>
+        </div>
+      </section>
     </div>
   );
 };

@@ -81,41 +81,47 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="overflow-hidden border-0 bg-card hover:shadow-card transition-all duration-300 group hover:scale-105">
-              <img 
-                src="/lovable-uploads/b945bafd-eeaa-47d9-b5cb-ca4debdfb7b1.png" 
-                alt="Package Delivery Platform"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-foreground">Package Delivery Platform</h3>
-                <p className="text-muted-foreground text-sm">Logistics and delivery management</p>
-              </div>
-            </Card>
+            <a href="https://www.packageyangulogistics.com/" target="_blank" rel="noopener noreferrer">
+              <Card className="overflow-hidden border-0 bg-card hover:shadow-card transition-all duration-300 group hover:scale-105">
+                <img 
+                  src="/lovable-uploads/0207f092-a550-48d0-ac3d-0f905a7c97e1.png" 
+                  alt="Package Yangu Logistics"
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2 text-foreground">Package Yangu Logistics</h3>
+                  <p className="text-muted-foreground text-sm">Fast & reliable delivery services</p>
+                </div>
+              </Card>
+            </a>
             
-            <Card className="overflow-hidden border-0 bg-card hover:shadow-card transition-all duration-300 group hover:scale-105">
-              <img 
-                src="/lovable-uploads/b945bafd-eeaa-47d9-b5cb-ca4debdfb7b1.png" 
-                alt="Cozy Invoice"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-foreground">Cozy Invoice</h3>
-                <p className="text-muted-foreground text-sm">Invoicing platform for businesses</p>
-              </div>
-            </Card>
+            <a href="https://cozyinvoicekeeper-one.vercel.app/" target="_blank" rel="noopener noreferrer">
+              <Card className="overflow-hidden border-0 bg-card hover:shadow-card transition-all duration-300 group hover:scale-105">
+                <img 
+                  src="/lovable-uploads/22e49366-a76a-4bd7-bb52-0fbfc7f05334.png" 
+                  alt="Cozy Invoice"
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2 text-foreground">Cozy Invoice</h3>
+                  <p className="text-muted-foreground text-sm">Effortless invoicing for African businesses</p>
+                </div>
+              </Card>
+            </a>
             
-            <Card className="overflow-hidden border-0 bg-card hover:shadow-card transition-all duration-300 group hover:scale-105">
-              <img 
-                src="/lovable-uploads/b945bafd-eeaa-47d9-b5cb-ca4debdfb7b1.png" 
-                alt="Vitabuz Inventory"
-                className="w-full h-48 object-cover"
-              />
-              <div className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-foreground">Vitabuz Inventory</h3>
-                <p className="text-muted-foreground text-sm">Smart inventory management</p>
-              </div>
-            </Card>
+            <a href="https://vitabuzsmart.africa/" target="_blank" rel="noopener noreferrer">
+              <Card className="overflow-hidden border-0 bg-card hover:shadow-card transition-all duration-300 group hover:scale-105">
+                <img 
+                  src="/lovable-uploads/7c4038d8-d7bb-4c3f-b239-81d70e8e220b.png" 
+                  alt="Vitabuz Inventory"
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2 text-foreground">Vitabuz Inventory</h3>
+                  <p className="text-muted-foreground text-sm">Inventory management simplified</p>
+                </div>
+              </Card>
+            </a>
           </div>
           
           <div className="text-center mt-12">

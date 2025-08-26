@@ -20,10 +20,10 @@ export const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+          <Link to="/" className="text-2xl font-bold text-white">
             EspiraNova
           </Link>
 
@@ -33,14 +33,14 @@ export const Navigation = () => {
               <Link
                 key={item.href}
                 to={item.href}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  isActive(item.href) ? "text-primary" : "text-muted-foreground"
+                className={`text-sm font-medium transition-colors hover:text-white/80 ${
+                  isActive(item.href) ? "text-white" : "text-white/70"
                 }`}
               >
                 {item.label}
               </Link>
             ))}
-            <Button variant="hero" size="sm">
+            <Button variant="outline" size="sm" className="border-white/30 text-white hover:bg-white/10">
               Get Started
             </Button>
           </div>
@@ -49,7 +49,7 @@ export const Navigation = () => {
           <Button
             variant="ghost"
             size="icon"
-            className="md:hidden"
+            className="md:hidden text-white/70 hover:text-white hover:bg-white/10"
             onClick={() => setIsOpen(!isOpen)}
           >
             {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -58,13 +58,13 @@ export const Navigation = () => {
 
         {/* Mobile Navigation Menu */}
         {isOpen && (
-          <div className="md:hidden py-4 space-y-2">
+          <div className="md:hidden py-4 space-y-2 bg-black/90 backdrop-blur-sm">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 to={item.href}
-                className={`block px-4 py-2 text-sm font-medium transition-colors hover:text-primary ${
-                  isActive(item.href) ? "text-primary" : "text-muted-foreground"
+                className={`block px-4 py-2 text-sm font-medium transition-colors hover:text-white/80 ${
+                  isActive(item.href) ? "text-white" : "text-white/70"
                 }`}
                 onClick={() => setIsOpen(false)}
               >
@@ -72,7 +72,7 @@ export const Navigation = () => {
               </Link>
             ))}
             <div className="px-4 pt-2">
-              <Button variant="hero" size="sm" className="w-full">
+              <Button variant="outline" size="sm" className="w-full border-white/30 text-white hover:bg-white/10">
                 Get Started
               </Button>
             </div>

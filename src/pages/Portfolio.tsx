@@ -73,8 +73,13 @@ const PortfolioPage = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="pt-24 pb-16 bg-gradient-hero">
-        <div className="container mx-auto px-6 text-center">
+      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(/src/assets/hero-bg.jpg)` }}
+        />
+        <div className="absolute inset-0 bg-black/60" />
+        <div className="relative z-10 container mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             Featured Work
           </h1>
@@ -108,11 +113,11 @@ const PortfolioPage = () => {
               <Card key={project.id} className={`overflow-hidden border-0 bg-card hover:shadow-card transition-all duration-300 ${
                 index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
               } lg:flex`}>
-                <div className="lg:w-1/2">
+                <div className="lg:w-1/2 relative overflow-hidden">
                   <img 
                     src={project.image} 
                     alt={project.title}
-                    className="w-full h-64 lg:h-full object-cover"
+                    className="w-full h-64 sm:h-72 lg:h-80 xl:h-96 object-contain bg-muted/50 transition-transform duration-300 hover:scale-105"
                   />
                 </div>
                 <div className="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center">

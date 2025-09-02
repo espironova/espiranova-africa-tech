@@ -1,0 +1,86 @@
+import { Link } from "react-router-dom";
+import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram } from "lucide-react";
+
+export const Footer = () => {
+  return (
+    <footer className="bg-background border-t border-border">
+      <div className="container mx-auto px-6 py-12">
+        <div className="grid md:grid-cols-4 gap-8">
+          {/* Company Info */}
+          <div className="space-y-4">
+            <h3 className="text-lg font-bold text-foreground">EspiraNova</h3>
+            <p className="text-muted-foreground text-sm leading-relaxed">
+              Inspire. Innovate. Impact. We deliver cutting-edge technology solutions 
+              that transform businesses across Africa.
+            </p>
+            <div className="flex space-x-4">
+              <Facebook className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+              <Twitter className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+              <Linkedin className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+              <Instagram className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+            </div>
+          </div>
+
+          {/* Quick Links */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-foreground">Quick Links</h4>
+            <ul className="space-y-2">
+              <li><Link to="/" className="text-muted-foreground hover:text-primary transition-colors text-sm">Home</Link></li>
+              <li><Link to="/about" className="text-muted-foreground hover:text-primary transition-colors text-sm">About Us</Link></li>
+              <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors text-sm">Services</Link></li>
+              <li><Link to="/portfolio" className="text-muted-foreground hover:text-primary transition-colors text-sm">Portfolio</Link></li>
+              <li><Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors text-sm">Contact</Link></li>
+            </ul>
+          </div>
+
+          {/* Services */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-foreground">Services</h4>
+            <ul className="space-y-2">
+              <li className="text-muted-foreground text-sm">Custom Software Development</li>
+              <li className="text-muted-foreground text-sm">Web Applications</li>
+              <li className="text-muted-foreground text-sm">Mobile Applications</li>
+              <li className="text-muted-foreground text-sm">API Development</li>
+              <li className="text-muted-foreground text-sm">AI-Powered Solutions</li>
+            </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div className="space-y-4">
+            <h4 className="text-lg font-semibold text-foreground">Contact Info</h4>
+            <div className="space-y-3">
+              <div className="flex items-center gap-3">
+                <Mail className="w-4 h-4 text-primary flex-shrink-0" />
+                <span className="text-muted-foreground text-sm">info@espiranova.com</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <Phone className="w-4 h-4 text-primary flex-shrink-0" />
+                <span className="text-muted-foreground text-sm">+254 700 000 000</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
+                <span className="text-muted-foreground text-sm">Nairobi, Kenya</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-border mt-12 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-muted-foreground text-sm">
+              © 2024 EspiraNova. All rights reserved.
+            </p>
+            <div className="flex gap-6">
+              <Link to="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                Privacy Policy
+              </Link>
+              <Link to="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">
+                Terms of Service
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};

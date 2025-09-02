@@ -1,5 +1,6 @@
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
+import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Code, Smartphone, Globe } from "lucide-react";
@@ -160,6 +161,7 @@ const Index = () => {
           </Card>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

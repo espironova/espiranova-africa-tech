@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Calendar, Users, TrendingUp } from "lucide-react";
@@ -188,6 +189,7 @@ const PortfolioPage = () => {
           </Card>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

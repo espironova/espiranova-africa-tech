@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Code, Smartphone, Globe, Database, Users, Brain, CheckCircle } from "lucide-react";
@@ -153,6 +154,7 @@ const ServicesPage = () => {
           </Card>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

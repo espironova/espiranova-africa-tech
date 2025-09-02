@@ -1,4 +1,5 @@
 import { Navigation } from "@/components/Navigation";
+import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Lightbulb, Shield, Zap } from "lucide-react";
 
@@ -126,6 +127,7 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

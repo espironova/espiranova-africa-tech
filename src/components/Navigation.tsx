@@ -21,11 +21,11 @@ export const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-sm transition-all duration-300">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="EspiraNova" className="h-10 w-auto" />
+            <img src="/lovable-uploads/c9fb0796-b2da-4460-b47e-2e164cc0406c.png" alt="EspiraNova" className="h-10 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}

@@ -5,7 +5,7 @@ export const Footer = () => {
   return (
     <footer className="bg-background border-t border-border">
       <div className="container mx-auto px-6 py-12">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
             <h3 className="text-lg font-bold text-foreground">EspiraNova</h3>
@@ -30,18 +30,6 @@ export const Footer = () => {
               <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors text-sm">Services</Link></li>
               <li><Link to="/portfolio" className="text-muted-foreground hover:text-primary transition-colors text-sm">Portfolio</Link></li>
               <li><Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors text-sm">Contact</Link></li>
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-foreground">Services</h4>
-            <ul className="space-y-2">
-              <li className="text-muted-foreground text-sm">Custom Software Development</li>
-              <li className="text-muted-foreground text-sm">Web Applications</li>
-              <li className="text-muted-foreground text-sm">Mobile Applications</li>
-              <li className="text-muted-foreground text-sm">API Development</li>
-              <li className="text-muted-foreground text-sm">AI-Powered Solutions</li>
             </ul>
           </div>
 

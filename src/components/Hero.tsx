@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-bg.jpg";
 
 export const Hero = () => {
@@ -23,12 +24,16 @@ export const Hero = () => {
             and bespoke applications that uplift businesses and communities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button variant="hero" size="lg" className="min-w-[200px]">
-              Explore Our Work
-            </Button>
-            <Button variant="outline" size="lg" className="min-w-[200px] text-white border-white hover:bg-white hover:text-primary">
-              Get In Touch
-            </Button>
+            <Link to="/portfolio">
+              <Button variant="hero" size="lg" className="min-w-[200px]">
+                Explore Our Work
+              </Button>
+            </Link>
+            <Link to="/contact">
+              <Button variant="outline" size="lg" className="min-w-[200px] text-white border-white hover:bg-white hover:text-primary">
+                Get In Touch
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

@@ -25,7 +25,7 @@ export const Navigation = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center">
-            <img src="/lovable-uploads/c9fb0796-b2da-4460-b47e-2e164cc0406c.png" alt="EspiraNova" className="h-10 w-auto" />
+            <img src="/lovable-uploads/c9fb0796-b2da-4460-b47e-2e164cc0406c.png" alt="EspiraNova" className="h-16 w-auto bg-white/90 rounded-lg p-2" />
           </Link>
 
           {/* Desktop Navigation */}
@@ -41,9 +41,6 @@ export const Navigation = () => {
                 {item.label}
               </Link>
             ))}
-            <Button variant="outline" size="sm" className="border-white/30 text-white hover:bg-white/10">
-              Get Started
-            </Button>
           </div>
 
           {/* Mobile Navigation Button */}
@@ -72,11 +69,6 @@ export const Navigation = () => {
                 {item.label}
               </Link>
             ))}
-            <div className="px-4 pt-2">
-              <Button variant="outline" size="sm" className="w-full border-white/30 text-white hover:bg-white/10">
-                Get Started
-              </Button>
-            </div>
           </div>
         )}
       </div>

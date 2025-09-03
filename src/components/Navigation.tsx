@@ -25,7 +25,9 @@ export const Navigation = () => {
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center">
-            <img src="/lovable-uploads/espiranova-logo-new.png" alt="EspiraNova" className="h-16 w-auto brightness-0 invert" />
+            <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
+              EspiraNova
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

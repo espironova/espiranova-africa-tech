@@ -7,7 +7,7 @@ export const Hero = () => {
   const [currentText, setCurrentText] = useState("");
   const [currentColor, setCurrentColor] = useState(0);
   const fullText = "Inspire. Innovate. Impact.";
-  const colors = ["text-blue-400", "text-cyan-400", "text-purple-400", "text-primary"];
+  const colors = ["text-white", "text-cyan-300", "text-blue-300", "text-primary-glow"];
 
   useEffect(() => {
     let index = 0;
@@ -40,7 +40,7 @@ export const Hero = () => {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden -mt-20 pt-20">
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-hero-move"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
       <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/50 to-black/70" />
@@ -64,7 +64,7 @@ export const Hero = () => {
               </Button>
             </Link>
             <Link to="/contact">
-              <Button variant="outline" size="lg" className="min-w-[200px] text-white border-white hover:bg-white hover:text-primary">
+              <Button variant="outline" size="lg" className="min-w-[200px] text-white border-white/80 hover:bg-white hover:text-black backdrop-blur-sm">
                 Get In Touch
               </Button>
             </Link>

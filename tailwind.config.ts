@@ -124,6 +124,17 @@ export default {
 					'100%': {
 						backgroundPosition: '200% center'
 					}
+				},
+				'hero-move': {
+					'0%': {
+						transform: 'translate(0px, 0px) scale(1.1)'
+					},
+					'50%': {
+						transform: 'translate(-10px, -5px) scale(1.12)'
+					},
+					'100%': {
+						transform: 'translate(0px, 0px) scale(1.1)'
+					}
 				}
 			},
 			animation: {
@@ -131,7 +142,8 @@ export default {
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'glow': 'glow 3s ease-in-out infinite',
 				'float': 'float 6s ease-in-out infinite',
-				'shimmer': 'shimmer 2s linear infinite'
+				'shimmer': 'shimmer 2s linear infinite',
+				'hero-move': 'hero-move 20s ease-in-out infinite'
 			}
 		}
 	},

@@ -6,7 +6,7 @@ import heroImage from "@/assets/hero-bg.jpg";
 export const Hero = () => {
   const [currentText, setCurrentText] = useState("");
   const [currentColor, setCurrentColor] = useState(0);
-  const fullText = "Inspire. Innovate. Impact.";
+  const fullText = "Ignite. Innovate. Impact.";
   const colors = ["text-white", "text-cyan-300", "text-blue-300", "text-primary-glow"];
 
   useEffect(() => {

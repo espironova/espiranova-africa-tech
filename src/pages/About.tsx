@@ -32,8 +32,8 @@ const AboutPage = () => {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(/src/assets/hero-bg.jpg)` }}
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-hero-move"
+          style={{ backgroundImage: `url(/lovable-uploads/93de2e72-0ee8-43e9-aafb-0e4b80c79f3a.png)` }}
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 container mx-auto px-6 text-center">

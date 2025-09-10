@@ -76,8 +76,8 @@ const PortfolioPage = () => {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(/src/assets/hero-bg.jpg)` }}
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-hero-move"
+          style={{ backgroundImage: `url(/lovable-uploads/680b85d9-b389-4be9-9b2a-7638c311663e.png)` }}
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 container mx-auto px-6 text-center">

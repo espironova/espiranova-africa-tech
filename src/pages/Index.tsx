@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { ArrowRight, Code, Smartphone, Globe } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEO } from "@/components/SEO";
 
 const Index = () => {
   const highlights = [
@@ -27,6 +28,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="EspiraNova - Ignite. Innovate. Impact."
+        description="Innovative technology solutions provider igniting digital transformation across Africa with cutting-edge AI, robust API development, and bespoke applications that uplift businesses and communities."
+        keywords="technology solutions Africa, custom software development Kenya, API development, AI solutions, web applications, mobile apps, digital transformation Africa"
+        url="https://espiranova.com"
+      />
       <Navigation />
       <Hero />
       

@@ -10,7 +10,7 @@ export const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-bold text-foreground">EspiraNova</h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Inspire. Innovate. Impact. We deliver cutting-edge technology solutions 
+              Ignite. Innovate. Impact. We deliver cutting-edge technology solutions 
               that transform businesses across Africa.
             </p>
             <div className="flex space-x-4">

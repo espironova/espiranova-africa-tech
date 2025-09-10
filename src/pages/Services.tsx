@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Code, Smartphone, Globe, Database, Users, Brain, CheckCircle } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 const ServicesPage = () => {
   const services = [
@@ -55,6 +56,12 @@ const ServicesPage = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Our Services - Custom Software Development & AI Solutions"
+        description="Comprehensive technology services including custom software development, web applications, mobile apps, API development, and AI-powered solutions. Expert technology consulting for African businesses."
+        keywords="custom software development, web applications, mobile app development, API development, AI solutions, technology consulting, software services Kenya"
+        url="https://espiranova.com/services"
+      />
       <Navigation />
       
       {/* Hero Section */}

@@ -3,6 +3,7 @@ import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Calendar, Users, TrendingUp } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 const PortfolioPage = () => {
   const projects = [
@@ -71,6 +72,12 @@ const PortfolioPage = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Portfolio - Successful Projects & Case Studies"
+        description="Explore EspiraNova's portfolio of successful technology projects including logistics platforms, invoicing systems, inventory management, and digital solutions across various industries in Africa."
+        keywords="portfolio, case studies, software projects, web applications, mobile apps, technology solutions, client work, African tech projects"
+        url="https://espiranova.com/portfolio"
+      />
       <Navigation />
       
       {/* Hero Section */}

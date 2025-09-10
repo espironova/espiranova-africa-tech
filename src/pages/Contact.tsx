@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 const ContactPage = () => {
   const contactInfo = [
@@ -32,6 +33,12 @@ const ContactPage = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="Contact EspiraNova - Get Your Technology Solution Today"
+        description="Contact EspiraNova for custom software development, web applications, mobile apps, and AI solutions. Located in Nairobi, Kenya. Get a free consultation for your technology project."
+        keywords="contact EspiraNova, software development consultation, technology solutions Kenya, custom software quote, web development services, API development"
+        url="https://espiranova.com/contact"
+      />
       <Navigation />
       
       {/* Hero Section */}

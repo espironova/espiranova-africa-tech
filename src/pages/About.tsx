@@ -2,6 +2,7 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Lightbulb, Shield, Zap } from "lucide-react";
+import { SEO } from "@/components/SEO";
 
 const AboutPage = () => {
   const values = [
@@ -27,6 +28,12 @@ const AboutPage = () => {
 
   return (
     <div className="min-h-screen">
+      <SEO 
+        title="About EspiraNova - Leading Technology Solutions Provider in Africa"
+        description="Learn about EspiraNova's mission to ignite digital transformation across Africa. Over 8 years of API engineering expertise, delivering innovative software solutions to empower businesses and communities."
+        keywords="about EspiraNova, African technology company, software development team, API engineering Kenya, digital transformation Africa"
+        url="https://espiranova.com/about"
+      />
       <Navigation />
       
       {/* Hero Section */}

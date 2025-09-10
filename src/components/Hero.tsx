@@ -59,12 +59,12 @@ export const Hero = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <Link to="/portfolio">
-              <Button variant="hero" size="lg" className="min-w-[200px]">
+              <Button variant="magnetic" size="lg" className="min-w-[200px] animate-fade-in">
                 Explore Our Work
               </Button>
             </Link>
             <Link to="/contact">
-              <Button variant="outline" size="lg" className="min-w-[200px] text-white border-white/80 hover:bg-white hover:text-black backdrop-blur-sm">
+              <Button variant="outline" size="lg" className="min-w-[200px] text-white border-white/80 hover:bg-white hover:text-black backdrop-blur-sm hover:shadow-intense animate-fade-in">
                 Get In Touch
               </Button>
             </Link>

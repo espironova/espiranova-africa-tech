@@ -36,7 +36,7 @@ export const Navigation = () => {
               <Link
                 key={item.href}
                 to={item.href}
-                className={`text-sm font-medium transition-colors hover:text-white/80 ${
+                className={`text-sm font-medium transition-all duration-300 nav-link hover:scale-105 hover:text-white ${
                   isActive(item.href) ? "text-white" : "text-white/70"
                 }`}
               >

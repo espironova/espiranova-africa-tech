@@ -13,7 +13,7 @@ const PortfolioPage = () => {
       description: "Fast & reliable delivery services platform with shipment tracking and logistics management. Built for African markets with mobile-first approach.",
       category: "Logistics Platform",
       image: "/lovable-uploads/0207f092-a550-48d0-ac3d-0f905a7c97e1.png",
-      technologies: ["React", "Node.js", "MongoDB", "Socket.io"],
+      
       features: ["Real-time tracking", "Route optimization", "Payment integration", "Admin dashboard"],
       status: "Live",
       url: "https://www.packageyangulogistics.com/"
@@ -24,7 +24,7 @@ const PortfolioPage = () => {
       description: "Effortless invoicing platform designed for African businesses with professional invoice creation, client management, and payment tracking.",
       category: "SaaS Platform",
       image: "/lovable-uploads/22e49366-a76a-4bd7-bb52-0fbfc7f05334.png",
-      technologies: ["React", "Django", "PostgreSQL", "Stripe API"],
+      
       features: ["Invoice templates", "Client management", "Payment tracking", "Multi-currency support"],
       status: "Live",
       url: "https://cozyinvoicekeeper-one.vercel.app/"
@@ -35,7 +35,7 @@ const PortfolioPage = () => {
       description: "Inventory management simplified - track inventory, manage sales, and analyze business performance with comprehensive reporting and analytics.",
       category: "Business Management",
       image: "/lovable-uploads/7c4038d8-d7bb-4c3f-b239-81d70e8e220b.png",
-      technologies: ["Vue.js", "Laravel", "MySQL", "Chart.js"],
+      
       features: ["Stock management", "Sales analytics", "Low stock alerts", "Barcode scanning"],
       status: "Live",
       url: "https://vitabuzsmart.africa/"
@@ -46,18 +46,16 @@ const PortfolioPage = () => {
       description: "Tailored legal solutions with integrity and precision. Comprehensive case management system for law firms with document management and client portals.",
       category: "Legal Tech",
       image: "/lovable-uploads/747bed90-af81-4593-b723-10a1caea83f7.png",
-      technologies: ["React", "Express.js", "MongoDB", "AWS S3"],
       features: ["Case management", "Document storage", "Client portals", "Billing integration"],
       status: "Live",
-      url: "https://kabene-co-advocates.vercel.app/"
+      url: "https://www.kabeneadvocates.co.ke/"
     },
     {
       id: 5,
       title: "Glorious Church Elburgon",
       description: "Modern church website with sermon management, event scheduling, and community engagement features. Built to connect and inspire the congregation.",
       category: "Church Management",
-      image: "/lovable-uploads/267d3f46-0425-4e4e-9aa7-5f4fb5be3322.png",
-      technologies: ["React", "Node.js", "PostgreSQL", "CMS"],
+      image: "/lovable-uploads/glorious-church-new.png",
       features: ["Sermon archive", "Event calendar", "Member portal", "Online giving"],
       status: "Live",
       url: "https://www.gloriouschurchelburgon.com/"
@@ -157,16 +155,6 @@ const PortfolioPage = () => {
                     </div>
                   </div>
                   
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-foreground mb-3">Technologies:</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech, idx) => (
-                        <span key={idx} className="text-xs bg-muted text-muted-foreground px-2 py-1 rounded">
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
                   
                   <a href={project.url} target="_blank" rel="noopener noreferrer">
                     <Button variant="hero" className="w-fit">

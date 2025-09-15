@@ -3,9 +3,10 @@ import { Hero } from "@/components/Hero";
 import { Footer } from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { ArrowRight, Code, Smartphone, Globe } from "lucide-react";
+import { ArrowRight, Code, Globe, Database, Users, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
+import { FeaturedWorkCarousel } from "@/components/FeaturedWorkCarousel";
 
 const Index = () => {
   const highlights = [
@@ -20,46 +21,72 @@ const Index = () => {
       description: "Modern, responsive web solutions"
     },
     {
-      icon: Smartphone,
-      title: "Mobile Apps",
-      description: "iOS and Android applications"
+      icon: Database,
+      title: "API Development & Integrations",
+      description: "Seamless connections and robust API solutions"
+    },
+    {
+      icon: Users,
+      title: "Specialized Software",
+      description: "Industry-specific applications and tools"
+    },
+    {
+      icon: TrendingUp,
+      title: "Data-driven Performance",
+      description: "From Data to Decisions",
+      tagline: "From Data to Decisions"
     }
   ];
 
   return (
     <div className="min-h-screen">
       <SEO 
-        title="EspiraNova - Ignite. Innovate. Impact."
-        description="Innovative technology solutions provider igniting digital transformation across Africa with cutting-edge AI, robust API development, and bespoke applications that uplift businesses and communities."
-        keywords="technology solutions Africa, custom software development Kenya, API development, AI solutions, web applications, mobile apps, digital transformation Africa"
+        title="EspiraNova - Innovation with Impact"
+        description="Driving digital transformation with innovative solutions, seamless integrations, and tailored applications to empower businesses and communities across Africa."
+        keywords="technology solutions Africa, custom software development Kenya, API development, AI solutions, web applications, digital transformation Africa, data analytics"
         url="https://espiranova.com"
       />
       <Navigation />
       <Hero />
       
       {/* Quick Overview */}
-      <section className="py-20 bg-background">
-        <div className="container mx-auto px-6">
+      <section className="py-20 bg-background relative overflow-hidden">
+        {/* Tech Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/20 via-transparent to-accent/20"></div>
+          <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-gradient-primary opacity-10 blur-3xl"></div>
+          <div className="absolute bottom-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-accent opacity-10 blur-3xl"></div>
+        </div>
+        <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
               Technology Solutions for Africa
             </h2>
             <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              We are an innovative technology solutions provider committed to igniting digital 
-              transformation across Africa through cutting-edge AI, robust API development, 
-              and bespoke applications.
+              Empowering Africa's digital future with innovative solutions, custom applications, 
+              and seamless API integrations that drive transformation, growth, and lasting impact.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6 max-w-7xl mx-auto">
             {highlights.map((item, index) => (
-              <Card key={index} className="p-6 text-center hover:shadow-card transition-all duration-300 border-0 bg-card group hover:scale-105">
-                <div className="w-12 h-12 rounded-lg bg-gradient-primary mb-4 flex items-center justify-center mx-auto group-hover:shadow-glow transition-all duration-300">
-                  <item.icon className="w-6 h-6 text-white" />
+              <Card 
+                key={index} 
+                className="p-6 text-center hover:shadow-card transition-all duration-500 border-0 bg-card/50 backdrop-blur-sm group hover:scale-105 animate-fade-in relative overflow-hidden"
+                style={{ animationDelay: `${index * 150}ms` }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="relative z-10">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-primary mb-4 flex items-center justify-center mx-auto group-hover:shadow-glow transition-all duration-300 group-hover:scale-110">
+                    <item.icon className="w-6 h-6 text-white" />
+                  </div>
+                  <h3 className="text-lg font-bold mb-3 text-foreground">{item.title}</h3>
+                  <p className="text-muted-foreground leading-relaxed text-sm">{item.description}</p>
+                  {item.tagline && (
+                    <p className="text-primary text-xs font-medium mt-2 italic">{item.tagline}</p>
+                  )}
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-foreground">{item.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{item.description}</p>
               </Card>
             ))}
           </div>
@@ -74,9 +101,15 @@ const Index = () => {
         </div>
       </section>
       
-      {/* Featured Projects Teaser */}
-      <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-6">
+      {/* Featured Projects Carousel */}
+      <section className="py-20 bg-muted/30 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-gradient-primary blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-gradient-accent blur-3xl"></div>
+        </div>
+        
+        <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6 text-foreground">
               Featured Work
@@ -88,53 +121,11 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <a href="https://www.packageyangulogistics.com/" target="_blank" rel="noopener noreferrer">
-              <Card className="overflow-hidden border-0 bg-card hover:shadow-card transition-all duration-300 group hover:scale-105">
-                <img 
-                  src="/lovable-uploads/0207f092-a550-48d0-ac3d-0f905a7c97e1.png" 
-                  alt="Package Yangu Logistics"
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-foreground">Package Yangu Logistics</h3>
-                  <p className="text-muted-foreground text-sm">Fast & reliable delivery services</p>
-                </div>
-              </Card>
-            </a>
-            
-            <a href="https://cozyinvoicekeeper-one.vercel.app/" target="_blank" rel="noopener noreferrer">
-              <Card className="overflow-hidden border-0 bg-card hover:shadow-card transition-all duration-300 group hover:scale-105">
-                <img 
-                  src="/lovable-uploads/22e49366-a76a-4bd7-bb52-0fbfc7f05334.png" 
-                  alt="Cozy Invoice"
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-foreground">Cozy Invoice</h3>
-                  <p className="text-muted-foreground text-sm">Effortless invoicing for African businesses</p>
-                </div>
-              </Card>
-            </a>
-            
-            <a href="https://vitabuzsmart.africa/" target="_blank" rel="noopener noreferrer">
-              <Card className="overflow-hidden border-0 bg-card hover:shadow-card transition-all duration-300 group hover:scale-105">
-                <img 
-                  src="/lovable-uploads/7c4038d8-d7bb-4c3f-b239-81d70e8e220b.png" 
-                  alt="Vitabuz Inventory"
-                  className="w-full h-48 object-cover"
-                />
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2 text-foreground">Vitabuz Inventory</h3>
-                  <p className="text-muted-foreground text-sm">Inventory management simplified</p>
-                </div>
-              </Card>
-            </a>
-          </div>
+          <FeaturedWorkCarousel />
           
           <div className="text-center mt-12">
             <Link to="/portfolio">
-              <Button variant="outline" size="lg">
+              <Button variant="outline" size="lg" className="hover:scale-105 transition-all duration-300">
                 View All Projects <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Link>

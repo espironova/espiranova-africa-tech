@@ -6,7 +6,7 @@ import heroImage from "@/assets/hero-bg.jpg";
 export const Hero = () => {
   const [currentText, setCurrentText] = useState("");
   const [currentColor, setCurrentColor] = useState(0);
-  const fullText = "Ignite. Innovate. Impact.";
+  const fullText = "Innovation with Impact";
   const colors = ["text-white", "text-cyan-300", "text-blue-300", "text-primary-glow"];
 
   useEffect(() => {
@@ -54,18 +54,13 @@ export const Hero = () => {
             </span>
           </p>
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Igniting digital transformation across Africa with cutting-edge AI, robust API development, 
-            and bespoke applications that uplift businesses and communities.
+            Driving digital transformation with innovative solutions, seamless integrations, 
+            and tailored applications to empower businesses and communities.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex justify-center">
             <Link to="/portfolio">
               <Button variant="magnetic" size="lg" className="min-w-[200px] animate-fade-in">
                 Explore Our Work
-              </Button>
-            </Link>
-            <Link to="/contact">
-              <Button variant="outline" size="lg" className="min-w-[200px] text-white border-white/80 hover:bg-white hover:text-black backdrop-blur-sm hover:shadow-intense animate-fade-in">
-                Get In Touch
               </Button>
             </Link>
           </div>

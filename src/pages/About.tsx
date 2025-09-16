@@ -128,7 +128,7 @@ const AboutPage = () => {
             <Card className="p-8 text-center hover:shadow-card transition-all duration-300 border-0 bg-card group hover:scale-105">
               <div className="w-20 h-20 mx-auto mb-6 overflow-hidden rounded-lg bg-white/5 flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
                 <img 
-                  src="/lovable-uploads/22e49366-a76a-4bd7-bb52-0fbfc7f05334.png" 
+                  src="/lovable-uploads/package-yangu-new.png" 
                   alt="Package Yangu Logistics"
                   className="w-full h-full object-contain"
                 />
@@ -140,7 +140,7 @@ const AboutPage = () => {
             <Card className="p-8 text-center hover:shadow-card transition-all duration-300 border-0 bg-card group hover:scale-105">
               <div className="w-20 h-20 mx-auto mb-6 overflow-hidden rounded-lg bg-white/5 flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
                 <img 
-                  src="/lovable-uploads/0207f092-a550-48d0-ac3d-0f905a7c97e1.png" 
+                  src="/lovable-uploads/cozy-invoice-new.png" 
                   alt="Cozy Invoice"
                   className="w-full h-full object-contain"
                 />
@@ -164,12 +164,12 @@ const AboutPage = () => {
             <Card className="p-8 text-center hover:shadow-card transition-all duration-300 border-0 bg-card group hover:scale-105">
               <div className="w-20 h-20 mx-auto mb-6 overflow-hidden rounded-lg bg-white/5 flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
                 <img 
-                  src="/lovable-uploads/glorious-church-new.png" 
-                  alt="Glorious Church Elburgon"
+                  src="/lovable-uploads/glorious-mission-outreach.jpg" 
+                  alt="Glorious Mission Outreach Ministries"
                   className="w-full h-full object-contain"
                 />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-foreground">Glorious Church Elburgon</h3>
+              <h3 className="text-xl font-bold mb-3 text-foreground">Glorious Mission Outreach Ministries</h3>
               <p className="text-muted-foreground text-sm">Modern church management and community platform</p>
             </Card>
 

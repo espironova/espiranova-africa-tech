@@ -47,7 +47,7 @@ const projects = [
     title: "Kabene & Co. Advocates",
     description: "Professional legal services platform",
     category: "Legal Services",
-    image: "/lovable-uploads/267d3f46-0425-4e4e-9aa7-5f4fb5be3322.png",
+    image: "/lovable-uploads/747bed90-af81-4593-b723-10a1caea83f7.png",
     url: "https://www.kabeneadvocates.co.ke/",
     features: ["Case management", "Client portal", "Document automation"]
   }

@@ -72,11 +72,6 @@ const AboutPage = () => {
                 to uplift small and medium enterprises, freelancers, and diverse industries.
               </p>
               
-              <p className="text-lg leading-relaxed text-muted-foreground mb-8">
-                Led by a founder with over eight years of API engineering expertise and Apigee mastery, our team 
-                crafts tailored web and mobile solutions—such as the transformative <strong className="text-primary">Cozy Invoice</strong> for 
-                streamlined invoicing—to address unique business challenges.
-              </p>
               
               <div className="bg-gradient-hero p-6 rounded-lg">
                 <h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
@@ -112,6 +107,83 @@ const AboutPage = () => {
                 <p className="text-muted-foreground leading-relaxed">{value.description}</p>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Our Partners */}
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-6">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+              Our Partners
+            </h2>
+            <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Trusted by businesses and organizations across Africa
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="p-8 text-center hover:shadow-card transition-all duration-300 border-0 bg-card group hover:scale-105">
+              <div className="w-20 h-20 mx-auto mb-6 overflow-hidden rounded-lg bg-white/5 flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
+                <img 
+                  src="/lovable-uploads/22e49366-a76a-4bd7-bb52-0fbfc7f05334.png" 
+                  alt="Package Yangu Logistics"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-foreground">Package Yangu Logistics</h3>
+              <p className="text-muted-foreground text-sm">Modern logistics and delivery management platform</p>
+            </Card>
+
+            <Card className="p-8 text-center hover:shadow-card transition-all duration-300 border-0 bg-card group hover:scale-105">
+              <div className="w-20 h-20 mx-auto mb-6 overflow-hidden rounded-lg bg-white/5 flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
+                <img 
+                  src="/lovable-uploads/0207f092-a550-48d0-ac3d-0f905a7c97e1.png" 
+                  alt="Cozy Invoice"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-foreground">Cozy Invoice</h3>
+              <p className="text-muted-foreground text-sm">Streamlined invoicing and billing solution for SMEs</p>
+            </Card>
+
+            <Card className="p-8 text-center hover:shadow-card transition-all duration-300 border-0 bg-card group hover:scale-105">
+              <div className="w-20 h-20 mx-auto mb-6 overflow-hidden rounded-lg bg-white/5 flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
+                <img 
+                  src="/lovable-uploads/680b85d9-b389-4be9-9b2a-7638c311663e.png" 
+                  alt="Vitabuz Inventory"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-foreground">Vitabuz Inventory</h3>
+              <p className="text-muted-foreground text-sm">Comprehensive inventory management system</p>
+            </Card>
+
+            <Card className="p-8 text-center hover:shadow-card transition-all duration-300 border-0 bg-card group hover:scale-105">
+              <div className="w-20 h-20 mx-auto mb-6 overflow-hidden rounded-lg bg-white/5 flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
+                <img 
+                  src="/lovable-uploads/glorious-church-new.png" 
+                  alt="Glorious Church Elburgon"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-foreground">Glorious Church Elburgon</h3>
+              <p className="text-muted-foreground text-sm">Modern church management and community platform</p>
+            </Card>
+
+            <Card className="p-8 text-center hover:shadow-card transition-all duration-300 border-0 bg-card group hover:scale-105 md:col-span-2 lg:col-span-1">
+              <div className="w-20 h-20 mx-auto mb-6 overflow-hidden rounded-lg bg-white/5 flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
+                <img 
+                  src="/lovable-uploads/747bed90-af81-4593-b723-10a1caea83f7.png" 
+                  alt="Kabene & Co. Advocates"
+                  className="w-full h-full object-contain"
+                />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-foreground">Kabene & Co. Advocates</h3>
+              <p className="text-muted-foreground text-sm">Professional legal services and case management platform</p>
+            </Card>
           </div>
         </div>
       </section>

@@ -179,6 +179,14 @@ export default {
 						opacity: '1'
 					}
 				},
+				'slide-logos': {
+					'0%': {
+						transform: 'translateX(0)'
+					},
+					'100%': {
+						transform: 'translateX(-100%)'
+					}
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -190,6 +198,7 @@ export default {
 				'fade-in': 'fade-in 0.6s ease-out',
 				'slide-up': 'slide-up 0.6s cubic-bezier(0.23, 1, 0.32, 1)',
 				'bounce-in': 'bounce-in 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
+				'slide-logos': 'slide-logos 30s linear infinite',
 			}
 		}
 	},

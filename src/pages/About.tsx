@@ -124,66 +124,47 @@ const AboutPage = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <Card className="p-8 text-center hover:shadow-card transition-all duration-300 border-0 bg-card group hover:scale-105">
-              <div className="w-20 h-20 mx-auto mb-6 overflow-hidden rounded-lg bg-white/5 flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
+          {/* Sliding Partners Logos */}
+          <div className="relative overflow-hidden">
+            <div className="flex animate-slide-logos">
+              {/* First set of logos */}
+              <div className="flex items-center space-x-16 min-w-max">
                 <img 
                   src="/lovable-uploads/package-yangu-new.png" 
                   alt="Package Yangu Logistics"
-                  className="w-full h-full object-contain"
+                  className="h-16 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
                 />
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-foreground">Package Yangu Logistics</h3>
-              <p className="text-muted-foreground text-sm">Modern logistics and delivery management platform</p>
-            </Card>
-
-            <Card className="p-8 text-center hover:shadow-card transition-all duration-300 border-0 bg-card group hover:scale-105">
-              <div className="w-20 h-20 mx-auto mb-6 overflow-hidden rounded-lg bg-white/5 flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
                 <img 
                   src="/lovable-uploads/cozy-invoice-new.png" 
                   alt="Cozy Invoice"
-                  className="w-full h-full object-contain"
+                  className="h-16 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
                 />
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-foreground">Cozy Invoice</h3>
-              <p className="text-muted-foreground text-sm">Streamlined invoicing and billing solution for SMEs</p>
-            </Card>
-
-            <Card className="p-8 text-center hover:shadow-card transition-all duration-300 border-0 bg-card group hover:scale-105">
-              <div className="w-20 h-20 mx-auto mb-6 overflow-hidden rounded-lg bg-white/5 flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
-                <img 
-                  src="/lovable-uploads/680b85d9-b389-4be9-9b2a-7638c311663e.png" 
-                  alt="Vitabuz Inventory"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <h3 className="text-xl font-bold mb-3 text-foreground">Vitabuz Inventory</h3>
-              <p className="text-muted-foreground text-sm">Comprehensive inventory management system</p>
-            </Card>
-
-            <Card className="p-8 text-center hover:shadow-card transition-all duration-300 border-0 bg-card group hover:scale-105">
-              <div className="w-20 h-20 mx-auto mb-6 overflow-hidden rounded-lg bg-white/5 flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
                 <img 
                   src="/lovable-uploads/glorious-mission-outreach.jpg" 
                   alt="Glorious Mission Outreach Ministries"
-                  className="w-full h-full object-contain"
+                  className="h-16 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
                 />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-foreground">Glorious Mission Outreach Ministries</h3>
-              <p className="text-muted-foreground text-sm">Modern church management and community platform</p>
-            </Card>
-
-            <Card className="p-8 text-center hover:shadow-card transition-all duration-300 border-0 bg-card group hover:scale-105 md:col-span-2 lg:col-span-1">
-              <div className="w-20 h-20 mx-auto mb-6 overflow-hidden rounded-lg bg-white/5 flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
+              
+              {/* Duplicate set for seamless loop */}
+              <div className="flex items-center space-x-16 min-w-max ml-16">
                 <img 
-                  src="/lovable-uploads/747bed90-af81-4593-b723-10a1caea83f7.png" 
-                  alt="Kabene & Co. Advocates"
-                  className="w-full h-full object-contain"
+                  src="/lovable-uploads/package-yangu-new.png" 
+                  alt="Package Yangu Logistics"
+                  className="h-16 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
+                />
+                <img 
+                  src="/lovable-uploads/cozy-invoice-new.png" 
+                  alt="Cozy Invoice"
+                  className="h-16 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
+                />
+                <img 
+                  src="/lovable-uploads/glorious-mission-outreach.jpg" 
+                  alt="Glorious Mission Outreach Ministries"
+                  className="h-16 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
                 />
               </div>
-              <h3 className="text-xl font-bold mb-3 text-foreground">Kabene & Co. Advocates</h3>
-              <p className="text-muted-foreground text-sm">Professional legal services and case management platform</p>
-            </Card>
+            </div>
           </div>
         </div>
       </section>

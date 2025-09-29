@@ -3,7 +3,8 @@ import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Lightbulb, Shield, Zap } from "lucide-react";
 import { SEO } from "@/components/SEO";
-
+import sharedLogo from "@/assets/partners/shared-logo.png";
+ 
 const AboutPage = () => {
   const values = [
     {
@@ -126,44 +127,70 @@ const AboutPage = () => {
           
           {/* Sliding Partners Logos */}
           <div className="relative overflow-hidden">
-            <div className="flex animate-slide-logos">
-              {/* First set of logos */}
-              <div className="flex items-center space-x-16 min-w-max">
-                <img 
-                  src="/lovable-uploads/package-yangu-new.png" 
-                  alt="Package Yangu Logistics"
-                  className="h-16 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
-                />
-                <img 
-                  src="/lovable-uploads/cozy-invoice-new.png" 
-                  alt="Cozy Invoice"
-                  className="h-16 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
-                />
-                <img 
-                  src="/lovable-uploads/glorious-mission-outreach.jpg" 
-                  alt="Glorious Mission Outreach Ministries"
-                  className="h-16 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
-                />
-              </div>
-              
+            <div className="flex items-center gap-12 sm:gap-16 w-max animate-slide-logos" aria-label="Partner logos marquee">
+              {/* First set */}
+              <img 
+                src="/lovable-uploads/package-yangu-new.png" 
+                alt="Package Yangu Logistics partner logo"
+                loading="lazy"
+                decoding="async"
+                className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
+              />
+              <img 
+                src="/lovable-uploads/cozy-invoice-new.png" 
+                alt="Cozy Invoice partner logo"
+                loading="lazy"
+                decoding="async"
+                className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
+              />
+              <img 
+                src="/lovable-uploads/glorious-mission-outreach.jpg" 
+                alt="Glorious Mission Outreach Ministries partner logo"
+                loading="lazy"
+                decoding="async"
+                className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
+              />
+              <img
+                src={sharedLogo}
+                alt="Shared partner logo"
+                loading="lazy"
+                decoding="async"
+                className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
+              />
+
               {/* Duplicate set for seamless loop */}
-              <div className="flex items-center space-x-16 min-w-max ml-16">
-                <img 
-                  src="/lovable-uploads/package-yangu-new.png" 
-                  alt="Package Yangu Logistics"
-                  className="h-16 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
-                />
-                <img 
-                  src="/lovable-uploads/cozy-invoice-new.png" 
-                  alt="Cozy Invoice"
-                  className="h-16 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
-                />
-                <img 
-                  src="/lovable-uploads/glorious-mission-outreach.jpg" 
-                  alt="Glorious Mission Outreach Ministries"
-                  className="h-16 w-auto object-contain opacity-70 hover:opacity-100 transition-opacity duration-300"
-                />
-              </div>
+              <img 
+                src="/lovable-uploads/package-yangu-new.png" 
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+                className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90"
+              />
+              <img 
+                src="/lovable-uploads/cozy-invoice-new.png" 
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+                className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90"
+              />
+              <img 
+                src="/lovable-uploads/glorious-mission-outreach.jpg" 
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+                className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90"
+              />
+              <img
+                src={sharedLogo}
+                alt=""
+                aria-hidden="true"
+                loading="lazy"
+                decoding="async"
+                className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90"
+              />
             </div>
           </div>
         </div>

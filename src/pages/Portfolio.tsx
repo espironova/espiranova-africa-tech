@@ -12,7 +12,7 @@ const PortfolioPage = () => {
       title: "Package Yangu Logistics",
       description: "Fast & reliable delivery services platform with shipment tracking and logistics management. Built for African markets with mobile-first approach.",
       category: "Logistics Platform",
-      image: "/lovable-uploads/0207f092-a550-48d0-ac3d-0f905a7c97e1.png",
+      image: "/lovable-uploads/package-yangu-new.png",
       
       features: ["Real-time tracking", "Route optimization", "Payment integration", "Admin dashboard"],
       status: "Live",
@@ -23,7 +23,7 @@ const PortfolioPage = () => {
       title: "Cozy Invoice",
       description: "Effortless invoicing platform designed for African businesses with professional invoice creation, client management, and payment tracking.",
       category: "SaaS Platform",
-      image: "/lovable-uploads/22e49366-a76a-4bd7-bb52-0fbfc7f05334.png",
+      image: "/lovable-uploads/cozy-invoice-new.png",
       
       features: ["Invoice templates", "Client management", "Payment tracking", "Multi-currency support"],
       status: "Live",
@@ -83,6 +83,8 @@ const PortfolioPage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-hero-move"
           style={{ backgroundImage: `url(/lovable-uploads/680b85d9-b389-4be9-9b2a-7638c311663e.png)` }}
+          role="img"
+          aria-label="EspiraNova featured work in logistics, invoicing, inventory, legal tech"
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 container mx-auto px-6 text-center">
@@ -123,6 +125,9 @@ const PortfolioPage = () => {
                   <img 
                     src={project.image} 
                     alt={project.title}
+                    title={`${project.title} by EspiraNova - ${project.category}`}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-64 sm:h-72 lg:h-80 xl:h-96 object-contain bg-muted/50 transition-transform duration-300 hover:scale-105"
                   />
                 </div>

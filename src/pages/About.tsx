@@ -42,6 +42,8 @@ const AboutPage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-hero-move"
           style={{ backgroundImage: `url(/lovable-uploads/93de2e72-0ee8-43e9-aafb-0e4b80c79f3a.png)` }}
+          role="img"
+          aria-label="EspiraNova team and technology solutions in Africa"
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 container mx-auto px-6 text-center">
@@ -132,6 +134,7 @@ const AboutPage = () => {
               <img 
                 src="/lovable-uploads/package-yangu-new.png" 
                 alt="Package Yangu Logistics partner logo"
+                title="Package Yangu Logistics - Logistics Platform by EspiraNova"
                 loading="lazy"
                 decoding="async"
                 className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
@@ -139,6 +142,7 @@ const AboutPage = () => {
               <img 
                 src="/lovable-uploads/cozy-invoice-new.png" 
                 alt="Cozy Invoice partner logo"
+                title="Cozy Invoice - Invoicing Software by EspiraNova"
                 loading="lazy"
                 decoding="async"
                 className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
@@ -146,6 +150,7 @@ const AboutPage = () => {
               <img 
                 src="/lovable-uploads/glorious-mission-outreach.jpg" 
                 alt="Glorious Mission Outreach Ministries partner logo"
+                title="Glorious Mission Outreach - Church Digital Solutions by EspiraNova"
                 loading="lazy"
                 decoding="async"
                 className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"

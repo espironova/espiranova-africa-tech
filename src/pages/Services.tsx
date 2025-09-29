@@ -64,6 +64,8 @@ const ServicesPage = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-hero-move"
           style={{ backgroundImage: `url(/lovable-uploads/dad02b7e-ac50-4612-8d4e-b6d45e772c11.png)` }}
+          role="img"
+          aria-label="EspiraNova services: custom software, web apps, APIs, data analytics"
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 container mx-auto px-6 text-center">

@@ -14,10 +14,18 @@ export const Footer = () => {
               that transform businesses across Africa.
             </p>
             <div className="flex space-x-4">
-              <Facebook className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
-              <Twitter className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
-              <Linkedin className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
-              <Instagram className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+              <a href="https://www.facebook.com/espiranova" target="_blank" rel="noopener noreferrer" aria-label="EspiraNova on Facebook">
+                <Facebook className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+              </a>
+              <a href="https://twitter.com/espiranova" target="_blank" rel="noopener noreferrer" aria-label="EspiraNova on Twitter">
+                <Twitter className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+              </a>
+              <a href="https://www.linkedin.com/company/espiranova" target="_blank" rel="noopener noreferrer" aria-label="EspiraNova on LinkedIn">
+                <Linkedin className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+              </a>
+              <a href="#" aria-label="EspiraNova on Instagram">
+                <Instagram className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
+              </a>
             </div>
           </div>
 
@@ -39,7 +47,7 @@ export const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-primary flex-shrink-0" />
-                <span className="text-muted-foreground text-sm">espiranova2@gmail.com</span>
+                <a href="mailto:info@espiranova.com" className="text-muted-foreground text-sm hover:text-primary">info@espiranova.com</a>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-primary flex-shrink-0" />

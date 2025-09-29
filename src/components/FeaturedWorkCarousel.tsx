@@ -11,7 +11,7 @@ const projects = [
     title: "Package Yangu Logistics",
     description: "Fast & reliable delivery services",
     category: "Logistics",
-    image: "/lovable-uploads/0207f092-a550-48d0-ac3d-0f905a7c97e1.png",
+    image: "/lovable-uploads/package-yangu-new.png",
     url: "https://www.packageyangulogistics.com/",
     features: ["Real-time tracking", "Fleet management", "Route optimization"]
   },
@@ -20,7 +20,7 @@ const projects = [
     title: "Cozy Invoice",
     description: "Effortless invoicing for African businesses",
     category: "Business Software",
-    image: "/lovable-uploads/22e49366-a76a-4bd7-bb52-0fbfc7f05334.png",
+    image: "/lovable-uploads/cozy-invoice-new.png",
     url: "https://cozyinvoicekeeper-one.vercel.app/",
     features: ["Automated billing", "Payment tracking", "Multi-currency support"]
   },
@@ -134,7 +134,10 @@ export const FeaturedWorkCarousel = () => {
                 <div className="relative overflow-hidden">
                   <img 
                     src={project.image} 
-                    alt={project.title}
+                    alt={`${project.title} - ${project.category} by EspiraNova`}
+                    title={`${project.title} by EspiraNova`}
+                    loading="lazy"
+                    decoding="async"
                     className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">

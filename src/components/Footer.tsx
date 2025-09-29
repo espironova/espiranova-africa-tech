@@ -10,7 +10,7 @@ export const Footer = () => {
           <div className="space-y-4">
             <h3 className="text-lg font-bold text-foreground">EspiraNova</h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Ignite. Innovate. Impact. We deliver cutting-edge technology solutions 
+              Innovation with Impact. We deliver cutting-edge technology solutions 
               that transform businesses across Africa.
             </p>
             <div className="flex space-x-4">
@@ -39,11 +39,11 @@ export const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-primary flex-shrink-0" />
-                <span className="text-muted-foreground text-sm">info@espiranova.com</span>
+                <span className="text-muted-foreground text-sm">espiranova2@gmail.com</span>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-primary flex-shrink-0" />
-                <span className="text-muted-foreground text-sm">+254 700 000 000</span>
+                <span className="text-muted-foreground text-sm">+254 728 143 812</span>
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="w-4 h-4 text-primary flex-shrink-0" />
@@ -56,7 +56,7 @@ export const Footer = () => {
         <div className="border-t border-border mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-muted-foreground text-sm">
-              © 2024 EspiraNova. All rights reserved.
+              © 2025 EspiraNova. All rights reserved.
             </p>
             <div className="flex gap-6">
               <Link to="#" className="text-muted-foreground hover:text-primary transition-colors text-sm">

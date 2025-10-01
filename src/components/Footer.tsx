@@ -47,7 +47,7 @@ export const Footer = () => {
             <div className="space-y-3">
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 text-primary flex-shrink-0" />
-                <a href="mailto:info@espiranova.com" className="text-muted-foreground text-sm hover:text-primary">info@espiranova.com</a>
+                <a href="mailto:espiranova2@gmail.com" className="text-muted-foreground text-sm hover:text-primary">espiranova2@gmail.com</a>
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 text-primary flex-shrink-0" />

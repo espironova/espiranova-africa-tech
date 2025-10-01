@@ -32,7 +32,7 @@ const AboutPage = () => {
       <SEO 
         title="About EspiraNova - Leading Technology Solutions Provider in Africa"
         description="Learn about EspiraNova's mission to ignite digital transformation across Africa. Over 8 years of API engineering expertise, delivering innovative software solutions to empower businesses and communities."
-        keywords="about EspiraNova, African technology company, software development team, API engineering Kenya, digital transformation Africa"
+        keywords="about EspiraNova, African technology company, Kenya based technology company, Website development company,custom software development company, POS systems,API development company,software development team, API engineering Kenya, digital transformation Africa, best websites, best custom software development, best API development, best POS systems, best software development team, best API engineering, best digital transformation, solutions for businesses, solutions for communities, solutions for Africa"
         url="https://espiranova.com/about"
       />
       <Navigation />
@@ -133,7 +133,7 @@ const AboutPage = () => {
               {/* First set */}
               <img 
                 src="/lovable-uploads/package-yangu-new.png" 
-                alt="Package Yangu Logistics partner logo"
+                alt="Package Yangu Logistics - Logistics Platform by EspiraNova"
                 title="Package Yangu Logistics - Logistics Platform by EspiraNova"
                 loading="lazy"
                 decoding="async"
@@ -141,8 +141,8 @@ const AboutPage = () => {
               />
               <img 
                 src="/lovable-uploads/cozy-invoice-new.png" 
-                alt="Cozy Invoice partner logo"
-                title="Cozy Invoice - Invoicing Software by EspiraNova"
+                alt="Cozy Invoice Management platform by EspiraNova"
+                title="Cozy Invoice - Invoicing Management Software by EspiraNova"
                 loading="lazy"
                 decoding="async"
                 className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"

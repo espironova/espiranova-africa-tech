@@ -27,7 +27,7 @@ export const SEO = ({
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "EspiraNova",
-    "description": "Ignite. Innovate. Impact. Technology solutions provider for Africa",
+    "description": "Innovation with Impact. Technology solutions provider for Africa",
     "url": "https://espiranova.com",
     "logo": "https://espiranova.com/lovable-uploads/espiranova-logo-new.png",
     "address": {
@@ -40,7 +40,7 @@ export const SEO = ({
       "@type": "ContactPoint",
       "telephone": "+254728143812",
       "contactType": "customer service",
-      "email": "info@espiranova.com"
+      "email": "espiranova2@gmail.com"
     },
     "sameAs": [
       "https://www.linkedin.com/company/espiranova",

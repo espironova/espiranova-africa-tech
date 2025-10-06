@@ -39,7 +39,7 @@ const projects = [
     description: "Modern church management platform",
     category: "Religious Organizations",
     image: "/lovable-uploads/glorious-church-new.png",
-    url: "https://glorious-church-elburgon.vercel.app/",
+    url: "https://www.gloriouschurchelburgon.com/",
     features: ["Member management", "Event planning", "Donation tracking"]
   },
   {

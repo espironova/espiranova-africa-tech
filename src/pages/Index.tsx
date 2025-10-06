@@ -22,19 +22,18 @@ const Index = () => {
     },
     {
       icon: Database,
-      title: "API Development & Integrations",
+      title: "API Development & Payments Integrations",
       description: "Seamless connections and robust API solutions"
     },
     {
       icon: Users,
-      title: "Specialized Software",
-      description: "Industry-specific applications and tools"
+      title: "Digital Transformation",
+      description: "Transform your operations and drive growth through smart, strategic digital solutions."
     },
     {
       icon: TrendingUp,
       title: "Data-driven Performance",
       description: "From Data to Decisions",
-      tagline: "From Data to Decisions"
     }
   ];
 

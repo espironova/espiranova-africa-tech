@@ -14,13 +14,13 @@ export const Footer = () => {
               that transform businesses across Africa.
             </p>
             <div className="flex space-x-4">
-              <a href="https://www.facebook.com/espiranova" target="_blank" rel="noopener noreferrer" aria-label="EspiraNova on Facebook">
+              <a href="https://web.facebook.com/profile.php?id=61581733860315" target="_blank" rel="noopener noreferrer" aria-label="EspiraNova on Facebook">
                 <Facebook className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
               </a>
               <a href="https://twitter.com/espiranova" target="_blank" rel="noopener noreferrer" aria-label="EspiraNova on Twitter">
                 <Twitter className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
               </a>
-              <a href="https://www.linkedin.com/company/espiranova" target="_blank" rel="noopener noreferrer" aria-label="EspiraNova on LinkedIn">
+              <a href="https://www.linkedin.com/company/espiranova/" target="_blank" rel="noopener noreferrer" aria-label="EspiraNova on LinkedIn">
                 <Linkedin className="w-5 h-5 text-muted-foreground hover:text-primary cursor-pointer transition-colors" />
               </a>
               <a href="#" aria-label="EspiraNova on Instagram">

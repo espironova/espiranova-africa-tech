@@ -11,7 +11,7 @@ const projects = [
     title: "Package Yangu Logistics",
     description: "Fast & reliable delivery services",
     category: "Logistics",
-    image: "/lovable-uploads/package-yangu-new.png",
+    image: "/lovable-uploads/package-yangu-logistics-EspiraNova-solutions-payments-africa.png",
     url: "https://www.packageyangulogistics.com/",
     features: ["Real-time tracking", "Fleet management", "Route optimization"]
   },
@@ -20,7 +20,7 @@ const projects = [
     title: "Cozy Invoice",
     description: "Effortless invoicing for African businesses",
     category: "Business Software",
-    image: "/lovable-uploads/cozy-invoice-new.png",
+    image: "/lovable-uploads/cozy-invoice-management-solution-africa-EspiraNova.png",
     url: "https://cozyinvoicekeeper-one.vercel.app/",
     features: ["Automated billing", "Payment tracking", "Multi-currency support"]
   },
@@ -29,16 +29,16 @@ const projects = [
     title: "Vitabuz Inventory",
     description: "Inventory management simplified",
     category: "Business Software",
-    image: "/lovable-uploads/7c4038d8-d7bb-4c3f-b239-81d70e8e220b.png",
+    image: "/lovable-uploads/inventory-management-EspiraNova-Vitabuz-smart-africa.png",
     url: "https://vitabuzsmart.africa/",
     features: ["Stock management", "Analytics", "Multi-location support"]
   },
   {
     id: 4,
     title: "Glorious Church Elburgon",
-    description: "Modern church management platform",
+    description: "Modern church website",
     category: "Religious Organizations",
-    image: "/lovable-uploads/glorious-church-new.png",
+    image: "/lovable-uploads/glorious-church-elburgon-EspiraNova-espiranova-solutions-websites.png",
     url: "https://www.gloriouschurchelburgon.com/",
     features: ["Member management", "Event planning", "Donation tracking"]
   },
@@ -47,7 +47,7 @@ const projects = [
     title: "Kabene & Co. Advocates",
     description: "Professional legal services platform",
     category: "Legal Services",
-    image: "/lovable-uploads/747bed90-af81-4593-b723-10a1caea83f7.png",
+    image: "/lovable-uploads/kabeneadvocates-EspiraNova-web-digital-solutions.png",
     url: "https://www.kabeneadvocates.co.ke/",
     features: ["Case management", "Client portal", "Document automation"]
   }

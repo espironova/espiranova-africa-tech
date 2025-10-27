@@ -82,9 +82,6 @@ const Index = () => {
                   </div>
                   <h3 className="text-lg font-bold mb-3 text-foreground">{item.title}</h3>
                   <p className="text-muted-foreground leading-relaxed text-sm">{item.description}</p>
-                  {item.tagline && (
-                    <p className="text-primary text-xs font-medium mt-2 italic">{item.tagline}</p>
-                  )}
                 </div>
               </Card>
             ))}

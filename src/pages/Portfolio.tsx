@@ -12,7 +12,7 @@ const PortfolioPage = () => {
       title: "Package Yangu Logistics",
       description: "Fast & reliable delivery services platform with shipment tracking and logistics management. Built for African markets with mobile-first approach.",
       category: "Logistics Platform",
-      image: "/lovable-uploads/package-yangu-new.png",
+      image: "/lovable-uploads/package-yangu-logistics-EspiraNova-solutions-payments-africa.png",
       
       features: ["Real-time tracking", "Route optimization", "Payment integration", "Admin dashboard"],
       status: "Live",
@@ -23,7 +23,7 @@ const PortfolioPage = () => {
       title: "Cozy Invoice",
       description: "Effortless invoicing platform designed for African businesses with professional invoice creation, client management, and payment tracking.",
       category: "SaaS Platform",
-      image: "/lovable-uploads/cozy-invoice-new.png",
+      image: "/lovable-uploads/cozy-invoice-management-solution-africa-EspiraNova.png",
       
       features: ["Invoice templates", "Client management", "Payment tracking", "Multi-currency support"],
       status: "Live",
@@ -34,7 +34,7 @@ const PortfolioPage = () => {
       title: "Vitabuz Inventory",
       description: "Inventory management simplified - track inventory, manage sales, and analyze business performance with comprehensive reporting and analytics.",
       category: "Business Management",
-      image: "/lovable-uploads/7c4038d8-d7bb-4c3f-b239-81d70e8e220b.png",
+      image: "/lovable-uploads/inventory-management-EspiraNova-Vitabuz-smart-africa.png",
       
       features: ["Stock management", "Sales analytics", "Low stock alerts", "Barcode scanning"],
       status: "Live",
@@ -45,7 +45,7 @@ const PortfolioPage = () => {
       title: "Kabene & Co. Advocates",
       description: "Tailored legal solutions with integrity and precision. Comprehensive case management system for law firms with document management and client portals.",
       category: "Legal Tech",
-      image: "/lovable-uploads/747bed90-af81-4593-b723-10a1caea83f7.png",
+      image: "/lovable-uploads/kabeneadvocates-EspiraNova-web-digital-solutions.png",
       features: ["Case management", "Document storage", "Client portals", "Billing integration"],
       status: "Live",
       url: "https://www.kabeneadvocates.co.ke/"
@@ -55,7 +55,7 @@ const PortfolioPage = () => {
       title: "Glorious Church Elburgon",
       description: "Modern church website with sermon management, event scheduling, and community engagement features. Built to connect and inspire the congregation.",
       category: "Church Management",
-      image: "/lovable-uploads/glorious-church-new.png",
+      image: "/lovable-uploads/glorious-church-elburgon-EspiraNova-espiranova-solutions-websites.png",
       features: ["Sermon archive", "Event calendar", "Member portal", "Online giving"],
       status: "Live",
       url: "https://www.gloriouschurchelburgon.com/"

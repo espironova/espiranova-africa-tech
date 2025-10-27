@@ -20,7 +20,7 @@ const projects = [
     title: "Cozy Invoice",
     description: "Effortless invoicing for African businesses",
     category: "Business Software",
-    image: "/lovable-uploads/cozy-invoice-management-solution-africa-EspiraNova.png",
+    image: "/lovable-uploads/cozy-invoice-screenshot.png",
     url: "https://cozyinvoicekeeper-one.vercel.app/",
     features: ["Automated billing", "Payment tracking", "Multi-currency support"]
   },

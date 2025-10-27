@@ -23,7 +23,7 @@ const PortfolioPage = () => {
       title: "Cozy Invoice",
       description: "Effortless invoicing platform designed for African businesses with professional invoice creation, client management, and payment tracking.",
       category: "SaaS Platform",
-      image: "/lovable-uploads/cozy-invoice-management-solution-africa-EspiraNova.png",
+      image: "/lovable-uploads/cozy-invoice-screenshot.png",
       
       features: ["Invoice templates", "Client management", "Payment tracking", "Multi-currency support"],
       status: "Live",

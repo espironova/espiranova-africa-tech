@@ -132,7 +132,7 @@ const AboutPage = () => {
             <div className="flex items-center gap-12 sm:gap-16 w-max animate-slide-logos" aria-label="Partner logos marquee">
               {/* First set */}
               <img 
-                src="/lovable-uploads/package-yangu-new.png" 
+                src="/lovable-uploads/package-yangu-logistics-EspiraNova-solutions-payments-africa.png" 
                 alt="Package Yangu Logistics - Logistics Platform by EspiraNova"
                 title="Package Yangu Logistics - Logistics Platform by EspiraNova"
                 loading="lazy"
@@ -140,7 +140,7 @@ const AboutPage = () => {
                 className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
               />
               <img 
-                src="/lovable-uploads/cozy-invoice-new.png" 
+                src="/lovable-uploads/cozy-invoice-screenshot.png" 
                 alt="Cozy Invoice Management platform by EspiraNova"
                 title="Cozy Invoice - Invoicing Management Software by EspiraNova"
                 loading="lazy"
@@ -165,7 +165,7 @@ const AboutPage = () => {
 
               {/* Duplicate set for seamless loop */}
               <img 
-                src="/lovable-uploads/package-yangu-new.png" 
+                src="/lovable-uploads/package-yangu-logistics-EspiraNova-solutions-payments-africa.png" 
                 alt=""
                 aria-hidden="true"
                 loading="lazy"
@@ -173,7 +173,7 @@ const AboutPage = () => {
                 className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90"
               />
               <img 
-                src="/lovable-uploads/cozy-invoice-new.png" 
+                src="/lovable-uploads/cozy-invoice-screenshot.png" 
                 alt=""
                 aria-hidden="true"
                 loading="lazy"

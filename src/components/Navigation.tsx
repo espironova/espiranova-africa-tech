@@ -23,15 +23,13 @@ export const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-sm transition-all duration-300">
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-24 md:h-32 lg:h-28">
+        <div className="flex items-center justify-between h-28 md:h-36 lg:h-32">
           <Link to="/" className="flex items-center gap-3">
-            <div className="relative p-2 rounded-lg bg-white/5 backdrop-blur-sm shadow-[0_0_20px_rgba(255,255,255,0.1)] hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all duration-300">
-              <img 
-                src="/lovable-uploads/espiranova-logo-main.png" 
-                alt="EspiraNova - Innovation with Impact" 
-                className="h-20 w-auto sm:h-24 md:h-28 lg:h-24 object-contain brightness-110 drop-shadow-2xl"
-              />
-            </div>
+            <img 
+              src="/lovable-uploads/espiranova-logo-main.png" 
+              alt="EspiraNova - Innovation with Impact" 
+              className="h-24 w-auto sm:h-28 md:h-32 lg:h-28 object-contain brightness-110 drop-shadow-2xl"
+            />
           </Link>
 
           {/* Desktop Navigation */}

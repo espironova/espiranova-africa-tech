@@ -59,6 +59,26 @@ const PortfolioPage = () => {
       features: ["Sermon archive", "Event calendar", "Member portal", "Online giving"],
       status: "Live",
       url: "https://www.gloriouschurchelburgon.com/"
+    },
+    {
+      id: 6,
+      title: "Zoza",
+      description: "Track Kenya's development projects with transparency and accountability. Platform for monitoring housing, markets, agriculture, and community development initiatives.",
+      category: "Civic Tech",
+      image: "/lovable-uploads/zoza-screenshot.png",
+      features: ["Project tracking", "Public engagement", "Data visualization", "Reporting tools"],
+      status: "Live",
+      url: "https://www.zoza.co.ke/"
+    },
+    {
+      id: 7,
+      title: "Loise N.K & Co. Advocates",
+      description: "Modern legal excellence - Professional law firm website providing comprehensive legal services with integrity, commitment, and excellence to clients nationally, regionally, and internationally.",
+      category: "Legal Services",
+      image: "/lovable-uploads/loise-advocates-screenshot.png",
+      features: ["Practice areas showcase", "Team profiles", "Consultation booking", "Client resources"],
+      status: "Live",
+      url: "https://www.loisenkadvocates.co.ke/"
     }
   ];
 

@@ -26,9 +26,9 @@ export const Navigation = () => {
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-3">
             <img 
-              src="/lovable-uploads/espiranova-logo-new.png" 
-              alt="EspiraNova Logo" 
-              className="h-10 w-auto"
+              src="/lovable-uploads/espiranova-logo-main.png" 
+              alt="EspiraNova - Innovation with Impact" 
+              className="h-14 w-auto sm:h-16 md:h-14 object-contain brightness-110"
             />
           </Link>
 

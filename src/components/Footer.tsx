@@ -8,7 +8,11 @@ export const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-lg font-bold text-foreground">EspiraNova</h3>
+            <img 
+              src="/lovable-uploads/espiranova-logo-main.png" 
+              alt="EspiraNova - Innovation with Impact" 
+              className="h-12 w-auto object-contain"
+            />
             <p className="text-muted-foreground text-sm leading-relaxed">
               Innovation with Impact. We deliver cutting-edge technology solutions 
               that transform businesses across Africa.

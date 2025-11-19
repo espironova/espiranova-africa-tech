@@ -23,13 +23,9 @@ export const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-sm transition-all duration-300">
       <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-28 md:h-36 lg:h-32">
-          <Link to="/" className="flex items-center gap-3">
-            <img 
-              src="/lovable-uploads/espiranova-logo-main.png" 
-              alt="EspiraNova - Innovation with Impact" 
-              className="h-24 w-auto sm:h-28 md:h-32 lg:h-28 object-contain brightness-110 drop-shadow-2xl"
-            />
+        <div className="flex items-center justify-between h-20">
+          <Link to="/" className="text-2xl font-bold text-white hover:text-white/90 transition-colors">
+            EspiraNova
           </Link>
 
           {/* Desktop Navigation */}

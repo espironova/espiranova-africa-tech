@@ -50,6 +50,24 @@ const projects = [
     image: "/lovable-uploads/kabeneadvocates-EspiraNova-web-digital-solutions.png",
     url: "https://www.kabeneadvocates.co.ke/",
     features: ["Case management", "Client portal", "Document automation"]
+  },
+  {
+    id: 6,
+    title: "Zoza",
+    description: "Track Kenya's development projects with transparency",
+    category: "Civic Tech",
+    image: "/lovable-uploads/zoza-screenshot.png",
+    url: "https://www.zoza.co.ke/",
+    features: ["Project tracking", "Public engagement", "Data visualization"]
+  },
+  {
+    id: 7,
+    title: "Loise N.K & Co. Advocates",
+    description: "Modern legal excellence and professional services",
+    category: "Legal Services",
+    image: "/lovable-uploads/loise-advocates-screenshot.png",
+    url: "https://www.loisenkadvocates.co.ke/",
+    features: ["Practice areas", "Team profiles", "Consultation booking"]
   }
 ];
 

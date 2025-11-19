@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "@/assets/espiranova-logo.png";
+
 
 export const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,10 +24,12 @@ export const Navigation = () => {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-black/20 backdrop-blur-sm transition-all duration-300">
       <div className="container mx-auto px-6">
         <div className="flex items-center justify-between h-16">
-          <Link to="/" className="flex items-center">
-            <span className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              EspiraNova
-            </span>
+          <Link to="/" className="flex items-center gap-3">
+            <img 
+              src="/lovable-uploads/espiranova-logo-new.png" 
+              alt="EspiraNova Logo" 
+              className="h-10 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

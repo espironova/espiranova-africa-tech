@@ -11,7 +11,7 @@ export const Footer = () => {
             <img 
               src="/lovable-uploads/espiranova-logo-main.png" 
               alt="EspiraNova - Innovation with Impact" 
-              className="h-12 w-auto object-contain"
+              className="h-16 w-auto object-contain"
             />
             <p className="text-muted-foreground text-sm leading-relaxed">
               Innovation with Impact. We deliver cutting-edge technology solutions 

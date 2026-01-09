@@ -22,7 +22,7 @@ const Index = () => {
     },
     {
       icon: Database,
-      title: "API Development & Payments Integrations",
+      title: "API & Payments Integrations",
       description: "Seamless connections and robust API solutions"
     },
     {

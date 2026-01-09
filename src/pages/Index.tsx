@@ -17,7 +17,7 @@ const Index = () => {
     },
     {
       icon: Globe,
-      title: "Web Applications",
+      title: "Modern Websites",
       description: "We build modern, responsive web apps that automate daily business processes"
     },
     {
@@ -28,7 +28,7 @@ const Index = () => {
     {
       icon: Users,
       title: "Digital Transformation",
-      description: "We help businesses transform their operations and drive growth through smart, strategic digital solutions."
+      description: "Transform business operations and drive growth through smart, strategic digital solutions."
     },
     {
       icon: TrendingUp,

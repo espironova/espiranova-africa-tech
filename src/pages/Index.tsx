@@ -13,12 +13,12 @@ const Index = () => {
     {
       icon: Code,
       title: "Custom Software",
-      description: "Tailored solutions for your unique business needs"
+      description: "We help SMEs eliminate manual work using simple systems"
     },
     {
       icon: Globe,
       title: "Web Applications",
-      description: "Modern, responsive web solutions"
+      description: "We build modern, responsive web apps that automate daily business processes"
     },
     {
       icon: Database,
@@ -28,12 +28,12 @@ const Index = () => {
     {
       icon: Users,
       title: "Digital Transformation",
-      description: "Transform your operations and drive growth through smart, strategic digital solutions."
+      description: "We help businesses transform their operations and drive growth through smart, strategic digital solutions."
     },
     {
       icon: TrendingUp,
       title: "Data-driven Performance",
-      description: "From Data to Decisions",
+      description: "We help businesses make data-driven decisions to improve their operations and drive growth.",
     }
   ];
 
@@ -43,7 +43,7 @@ const Index = () => {
         title="EspiraNova - Innovation with Impact"
         description="Driving digital transformation with innovative solutions, seamless integrations, and tailored applications to empower businesses and communities across Africa."
         keywords="technology solutions Africa, custom software development Kenya, API development, AI solutions, web applications, digital transformation Africa, data analytics"
-        url="https://espiranova.com"
+        url="https://espiranova.co.ke"
       />
       <Navigation />
       <Hero />
@@ -63,8 +63,8 @@ const Index = () => {
             </h2>
             <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Empowering Africa's digital future with innovative solutions, custom applications, 
-              and seamless API integrations that drive transformation, growth, and lasting impact.
+              Empowering Africa's digital future with innovative solutions, modern websites, 
+              and API & Payment Integrations that drive transformation, growth, and lasting impact.
             </p>
           </div>
           

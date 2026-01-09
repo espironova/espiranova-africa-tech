@@ -54,8 +54,7 @@ export const Hero = () => {
             </span>
           </p>
           <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Driving digital transformation with innovative solutions, seamless integrations, 
-            and tailored applications to empower businesses and communities.
+          EspiraNova builds fast, affordable web apps and modern websites that automate daily business processes — from Excel and WhatsApp to intelligent, cloud-based systems.
           </p>
           <div className="flex justify-center">
             <Link to="/portfolio">

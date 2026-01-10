@@ -1,42 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { ArrowRight } from "lucide-react";
 import heroImage from "@/assets/hero-bg.jpg";
 
 export const Hero = () => {
-  const [currentText, setCurrentText] = useState("");
-  const [currentColor, setCurrentColor] = useState(0);
-  const fullText = "Innovation with Impact";
-  const colors = ["text-white", "text-cyan-300", "text-blue-300", "text-primary-glow"];
-
-  useEffect(() => {
-    let index = 0;
-    let colorIndex = 0;
-    
-    const typewriterTimer = setInterval(() => {
-      if (index <= fullText.length) {
-        setCurrentText(fullText.slice(0, index));
-        index++;
-      } else {
-        // Reset and start over
-        setTimeout(() => {
-          index = 0;
-          setCurrentText("");
-        }, 2000);
-      }
-    }, 150);
-
-    const colorTimer = setInterval(() => {
-      colorIndex = (colorIndex + 1) % colors.length;
-      setCurrentColor(colorIndex);
-    }, 1000);
-
-    return () => {
-      clearInterval(typewriterTimer);
-      clearInterval(colorTimer);
-    };
-  }, []);
-
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden -mt-20 pt-20">
       <div 
@@ -47,19 +14,16 @@ export const Hero = () => {
       
       <div className="relative z-10 container mx-auto px-6 text-center">
         <div className="max-w-4xl mx-auto">
-          <p className={`text-4xl md:text-6xl font-bold mb-4 min-h-[4rem] flex items-center justify-center transition-colors duration-500 ${colors[currentColor]}`}>
-            <span className="inline-block">
-              {currentText}
-              <span className="animate-pulse">|</span>
-            </span>
-          </p>
-          <p className="text-lg md:text-xl text-white/90 mb-8 max-w-2xl mx-auto leading-relaxed">
-          EspiraNova builds fast, affordable web apps and modern websites that automate daily business processes — from Excel and WhatsApp to intelligent, cloud-based systems.
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-white leading-tight">
+            We Help SMEs Eliminate Manual Work Using Simple Systems
+          </h1>
+          <p className="text-lg md:text-xl text-white/90 mb-10 max-w-3xl mx-auto leading-relaxed">
+            EspiraNova builds fast, affordable web apps and modern websites that automate daily business processes — from Excel and WhatsApp to intelligent, cloud-based systems.
           </p>
           <div className="flex justify-center">
-            <Link to="/portfolio">
-              <Button variant="magnetic" size="lg" className="min-w-[200px] animate-fade-in">
-                Explore Our Work
+            <Link to="/contact">
+              <Button variant="magnetic" size="lg" className="min-w-[280px] animate-fade-in text-lg">
+                Get a Free Automation Assessment <ArrowRight className="w-5 h-5 ml-2" />
               </Button>
             </Link>
           </div>

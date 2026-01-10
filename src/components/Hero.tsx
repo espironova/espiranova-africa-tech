@@ -20,9 +20,9 @@ const colors = [
 ];
 
 const carouselSlides = [
-  "EspiraNova builds fast, affordable web apps and modern websites that automate daily business processes — from Excel and WhatsApp to intelligent, cloud-based systems.",
-  "Most businesses waste hours on manual records, Excel sheets, paper forms, and WhatsApp approvals. We replace all that with simple, custom-built systems — delivered fast.",
-  "AI-assisted builds = lower cost, better systems. Faster delivery than traditional developers. Built for Kenyan & African businesses. Ongoing support included."
+  "EspiraNova builds fast, affordable web apps and modern websites that automate daily business processes — from manual tasks to intelligent, cloud-based systems.",
+  "Most businesses waste hours on manual tasks. We replace all that with simple, custom-built systems — delivered fast.",
+  "Faster delivery than traditional developers. Built for Kenyan & African businesses. Ongoing support included."
 ];
 
 export const Hero = () => {

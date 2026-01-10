@@ -68,8 +68,8 @@ const Index = () => {
     },
     {
       icon: Brain,
-      title: "AI-Assisted Builds",
-      description: "AI-assisted builds = lower cost, better systems"
+      title: "Innovative Solutions",
+      description: "We use smart development workflows that help us build better systems faster and more affordably."
     },
     {
       icon: Globe2,
@@ -125,7 +125,7 @@ const Index = () => {
           <div className="text-center">
             <Card className="inline-block p-6 md:p-8 bg-success/10 border-success/20">
               <p className="text-lg md:text-xl font-semibold text-foreground">
-                We replace all that with <span className="text-success">simple, custom-built systems</span> — delivered fast using AI-assisted development.
+                We replace all that with <span className="text-success">simple, custom-built systems</span> — delivered fast using advanced development workflows.
               </p>
             </Card>
           </div>

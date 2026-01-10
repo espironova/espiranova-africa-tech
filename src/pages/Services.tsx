@@ -2,60 +2,134 @@ import { Navigation } from "@/components/Navigation";
 import { Footer } from "@/components/Footer";
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Code, Globe, Database, Users, TrendingUp, CheckCircle } from "lucide-react";
+import { 
+  Zap, 
+  Globe, 
+  Server, 
+  Sparkles, 
+  Cloud,
+  CheckCircle, 
+  Clock, 
+  Users, 
+  ArrowRight,
+  TrendingDown,
+  AlertCircle,
+  BarChart3
+} from "lucide-react";
+import { Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 
 const ServicesPage = () => {
-  const services = [
+  const packages = [
     {
-      icon: Code,
-      title: "Custom Software",
-      description: "Tailored solutions built around your specific needs and business requirements.",
-      features: ["Custom web applications", "Desktop software solutions", "System integrations", "Legacy system modernization"]
+      id: "automation-sprint",
+      icon: Zap,
+      title: "SME Automation Sprint",
+      badge: "FLAGSHIP",
+      timeline: "2–4 weeks",
+      idealFor: "SMEs stuck in Excel, paper, WhatsApp",
+      description: "Get a custom web app that eliminates repetitive admin work.",
+      features: [
+        "Simple custom web app",
+        "Automated workflows",
+        "Admin dashboard",
+        "Hosted on Vercel + custom domain"
+      ],
+      results: [
+        { icon: TrendingDown, text: "40–70% reduction in admin work" },
+        { icon: AlertCircle, text: "Fewer errors" },
+        { icon: BarChart3, text: "Faster reporting" }
+      ],
+      cta: "Start Your Sprint"
     },
     {
+      id: "website-upgrade",
       icon: Globe,
-      title: "Web Applications",
-      description: "Modern, responsive web solutions with rich functionality and exceptional user experiences.",
-      features: ["Progressive web apps", "E-commerce platforms", "Content management systems", "Single-page applications"]
+      title: "Website → Business System Upgrade",
+      badge: null,
+      timeline: "2–3 weeks",
+      idealFor: "Companies with outdated or static websites",
+      description: "Your website becomes a working tool, not a brochure.",
+      features: [
+        "Modern website (fast, mobile-first)",
+        "Lead capture & forms",
+        "Booking / enquiries",
+        "AI chat assistant",
+        "Analytics dashboard"
+      ],
+      results: null,
+      cta: "Upgrade Your Website"
     },
     {
-      icon: Database,
-      title: "API Development & Integrations",
-      description: "Robust APIs enabling seamless system connectivity and data exchange.",
-      features: ["RESTful API design", "GraphQL implementations", "Third-party integrations", "API documentation"]
+      id: "digital-migration",
+      icon: Server,
+      title: "Manual → Digital → Intelligent Migration",
+      badge: null,
+      timeline: "4–8 weeks",
+      idealFor: "NGOs, SACCOs, institutions, growing SMEs",
+      description: "Full digital transformation from paper-based to intelligent cloud systems.",
+      features: [
+        "Custom cloud system",
+        "Data migration",
+        "Workflow automation",
+        "AI insights layer",
+        "Staff training"
+      ],
+      results: null,
+      cta: "Plan Your Migration"
     },
     {
-      icon: Users,
-      title: "Specialized Software",
-      description: "Industry-specific applications including CRM, HR, and Document Management Systems.",
-      features: ["HR management systems", "Customer relationship management", "Inventory tracking", "Document workflows"]
+      id: "micro-apps",
+      icon: Sparkles,
+      title: "AI Micro-Apps (Quick Wins)",
+      badge: "FAST",
+      timeline: "1–2 weeks",
+      idealFor: "Businesses needing quick solutions",
+      description: "Small apps built fast to solve specific problems.",
+      features: [
+        "Invoice tracking",
+        "Stock systems",
+        "Client management",
+        "Reporting dashboards"
+      ],
+      results: null,
+      cta: "Build a Micro-App"
     },
     {
-      icon: TrendingUp,
-      title: "Data-driven Performance",
-      description: "From Data to Decisions - Analytics and insights that drive measurable business growth.",
-      features: ["Business intelligence dashboards", "Performance analytics", "Data visualization", "Predictive insights"],
-      tagline: "From Data to Decisions"
+      id: "managed-hosting",
+      icon: Cloud,
+      title: "Hosting, Domains & Managed Systems",
+      badge: null,
+      timeline: "Ongoing",
+      idealFor: "All businesses needing reliable hosting",
+      description: "Keep your systems running smoothly with managed hosting and support.",
+      features: [
+        "Vercel hosting",
+        "Custom domain",
+        "SSL & monitoring",
+        "Minor updates included"
+      ],
+      results: null,
+      cta: "Get Managed Hosting"
     }
   ];
 
   const approach = [
-    "Personalized Approach – Solutions tailored to your workflow",
-    "Transparent Process – Clear updates at every stage",
-    "Continuous Support – Long-term system maintenance and assistance",
-    "Industry Expertise – Valuable insights from diverse sectors",
-    "Cutting-Edge Technology – Future-ready innovations",
-    "Cost-Effective Results – High-value technology at sustainable costs"
+    "We start by understanding your actual workflow, not just your wishlist",
+    "AI-assisted development means faster builds at lower cost",
+    "You get a working system in weeks, not months",
+    "We train your team and provide ongoing support",
+    "Built specifically for Kenyan and African business contexts",
+    "Transparent pricing with no hidden costs"
   ];
 
   return (
     <div className="min-h-screen">
       <SEO 
-        title="Our Services - Innovation with Impact"
-        description="Comprehensive technology services including custom software development, web applications, API development, and data-driven solutions. Expert technology consulting for African businesses."
-        keywords="custom software development, web applications, API development, data analytics, specialized software, technology consulting, digital transformation Kenya"
-        url="https://espiranova.com/services"
+        title="Service Packages - EspiraNova"
+        description="Focused service packages designed for African SMEs. From automation sprints to full digital migration, we help you eliminate manual work with simple systems."
+        keywords="SME automation packages, business system upgrade, digital migration Kenya, AI micro-apps, managed hosting Africa"
+        url="https://espiranova.co.ke/services"
       />
       <Navigation />
       
@@ -65,66 +139,102 @@ const ServicesPage = () => {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-hero-move"
           style={{ backgroundImage: `url(/lovable-uploads/dad02b7e-ac50-4612-8d4e-b6d45e772c11.png)` }}
           role="img"
-          aria-label="EspiraNova services: custom software, web apps, APIs, data analytics"
+          aria-label="EspiraNova services: SME automation, web apps, digital migration"
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Our Services
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+            Solutions That Actually Solve Problems
           </h1>
           <p className="text-xl text-white/90 max-w-3xl mx-auto">
-            We provide a full spectrum of custom technology solutions designed to simplify processes, 
-            enhance productivity, and drive measurable results.
+            Choose from focused service packages designed for African SMEs. 
+            No fluff, just working systems delivered fast.
           </p>
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* Service Packages */}
       <section className="py-20 bg-background relative overflow-hidden">
-        {/* Background Elements */}
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/20 via-transparent to-accent/20"></div>
           <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-gradient-primary opacity-10 blur-3xl"></div>
           <div className="absolute bottom-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-accent opacity-10 blur-3xl"></div>
         </div>
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-              Our Technology Services
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+              Our Service Packages
             </h2>
             <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              We provide a full spectrum of custom technology solutions designed to simplify processes, 
-              enhance productivity, and drive measurable results.
+              Each package is designed to deliver real results. Pick what fits your needs.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-            {services.map((service, index) => (
+          <div className="space-y-8 max-w-5xl mx-auto">
+            {packages.map((pkg, index) => (
               <Card 
-                key={index} 
-                className="p-6 hover:shadow-card transition-all duration-500 border-0 bg-card/80 backdrop-blur-sm group hover:scale-105 animate-fade-in relative overflow-hidden"
+                key={pkg.id} 
+                className={`p-6 md:p-8 hover:shadow-card transition-all duration-500 border-0 bg-card/80 backdrop-blur-sm animate-fade-in relative overflow-hidden ${pkg.badge === 'FLAGSHIP' ? 'ring-2 ring-primary' : ''}`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                <div className="relative z-10">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-primary mb-4 flex items-center justify-center group-hover:shadow-glow transition-all duration-300 group-hover:scale-110">
-                    <service.icon className="w-6 h-6 text-white" />
+                {pkg.badge && (
+                  <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold ${pkg.badge === 'FLAGSHIP' ? 'bg-primary text-primary-foreground' : 'bg-accent text-accent-foreground'}`}>
+                    {pkg.badge}
                   </div>
-                  <h3 className="text-xl font-bold mb-3 text-foreground group-hover:text-primary transition-colors duration-300">{service.title}</h3>
-                  {service.tagline && (
-                    <p className="text-primary text-sm font-medium mb-2 italic">{service.tagline}</p>
-                  )}
-                  <p className="text-muted-foreground leading-relaxed mb-4">{service.description}</p>
-                  <ul className="space-y-2">
-                    {service.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <CheckCircle className="w-4 h-4 text-success flex-shrink-0" />
-                        {feature}
-                      </li>
-                    ))}
-                  </ul>
+                )}
+                
+                <div className="grid md:grid-cols-3 gap-6">
+                  {/* Left: Icon, Title, Meta */}
+                  <div className="md:col-span-1">
+                    <div className="w-14 h-14 rounded-lg bg-gradient-primary mb-4 flex items-center justify-center">
+                      <pkg.icon className="w-7 h-7 text-white" />
+                    </div>
+                    <h3 className="text-xl md:text-2xl font-bold mb-2 text-foreground">{pkg.title}</h3>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
+                      <Clock className="w-4 h-4" />
+                      <span>{pkg.timeline}</span>
+                    </div>
+                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                      <Users className="w-4 h-4" />
+                      <span>{pkg.idealFor}</span>
+                    </div>
+                  </div>
+                  
+                  {/* Middle: Description & Features */}
+                  <div className="md:col-span-1">
+                    <p className="text-muted-foreground mb-4">{pkg.description}</p>
+                    <ul className="space-y-2">
+                      {pkg.features.map((feature, idx) => (
+                        <li key={idx} className="flex items-center gap-2 text-sm text-foreground">
+                          <CheckCircle className="w-4 h-4 text-success flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  
+                  {/* Right: Results & CTA */}
+                  <div className="md:col-span-1 flex flex-col justify-between">
+                    {pkg.results && (
+                      <div className="mb-4">
+                        <p className="text-sm font-semibold text-foreground mb-3">Results you'll see:</p>
+                        <ul className="space-y-2">
+                          {pkg.results.map((result, idx) => (
+                            <li key={idx} className="flex items-center gap-2 text-sm text-success">
+                              <result.icon className="w-4 h-4 flex-shrink-0" />
+                              {result.text}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                    <Link to="/contact" className="mt-auto">
+                      <Button variant="hero" className="w-full">
+                        {pkg.cta} <ArrowRight className="w-4 h-4 ml-2" />
+                      </Button>
+                    </Link>
+                  </div>
                 </div>
               </Card>
             ))}
@@ -137,33 +247,22 @@ const ServicesPage = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-                Our Approach
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+                How We Work
               </h2>
               <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-                At EspiraNova, we prioritize a personalized approach. Every solution is designed to fit seamlessly 
-                into your workflow with transparent processes and unwavering support.
+                We're not like other developers. Here's what makes working with us different.
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-8 mb-12">
-              <div className="space-y-6">
-                {approach.slice(0, 3).map((item, index) => (
-                  <div key={index} className="flex items-start gap-4">
-                    <CheckCircle className="w-6 h-6 text-success mt-1 flex-shrink-0" />
-                    <p className="text-lg text-foreground">{item}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="space-y-6">
-                {approach.slice(3).map((item, index) => (
-                  <div key={index} className="flex items-start gap-4">
-                    <CheckCircle className="w-6 h-6 text-success mt-1 flex-shrink-0" />
-                    <p className="text-lg text-foreground">{item}</p>
-                  </div>
-                ))}
-              </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              {approach.map((item, index) => (
+                <div key={index} className="flex items-start gap-4 p-4 rounded-lg bg-card/50">
+                  <CheckCircle className="w-6 h-6 text-success mt-1 flex-shrink-0" />
+                  <p className="text-foreground">{item}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -174,15 +273,17 @@ const ServicesPage = () => {
         <div className="container mx-auto px-6">
           <Card className="p-8 md:p-12 bg-gradient-hero text-center max-w-4xl mx-auto">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Ready to Transform Your Business?
+              Not Sure Which Package is Right for You?
             </h3>
             <p className="text-white/90 text-lg leading-relaxed mb-8">
-              Let's discuss how our technology solutions can drive your business forward. 
-              Contact us today for a personalized consultation.
+              Get a free automation assessment. We'll analyze your current processes 
+              and recommend the best solution for your business.
             </p>
-            <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary">
-              Start Your Project
-            </Button>
+            <Link to="/contact">
+              <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary">
+                Get Free Assessment <ArrowRight className="w-4 h-4 ml-2" />
+              </Button>
+            </Link>
           </Card>
         </div>
       </section>

@@ -17,7 +17,7 @@ const ContactPage = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: ["+254 728 143 812"],
+      details: ["+254 783238429"],
     },
     {
       icon: Mail,
@@ -37,7 +37,7 @@ const ContactPage = () => {
         title="Contact EspiraNova - Get Your Technology Solution Today"
         description="Contact EspiraNova for custom software development, web applications, mobile apps, and AI solutions. Located in Nairobi, Kenya. Get a free consultation for your technology project."
         keywords="contact EspiraNova, software development consultation, technology solutions Kenya, custom software quote, web development services, API development"
-        url="https://espiranova.com/contact"
+        url="https://espiranova.co.ke/contact"
       />
       <Navigation />
       

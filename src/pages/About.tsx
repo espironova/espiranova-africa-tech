@@ -33,7 +33,7 @@ const AboutPage = () => {
         title="About EspiraNova - Leading Technology Solutions Provider in Africa"
         description="Learn about EspiraNova's mission to ignite digital transformation across Africa. Over 8 years of API engineering expertise, delivering innovative software solutions to empower businesses and communities."
         keywords="about EspiraNova, African technology company, Kenya based technology company, Website development company,custom software development company, POS systems,API development company,software development team, API engineering Kenya, digital transformation Africa, best websites, best custom software development, best API development, best POS systems, best software development team, best API engineering, best digital transformation, solutions for businesses, solutions for communities, solutions for Africa"
-        url="https://espiranova.com/about"
+        url="https://espiranova.co.ke/about"
       />
       <Navigation />
       

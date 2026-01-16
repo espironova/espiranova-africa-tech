@@ -24,6 +24,15 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				// Brand colors
+				brand: {
+					navy: 'hsl(var(--brand-navy))',
+					'deep-blue': 'hsl(var(--brand-deep-blue))',
+					blue: 'hsl(var(--brand-blue))',
+					cyan: 'hsl(var(--brand-cyan))',
+					'light-cyan': 'hsl(var(--brand-light-cyan))',
+					sky: 'hsl(var(--brand-sky))'
+				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))',
@@ -73,13 +82,15 @@ export default {
 				'gradient-hero': 'var(--gradient-hero)',
 				'gradient-accent': 'var(--gradient-accent)',
 				'gradient-interactive': 'var(--gradient-interactive)',
-				'gradient-hover': 'var(--gradient-hover)'
+				'gradient-hover': 'var(--gradient-hover)',
+				'gradient-navy': 'var(--gradient-navy)'
 			},
 			boxShadow: {
 				'glow': 'var(--shadow-glow)',
 				'card': 'var(--shadow-card)',
 				'elegant': 'var(--shadow-elegant)',
-				'intense': 'var(--shadow-intense)'
+				'intense': 'var(--shadow-intense)',
+				'cyan': 'var(--shadow-cyan)'
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -121,6 +132,14 @@ export default {
 						transform: 'translateY(-10px)'
 					}
 				},
+				'float-gentle': {
+					'0%, 100%': {
+						transform: 'translateY(0) rotate(-1deg)'
+					},
+					'50%': {
+						transform: 'translateY(-20px) rotate(1deg)'
+					}
+				},
 				'shimmer': {
 					'0%': {
 						transform: 'translateX(-100%)'
@@ -134,10 +153,10 @@ export default {
 						transform: 'scale(1) translateX(0) translateY(0)'
 					},
 					'33%': {
-						transform: 'scale(1.1) translateX(10px) translateY(-5px)'
+						transform: 'scale(1.05) translateX(5px) translateY(-3px)'
 					},
 					'66%': {
-						transform: 'scale(1.05) translateX(-5px) translateY(10px)'
+						transform: 'scale(1.02) translateX(-3px) translateY(5px)'
 					},
 					'100%': {
 						transform: 'scale(1) translateX(0) translateY(0)'
@@ -153,6 +172,16 @@ export default {
 						transform: 'translateY(0)'
 					}
 				},
+				'fade-in-up': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(30px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
 				'slide-up': {
 					'0%': {
 						transform: 'translateY(100%)',
@@ -161,6 +190,24 @@ export default {
 					'100%': {
 						transform: 'translateY(0)',
 						opacity: '1'
+					}
+				},
+				'slide-up-text': {
+					'0%': {
+						transform: 'translateY(100%)',
+						opacity: '0'
+					},
+					'10%': {
+						transform: 'translateY(0)',
+						opacity: '1'
+					},
+					'90%': {
+						transform: 'translateY(0)',
+						opacity: '1'
+					},
+					'100%': {
+						transform: 'translateY(-100%)',
+						opacity: '0'
 					}
 				},
 				'bounce-in': {
@@ -179,7 +226,7 @@ export default {
 						opacity: '1'
 					}
 				},
-				'slide-logos': {
+				'marquee': {
 					'0%': {
 						transform: 'translateX(0)'
 					},
@@ -187,18 +234,30 @@ export default {
 						transform: 'translateX(-50%)'
 					}
 				},
+				'pulse-glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 20px hsl(185 75% 50% / 0.4)'
+					},
+					'50%': {
+						boxShadow: '0 0 40px hsl(185 75% 50% / 0.6), 0 0 60px hsl(185 75% 50% / 0.3)'
+					}
+				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'glow': 'glow 3s ease-in-out infinite alternate',
 				'float': 'float 3s ease-in-out infinite',
+				'float-gentle': 'float-gentle 6s ease-in-out infinite',
 				'shimmer': 'shimmer 2s infinite',
-				'hero-move': 'hero-move 20s ease-in-out infinite',
-				'fade-in': 'fade-in 0.6s ease-out',
+				'hero-move': 'hero-move 25s ease-in-out infinite',
+				'fade-in': 'fade-in 0.6s ease-out forwards',
+				'fade-in-up': 'fade-in-up 0.8s ease-out forwards',
 				'slide-up': 'slide-up 0.6s cubic-bezier(0.23, 1, 0.32, 1)',
+				'slide-up-text': 'slide-up-text 3.5s ease-in-out',
 				'bounce-in': 'bounce-in 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55)',
-				'slide-logos': 'slide-logos 30s linear infinite',
+				'marquee': 'marquee 30s linear infinite',
+				'pulse-glow': 'pulse-glow 2s ease-in-out infinite'
 			}
 		}
 	},

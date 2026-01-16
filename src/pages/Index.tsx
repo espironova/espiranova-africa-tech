@@ -17,7 +17,8 @@ import {
   Zap,
   Server,
   CreditCard,
-  Headphones
+  Headphones,
+  Camera
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
@@ -25,11 +26,12 @@ import { FeaturedWorkCarousel } from "@/components/FeaturedWorkCarousel";
 
 const Index = () => {
   const painPoints = [
-    { icon: FileText, label: "Manual records" },
-    { icon: Table, label: "Excel sheets" },
-    { icon: ClipboardList, label: "Paper forms" },
-    { icon: MessageCircle, label: "WhatsApp approvals" },
-    { icon: Globe, label: "Outdated websites" },
+    { icon: Table, label: "Excel Sheets" },
+    { icon: ClipboardList, label: "Paper Forms" },
+    { icon: Camera, label: "Photo Records" },
+    { icon: MessageCircle, label: "WhatsApp Approvals" },
+    { icon: Globe, label: "Outdated Websites" },
+    { icon: FileText, label: "Manual Records" },
   ];
 
   const coreServices = [
@@ -94,38 +96,67 @@ const Index = () => {
       <Navigation />
       <Hero />
       
-      {/* Pain Points Section */}
-      <section className="py-20 bg-background relative overflow-hidden">
-        <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-gradient-primary opacity-10 blur-3xl"></div>
+      {/* Pain Points Section - Animated Marquee */}
+      <section className="py-20 md:py-28 bg-gradient-to-b from-brand-sky/30 to-background relative overflow-hidden">
+        {/* Decorative elements */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 left-1/4 w-64 h-64 bg-brand-cyan/5 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-brand-blue/5 rounded-full blur-3xl" />
         </div>
+        
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
-              Most Businesses Waste Hours Every Day On...
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
+              Still Running Your Business On...
             </h2>
             <div className="w-24 h-1 bg-gradient-primary mx-auto"></div>
           </div>
           
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 max-w-5xl mx-auto mb-12">
-            {painPoints.map((point, index) => (
-              <Card 
-                key={index} 
-                className="p-6 text-center border-destructive/20 bg-destructive/5 hover:bg-destructive/10 transition-all duration-300 animate-fade-in"
-                style={{ animationDelay: `${index * 100}ms` }}
-              >
-                <div className="w-12 h-12 rounded-full bg-destructive/20 mb-4 flex items-center justify-center mx-auto">
-                  <point.icon className="w-6 h-6 text-destructive" />
+          {/* Animated Marquee */}
+          <div className="marquee-container py-8 mb-12">
+            <div className="marquee-content">
+              {/* First set of items */}
+              {painPoints.map((point, index) => (
+                <div 
+                  key={`first-${index}`}
+                  className="flex-shrink-0 group"
+                >
+                  <Card className="px-8 py-6 border-destructive/30 bg-destructive/5 hover:bg-destructive/10 hover:scale-105 transition-all duration-300 cursor-pointer min-w-[180px]">
+                    <div className="flex flex-col items-center gap-3">
+                      <div className="w-14 h-14 rounded-xl bg-destructive/20 flex items-center justify-center group-hover:bg-destructive/30 transition-colors">
+                        <point.icon className="w-7 h-7 text-destructive" />
+                      </div>
+                      <p className="text-sm font-semibold text-foreground whitespace-nowrap">{point.label}</p>
+                    </div>
+                  </Card>
                 </div>
-                <p className="text-sm font-medium text-foreground">{point.label}</p>
-              </Card>
-            ))}
+              ))}
+              {/* Duplicate set for seamless loop */}
+              {painPoints.map((point, index) => (
+                <div 
+                  key={`second-${index}`}
+                  className="flex-shrink-0 group"
+                >
+                  <Card className="px-8 py-6 border-destructive/30 bg-destructive/5 hover:bg-destructive/10 hover:scale-105 transition-all duration-300 cursor-pointer min-w-[180px]">
+                    <div className="flex flex-col items-center gap-3">
+                      <div className="w-14 h-14 rounded-xl bg-destructive/20 flex items-center justify-center group-hover:bg-destructive/30 transition-colors">
+                        <point.icon className="w-7 h-7 text-destructive" />
+                      </div>
+                      <p className="text-sm font-semibold text-foreground whitespace-nowrap">{point.label}</p>
+                    </div>
+                  </Card>
+                </div>
+              ))}
+            </div>
           </div>
           
-          <div className="text-center">
-            <Card className="inline-block p-6 md:p-8 bg-success/10 border-success/20">
-              <p className="text-lg md:text-xl font-semibold text-foreground">
-                We replace all that with <span className="text-success">simple, custom-built systems</span> — delivered fast using advanced development workflows.
+          {/* Solution Statement */}
+          <div className="text-center max-w-3xl mx-auto">
+            <Card className="p-8 md:p-10 bg-gradient-to-r from-brand-cyan/10 via-brand-blue/10 to-brand-cyan/10 border-brand-cyan/30 shadow-cyan">
+              <p className="text-xl md:text-2xl font-semibold text-foreground leading-relaxed">
+                We replace all that with{" "}
+                <span className="glow-text-cyan">simple, custom-built systems</span>
+                {" "}— built only for <span className="text-brand-cyan font-bold">YOUR</span> business.
               </p>
             </Card>
           </div>
@@ -133,13 +164,13 @@ const Index = () => {
       </section>
 
       {/* Core Services */}
-      <section className="py-20 bg-muted/30 relative overflow-hidden">
+      <section className="py-20 md:py-28 bg-muted/30 relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
-          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/20 via-transparent to-accent/20"></div>
+          <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-brand-blue/20 via-transparent to-brand-cyan/20"></div>
         </div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
               Our Core Services
             </h2>
             <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>
@@ -152,10 +183,10 @@ const Index = () => {
             {coreServices.map((service, index) => (
               <Card 
                 key={index} 
-                className="p-6 hover:shadow-card transition-all duration-500 border-0 bg-card/80 backdrop-blur-sm group hover:scale-105 animate-fade-in relative overflow-hidden"
+                className="p-6 hover:shadow-cyan transition-all duration-500 border-0 bg-card/80 backdrop-blur-sm group hover:scale-105 animate-fade-in relative overflow-hidden"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-brand-blue/5 to-brand-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative z-10">
                   <div className="w-12 h-12 rounded-lg bg-gradient-primary mb-4 flex items-center justify-center group-hover:shadow-glow transition-all duration-300 group-hover:scale-110">
                     <service.icon className="w-6 h-6 text-white" />
@@ -169,7 +200,7 @@ const Index = () => {
           
           <div className="text-center mt-12">
             <Link to="/services">
-              <Button variant="hero" size="lg">
+              <Button variant="hero" size="lg" className="bg-gradient-primary hover:shadow-cyan transition-all duration-300">
                 View All Packages <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Link>
@@ -178,13 +209,13 @@ const Index = () => {
       </section>
 
       {/* Why EspiraNova */}
-      <section className="py-20 bg-background relative overflow-hidden">
+      <section className="py-20 md:py-28 bg-background relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-gradient-accent blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-brand-cyan/20 blur-3xl"></div>
         </div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
               Why EspiraNova?
             </h2>
             <div className="w-24 h-1 bg-gradient-primary mx-auto"></div>
@@ -194,7 +225,7 @@ const Index = () => {
             {whyEspiraNova.map((item, index) => (
               <Card 
                 key={index} 
-                className="p-6 text-center hover:shadow-card transition-all duration-500 border-0 bg-card/50 backdrop-blur-sm group hover:scale-105 animate-fade-in"
+                className="p-6 text-center hover:shadow-cyan transition-all duration-500 border-0 bg-card/50 backdrop-blur-sm group hover:scale-105 animate-fade-in"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
                 <div className="w-14 h-14 rounded-full bg-gradient-primary mb-4 flex items-center justify-center mx-auto group-hover:shadow-glow transition-all duration-300">
@@ -209,15 +240,15 @@ const Index = () => {
       </section>
       
       {/* Featured Projects Carousel */}
-      <section className="py-20 bg-muted/30 relative overflow-hidden">
+      <section className="py-20 md:py-28 bg-muted/30 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-gradient-primary blur-3xl"></div>
-          <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-gradient-accent blur-3xl"></div>
+          <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-brand-blue/20 blur-3xl"></div>
+          <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-brand-cyan/20 blur-3xl"></div>
         </div>
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
               Featured Work
             </h2>
             <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>
@@ -230,7 +261,7 @@ const Index = () => {
           
           <div className="text-center mt-12">
             <Link to="/portfolio">
-              <Button variant="outline" size="lg" className="hover:scale-105 transition-all duration-300">
+              <Button variant="outline" size="lg" className="hover:scale-105 transition-all duration-300 border-brand-cyan/50 hover:border-brand-cyan hover:bg-brand-cyan/10">
                 View All Projects <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Link>
@@ -239,23 +270,23 @@ const Index = () => {
       </section>
       
       {/* CTA Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 md:py-28 bg-background">
         <div className="container mx-auto px-6">
-          <Card className="p-8 md:p-12 bg-gradient-hero text-center max-w-4xl mx-auto">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+          <Card className="p-8 md:p-12 bg-gradient-hero text-center max-w-4xl mx-auto border-0 shadow-cyan">
+            <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
               Ready to Eliminate Manual Work?
             </h3>
-            <p className="text-white/90 text-lg leading-relaxed mb-8">
+            <p className="text-white/90 text-lg leading-relaxed mb-8 max-w-2xl mx-auto">
               Get a free automation assessment and discover how much time and money you could save with simple, custom-built systems.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/portfolio">
-                <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary">
+                <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-brand-navy">
                   View Our Work
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button variant="accent" size="lg">
+                <Button size="lg" className="bg-brand-cyan hover:bg-brand-light-cyan text-brand-navy font-semibold">
                   Get Free Assessment <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>

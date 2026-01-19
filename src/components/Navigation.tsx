@@ -21,27 +21,27 @@ export const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-brand-navy/90 backdrop-blur-md transition-all duration-300 border-b border-brand-cyan/10">
-      <div className="container mx-auto px-6">
-        <div className="flex items-center justify-between h-20">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-brand-navy/95 backdrop-blur-md transition-all duration-300 border-b border-brand-cyan/10">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="flex items-center justify-between h-24 py-7">
           <Link to="/" className="flex items-center hover:opacity-90 transition-opacity">
             <img 
               src={logo} 
               alt="EspiraNova" 
-              className="h-8 md:h-9 w-auto"
+              className="h-14 md:h-16 w-auto"
             />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center gap-12">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 to={item.href}
-                className={`text-sm font-medium transition-all duration-300 nav-link hover:scale-105 ${
+                className={`text-lg font-semibold tracking-wide transition-all duration-300 hover:scale-105 ${
                   isActive(item.href) 
                     ? "text-brand-cyan" 
-                    : "text-white/80 hover:text-brand-cyan"
+                    : "text-white/90 hover:text-brand-cyan"
                 }`}
               >
                 {item.label}

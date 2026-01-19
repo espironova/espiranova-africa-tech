@@ -28,7 +28,7 @@ export const Navigation = () => {
             <img 
               src={logo} 
               alt="EspiraNova" 
-              className="h-14 md:h-16 w-auto"
+              className="h-8 md:h-9 w-auto"
             />
           </Link>
 

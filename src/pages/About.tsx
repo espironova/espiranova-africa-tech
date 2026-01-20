@@ -40,17 +40,17 @@ const AboutPage = () => {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-hero-move"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-hero-move scale-105"
           style={{ backgroundImage: `url(/lovable-uploads/93de2e72-0ee8-43e9-aafb-0e4b80c79f3a.png)` }}
           role="img"
           aria-label="EspiraNova team and technology solutions in Africa"
         />
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
         <div className="relative z-10 container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
             About EspiraNova
           </h1>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Igniting digital transformation across Africa with passion, expertise, and innovation.
           </p>
         </div>
@@ -67,7 +67,7 @@ const AboutPage = () => {
               <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>
             </div>
             
-            <Card className="p-8 md:p-12 shadow-card border-0 bg-card">
+            <Card className="p-8 md:p-12 shadow-card border-0 bg-card hover:shadow-elegant transition-all duration-500">
               <p className="text-lg leading-relaxed text-muted-foreground mb-6">
                 <strong className="text-foreground">EspiraNova</strong> is an innovative technology solutions provider 
                 committed to igniting digital transformation across Africa. Born from a passion to inspire progress 
@@ -76,7 +76,7 @@ const AboutPage = () => {
               </p>
               
               
-              <div className="bg-gradient-hero p-6 rounded-lg">
+              <div className="bg-gradient-hero p-6 rounded-lg hover:shadow-glow transition-all duration-300">
                 <h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
                 <p className="text-white/90 text-lg">
                   To be the catalyst for new possibilities, empowering businesses with simple, impactful technology.
@@ -102,8 +102,12 @@ const AboutPage = () => {
           
           <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             {values.map((value, index) => (
-              <Card key={index} className="p-8 text-center hover:shadow-card transition-all duration-300 border-0 bg-card group hover:scale-105">
-                <div className={`w-16 h-16 rounded-full bg-gradient-to-r ${value.gradient} mx-auto mb-6 flex items-center justify-center group-hover:shadow-glow transition-all duration-300`}>
+              <Card 
+                key={index} 
+                className="p-8 text-center hover:shadow-card transition-all duration-500 border-0 bg-card group hover:scale-105 hover:-translate-y-2 animate-fade-in"
+                style={{ animationDelay: `${index * 150}ms` }}
+              >
+                <div className={`w-16 h-16 rounded-full bg-gradient-to-r ${value.gradient} mx-auto mb-6 flex items-center justify-center group-hover:shadow-glow transition-all duration-300 animate-float group-hover:animate-none`}>
                   <value.icon className="w-8 h-8 text-white" />
                 </div>
                 <h3 className="text-xl font-bold mb-4 text-foreground">{value.title}</h3>
@@ -137,7 +141,7 @@ const AboutPage = () => {
                 title="Package Yangu Logistics - Logistics Platform by EspiraNova"
                 loading="lazy"
                 decoding="async"
-                className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
+                className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110"
               />
               <img 
                 src="/lovable-uploads/cozy-invoice-screenshot.png" 
@@ -145,7 +149,7 @@ const AboutPage = () => {
                 title="Cozy Invoice - Invoicing Management Software by EspiraNova"
                 loading="lazy"
                 decoding="async"
-                className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
+                className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110"
               />
               <img 
                 src="/lovable-uploads/glorious-mission-outreach.jpg" 
@@ -153,14 +157,14 @@ const AboutPage = () => {
                 title="Glorious Mission Outreach - Church Digital Solutions by EspiraNova"
                 loading="lazy"
                 decoding="async"
-                className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
+                className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110"
               />
               <img
                 src={sharedLogo}
                 alt="Shared partner logo"
                 loading="lazy"
                 decoding="async"
-                className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity duration-300"
+                className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110"
               />
 
               {/* Duplicate set for seamless loop */}
@@ -205,7 +209,7 @@ const AboutPage = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <Card className="p-8 md:p-12 bg-gradient-hero text-center">
+            <Card className="p-8 md:p-12 bg-gradient-hero text-center hover:shadow-intense transition-all duration-500">
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
                 Our Roots
               </h3>

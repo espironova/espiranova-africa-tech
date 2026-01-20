@@ -136,17 +136,17 @@ const ServicesPage = () => {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-hero-move"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-hero-move scale-105"
           style={{ backgroundImage: `url(/lovable-uploads/dad02b7e-ac50-4612-8d4e-b6d45e772c11.png)` }}
           role="img"
           aria-label="EspiraNova services: SME automation, web apps, digital migration"
         />
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
         <div className="relative z-10 container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fade-in">
             Solutions That Actually Solve Problems
           </h1>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto">
+          <p className="text-xl text-white/90 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Choose from focused service packages designed for African SMEs. 
             No fluff, just working systems delivered fast.
           </p>
@@ -175,19 +175,22 @@ const ServicesPage = () => {
             {packages.map((pkg, index) => (
               <Card 
                 key={pkg.id} 
-                className={`p-6 md:p-8 hover:shadow-card transition-all duration-500 border-0 bg-card/80 backdrop-blur-sm animate-fade-in relative overflow-hidden ${pkg.badge === 'FLAGSHIP' ? 'ring-2 ring-primary' : ''}`}
+                className={`p-6 md:p-8 hover:shadow-cyan transition-all duration-500 border-0 bg-card/80 backdrop-blur-sm animate-fade-in relative overflow-hidden group hover:-translate-y-1 ${pkg.badge === 'FLAGSHIP' ? 'ring-2 ring-primary' : ''}`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
+                {/* Hover gradient overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-brand-blue/5 to-brand-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                
                 {pkg.badge && (
-                  <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold ${pkg.badge === 'FLAGSHIP' ? 'bg-primary text-primary-foreground' : 'bg-accent text-accent-foreground'}`}>
+                  <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold animate-pulse-glow ${pkg.badge === 'FLAGSHIP' ? 'bg-primary text-primary-foreground' : 'bg-accent text-accent-foreground'}`}>
                     {pkg.badge}
                   </div>
                 )}
                 
-                <div className="grid md:grid-cols-3 gap-6">
+                <div className="grid md:grid-cols-3 gap-6 relative z-10">
                   {/* Left: Icon, Title, Meta */}
                   <div className="md:col-span-1">
-                    <div className="w-14 h-14 rounded-lg bg-gradient-primary mb-4 flex items-center justify-center">
+                    <div className="w-14 h-14 rounded-lg bg-gradient-primary mb-4 flex items-center justify-center group-hover:shadow-glow transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
                       <pkg.icon className="w-7 h-7 text-white" />
                     </div>
                     <h3 className="text-xl md:text-2xl font-bold mb-2 text-foreground">{pkg.title}</h3>
@@ -206,8 +209,8 @@ const ServicesPage = () => {
                     <p className="text-muted-foreground mb-4">{pkg.description}</p>
                     <ul className="space-y-2">
                       {pkg.features.map((feature, idx) => (
-                        <li key={idx} className="flex items-center gap-2 text-sm text-foreground">
-                          <CheckCircle className="w-4 h-4 text-success flex-shrink-0" />
+                        <li key={idx} className="flex items-center gap-2 text-sm text-foreground group/item">
+                          <CheckCircle className="w-4 h-4 text-success flex-shrink-0 transition-transform duration-300 group-hover/item:scale-110" />
                           {feature}
                         </li>
                       ))}
@@ -230,8 +233,8 @@ const ServicesPage = () => {
                       </div>
                     )}
                     <Link to="/contact" className="mt-auto">
-                      <Button variant="hero" className="w-full">
-                        {pkg.cta} <ArrowRight className="w-4 h-4 ml-2" />
+                      <Button variant="hero" className="w-full group/btn hover:shadow-glow transition-all duration-300">
+                        {pkg.cta} <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover/btn:translate-x-1" />
                       </Button>
                     </Link>
                   </div>
@@ -258,8 +261,12 @@ const ServicesPage = () => {
             
             <div className="grid md:grid-cols-2 gap-6">
               {approach.map((item, index) => (
-                <div key={index} className="flex items-start gap-4 p-4 rounded-lg bg-card/50">
-                  <CheckCircle className="w-6 h-6 text-success mt-1 flex-shrink-0" />
+                <div 
+                  key={index} 
+                  className="flex items-start gap-4 p-4 rounded-lg bg-card/50 hover:bg-card transition-all duration-300 hover:shadow-card group animate-fade-in"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <CheckCircle className="w-6 h-6 text-success mt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110" />
                   <p className="text-foreground">{item}</p>
                 </div>
               ))}
@@ -271,7 +278,7 @@ const ServicesPage = () => {
       {/* CTA Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
-          <Card className="p-8 md:p-12 bg-gradient-hero text-center max-w-4xl mx-auto">
+          <Card className="p-8 md:p-12 bg-gradient-hero text-center max-w-4xl mx-auto hover:shadow-intense transition-all duration-500">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
               Not Sure Which Package is Right for You?
             </h3>
@@ -280,7 +287,7 @@ const ServicesPage = () => {
               and recommend the best solution for your business.
             </p>
             <Link to="/contact">
-              <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary">
+              <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary transition-all duration-300 hover:scale-105">
                 Get Free Assessment <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Link>

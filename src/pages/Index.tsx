@@ -23,6 +23,7 @@ import {
 import { Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import { FeaturedWorkCarousel } from "@/components/FeaturedWorkCarousel";
+import logo from "@/assets/espiranova-logo-main.jpg";
 
 const Index = () => {
   const painPoints = [
@@ -98,15 +99,25 @@ const Index = () => {
       
       {/* Pain Points Section - Animated Marquee */}
       <section className="py-20 md:py-28 bg-gradient-to-b from-brand-sky/30 to-background relative overflow-hidden">
+        {/* Blurred Logo Watermark Background */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+          <img 
+            src={logo}
+            alt=""
+            aria-hidden="true"
+            className="w-[600px] h-auto opacity-[0.04] blur-xl"
+          />
+        </div>
+        
         {/* Decorative elements */}
         <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 left-1/4 w-64 h-64 bg-brand-cyan/5 rounded-full blur-3xl" />
+          <div className="absolute top-0 left-1/4 w-64 h-64 bg-brand-cyan/5 rounded-full blur-3xl animate-pulse-glow" />
           <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-brand-blue/5 rounded-full blur-3xl" />
         </div>
         
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground animate-fade-in">
               Still Running Your Business On...
             </h2>
             <div className="w-24 h-1 bg-gradient-primary mx-auto"></div>
@@ -121,10 +132,10 @@ const Index = () => {
                   key={`first-${index}`}
                   className="flex-shrink-0 group"
                 >
-                  <Card className="px-8 py-6 border-destructive/30 bg-destructive/5 hover:bg-destructive/10 hover:scale-105 transition-all duration-300 cursor-pointer min-w-[180px]">
+                  <Card className="px-8 py-6 border-destructive/30 bg-destructive/5 hover:bg-destructive/10 hover:scale-105 transition-all duration-300 cursor-pointer min-w-[180px] hover:shadow-lg">
                     <div className="flex flex-col items-center gap-3">
-                      <div className="w-14 h-14 rounded-xl bg-destructive/20 flex items-center justify-center group-hover:bg-destructive/30 transition-colors">
-                        <point.icon className="w-7 h-7 text-destructive" />
+                      <div className="w-14 h-14 rounded-xl bg-destructive/20 flex items-center justify-center group-hover:bg-destructive/30 transition-all duration-300 group-hover:rotate-6">
+                        <point.icon className="w-7 h-7 text-destructive transition-transform duration-300 group-hover:scale-110" />
                       </div>
                       <p className="text-sm font-semibold text-foreground whitespace-nowrap">{point.label}</p>
                     </div>
@@ -137,10 +148,10 @@ const Index = () => {
                   key={`second-${index}`}
                   className="flex-shrink-0 group"
                 >
-                  <Card className="px-8 py-6 border-destructive/30 bg-destructive/5 hover:bg-destructive/10 hover:scale-105 transition-all duration-300 cursor-pointer min-w-[180px]">
+                  <Card className="px-8 py-6 border-destructive/30 bg-destructive/5 hover:bg-destructive/10 hover:scale-105 transition-all duration-300 cursor-pointer min-w-[180px] hover:shadow-lg">
                     <div className="flex flex-col items-center gap-3">
-                      <div className="w-14 h-14 rounded-xl bg-destructive/20 flex items-center justify-center group-hover:bg-destructive/30 transition-colors">
-                        <point.icon className="w-7 h-7 text-destructive" />
+                      <div className="w-14 h-14 rounded-xl bg-destructive/20 flex items-center justify-center group-hover:bg-destructive/30 transition-all duration-300 group-hover:rotate-6">
+                        <point.icon className="w-7 h-7 text-destructive transition-transform duration-300 group-hover:scale-110" />
                       </div>
                       <p className="text-sm font-semibold text-foreground whitespace-nowrap">{point.label}</p>
                     </div>
@@ -152,7 +163,7 @@ const Index = () => {
           
           {/* Solution Statement */}
           <div className="text-center max-w-3xl mx-auto">
-            <Card className="p-8 md:p-10 bg-gradient-to-r from-brand-cyan/10 via-brand-blue/10 to-brand-cyan/10 border-brand-cyan/30 shadow-cyan">
+            <Card className="p-8 md:p-10 bg-gradient-to-r from-brand-cyan/10 via-brand-blue/10 to-brand-cyan/10 border-brand-cyan/30 shadow-cyan hover:shadow-intense transition-all duration-500">
               <p className="text-xl md:text-2xl font-semibold text-foreground leading-relaxed">
                 We replace all that with{" "}
                 <span className="glow-text-cyan">simple, custom-built systems</span>
@@ -183,12 +194,12 @@ const Index = () => {
             {coreServices.map((service, index) => (
               <Card 
                 key={index} 
-                className="p-6 hover:shadow-cyan transition-all duration-500 border-0 bg-card/80 backdrop-blur-sm group hover:scale-105 animate-fade-in relative overflow-hidden"
+                className="p-6 hover:shadow-cyan transition-all duration-500 border-0 bg-card/80 backdrop-blur-sm group hover:scale-105 animate-fade-in relative overflow-hidden hover:-translate-y-2"
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-brand-blue/5 to-brand-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="relative z-10">
-                  <div className="w-12 h-12 rounded-lg bg-gradient-primary mb-4 flex items-center justify-center group-hover:shadow-glow transition-all duration-300 group-hover:scale-110">
+                  <div className="w-12 h-12 rounded-lg bg-gradient-primary mb-4 flex items-center justify-center group-hover:shadow-glow transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
                     <service.icon className="w-6 h-6 text-white" />
                   </div>
                   <h3 className="text-lg font-bold mb-3 text-foreground">{service.title}</h3>
@@ -200,8 +211,8 @@ const Index = () => {
           
           <div className="text-center mt-12">
             <Link to="/services">
-              <Button variant="hero" size="lg" className="bg-gradient-primary hover:shadow-cyan transition-all duration-300">
-                View All Packages <ArrowRight className="w-4 h-4 ml-2" />
+              <Button variant="hero" size="lg" className="bg-gradient-primary hover:shadow-cyan transition-all duration-300 hover:scale-105 btn-magnetic">
+                View All Packages <ArrowRight className="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
               </Button>
             </Link>
           </div>
@@ -211,7 +222,7 @@ const Index = () => {
       {/* Why EspiraNova */}
       <section className="py-20 md:py-28 bg-background relative overflow-hidden">
         <div className="absolute inset-0 opacity-10">
-          <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-brand-cyan/20 blur-3xl"></div>
+          <div className="absolute bottom-0 right-0 w-96 h-96 rounded-full bg-brand-cyan/20 blur-3xl animate-pulse"></div>
         </div>
         <div className="container mx-auto px-6 relative z-10">
           <div className="text-center mb-16">
@@ -225,10 +236,10 @@ const Index = () => {
             {whyEspiraNova.map((item, index) => (
               <Card 
                 key={index} 
-                className="p-6 text-center hover:shadow-cyan transition-all duration-500 border-0 bg-card/50 backdrop-blur-sm group hover:scale-105 animate-fade-in"
+                className="p-6 text-center hover:shadow-cyan transition-all duration-500 border-0 bg-card/50 backdrop-blur-sm group hover:scale-105 animate-fade-in hover:-translate-y-2"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                <div className="w-14 h-14 rounded-full bg-gradient-primary mb-4 flex items-center justify-center mx-auto group-hover:shadow-glow transition-all duration-300">
+                <div className="w-14 h-14 rounded-full bg-gradient-primary mb-4 flex items-center justify-center mx-auto group-hover:shadow-glow transition-all duration-300 animate-float group-hover:animate-none">
                   <item.icon className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="text-lg font-bold mb-2 text-foreground">{item.title}</h3>
@@ -272,7 +283,7 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-20 md:py-28 bg-background">
         <div className="container mx-auto px-6">
-          <Card className="p-8 md:p-12 bg-gradient-hero text-center max-w-4xl mx-auto border-0 shadow-cyan">
+          <Card className="p-8 md:p-12 bg-gradient-hero text-center max-w-4xl mx-auto border-0 shadow-cyan hover:shadow-intense transition-all duration-500">
             <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
               Ready to Eliminate Manual Work?
             </h3>
@@ -281,12 +292,12 @@ const Index = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/portfolio">
-                <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-brand-navy">
+                <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-brand-navy transition-all duration-300 hover:scale-105">
                   View Our Work
                 </Button>
               </Link>
               <Link to="/contact">
-                <Button size="lg" className="bg-brand-cyan hover:bg-brand-light-cyan text-brand-navy font-semibold">
+                <Button size="lg" className="bg-brand-cyan hover:bg-brand-light-cyan text-brand-navy font-semibold transition-all duration-300 hover:scale-105 hover:shadow-glow">
                   Get Free Assessment <ArrowRight className="w-4 h-4 ml-2" />
                 </Button>
               </Link>

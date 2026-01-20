@@ -44,15 +44,15 @@ const ContactPage = () => {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(/src/assets/hero-bg.jpg)` }}
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
+          style={{ backgroundImage: `url(/lovable-uploads/hero-tech-bg.jpg)`, filter: 'blur(2px)' }}
         />
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
         <div className="relative z-10 container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
             Get In Touch
           </h1>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto">
+          <p className="text-xl text-white/90 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Let's shape tomorrow together. Contact us to discover how EspiraNova 
             can elevate your business operations.
           </p>
@@ -64,21 +64,27 @@ const ContactPage = () => {
         <div className="container mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Contact Form */}
-            <Card className="p-8 border-0 bg-card shadow-card">
+            <Card className="p-8 border-0 bg-card shadow-card hover:shadow-elegant transition-all duration-500 animate-fade-in">
               <h2 className="text-2xl font-bold mb-6 text-foreground">Send Us a Message</h2>
               <form className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
-                  <div>
+                  <div className="group">
                     <label className="text-sm font-medium text-foreground mb-2 block">
                       First Name *
                     </label>
-                    <Input placeholder="Your first name" />
+                    <Input 
+                      placeholder="Your first name" 
+                      className="focus-ring-animate transition-all duration-300 focus:scale-[1.01]"
+                    />
                   </div>
-                  <div>
+                  <div className="group">
                     <label className="text-sm font-medium text-foreground mb-2 block">
                       Last Name *
                     </label>
-                    <Input placeholder="Your last name" />
+                    <Input 
+                      placeholder="Your last name" 
+                      className="focus-ring-animate transition-all duration-300 focus:scale-[1.01]"
+                    />
                   </div>
                 </div>
                 
@@ -86,21 +92,28 @@ const ContactPage = () => {
                   <label className="text-sm font-medium text-foreground mb-2 block">
                     Email *
                   </label>
-                  <Input type="email" placeholder="your.email@example.com" />
+                  <Input 
+                    type="email" 
+                    placeholder="your.email@example.com" 
+                    className="focus-ring-animate transition-all duration-300 focus:scale-[1.01]"
+                  />
                 </div>
                 
                 <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">
                     Phone Number
                   </label>
-                  <Input placeholder="+254 XXX XXX XXX" />
+                  <Input 
+                    placeholder="+254 XXX XXX XXX" 
+                    className="focus-ring-animate transition-all duration-300 focus:scale-[1.01]"
+                  />
                 </div>
                 
                 <div>
                   <label className="text-sm font-medium text-foreground mb-2 block">
                     Project Type
                   </label>
-                  <select className="w-full px-3 py-2 border border-input bg-background rounded-md text-foreground">
+                  <select className="w-full px-3 py-2 border border-input bg-background rounded-md text-foreground focus-ring-animate transition-all duration-300 focus:scale-[1.01]">
                     <option>Select a service</option>
                     <option>Custom Software Development</option>
                     <option>Web Application</option>
@@ -118,11 +131,12 @@ const ContactPage = () => {
                   <Textarea 
                     placeholder="Tell us about your project requirements..." 
                     rows={5}
+                    className="focus-ring-animate transition-all duration-300 focus:scale-[1.01]"
                   />
                 </div>
                 
-                <Button variant="hero" size="lg" className="w-full">
-                  <Send className="w-4 h-4 mr-2" />
+                <Button variant="hero" size="lg" className="w-full group hover:shadow-glow transition-all duration-300 hover:scale-[1.02]">
+                  <Send className="w-4 h-4 mr-2 transition-transform duration-300 group-hover:translate-x-1" />
                   Send Message
                 </Button>
               </form>
@@ -130,7 +144,7 @@ const ContactPage = () => {
 
             {/* Contact Information */}
             <div className="space-y-6">
-              <div className="mb-8">
+              <div className="mb-8 animate-fade-in">
                 <h2 className="text-2xl font-bold mb-4 text-foreground">Contact Information</h2>
                 <p className="text-muted-foreground leading-relaxed">
                   Ready to transform your business with innovative technology solutions? 
@@ -139,9 +153,13 @@ const ContactPage = () => {
               </div>
 
               {contactInfo.map((info, index) => (
-                <Card key={index} className="p-6 bg-card border-0 hover:shadow-card transition-all duration-300">
+                <Card 
+                  key={index} 
+                  className="p-6 bg-card border-0 hover:shadow-cyan transition-all duration-500 group hover:scale-[1.02] hover:-translate-y-1 animate-fade-in"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center flex-shrink-0">
+                    <div className="w-12 h-12 rounded-lg bg-gradient-primary flex items-center justify-center flex-shrink-0 group-hover:shadow-glow transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
                       <info.icon className="w-6 h-6 text-white" />
                     </div>
                     <div>
@@ -163,9 +181,19 @@ const ContactPage = () => {
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-6 text-foreground">Find Us</h2>
-            <Card className="p-8 bg-card border-0 shadow-card">
-              <div className="bg-muted rounded-lg h-64 flex items-center justify-center mb-6">
-                <p className="text-muted-foreground">Interactive Map Placeholder</p>
+            <Card className="p-8 bg-card border-0 shadow-card hover:shadow-elegant transition-all duration-500">
+              <div className="bg-muted rounded-lg h-64 flex items-center justify-center mb-6 overflow-hidden">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8193191051064!2d36.7878!3d-1.2891!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMcKwMTcnMjAuOCJTIDM2wrA0NycxNi4xIkU!5e0!3m2!1sen!2ske!4v1234567890"
+                  width="100%"
+                  height="256"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  className="rounded-lg"
+                  title="EspiraNova Location Map"
+                />
               </div>
               <p className="text-muted-foreground">
                 Located in the heart of Nairobi, we're easily accessible and ready to meet 
@@ -180,7 +208,7 @@ const ContactPage = () => {
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <Card className="p-8 md:p-12 bg-gradient-hero text-center">
+            <Card className="p-8 md:p-12 bg-gradient-hero text-center hover:shadow-intense transition-all duration-500">
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
                 Our Commitment to Africa
               </h3>

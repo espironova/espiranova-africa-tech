@@ -253,7 +253,6 @@ All colors MUST be HSL - Based on EspiraNova Logo Colors
       opacity: 0;
     }
   }
-
   @keyframes marquee {
     0% {
       transform: translateX(0);
@@ -261,5 +260,73 @@ All colors MUST be HSL - Based on EspiraNova Logo Colors
     100% {
       transform: translateX(-50%);
     }
+  }
+
+  /* Scroll reveal animations */
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .scroll-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Enhanced card hover effects */
+  .card-hover-lift {
+    @apply transition-all duration-500;
+  }
+
+  .card-hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -15px hsl(185 75% 50% / 0.3);
+  }
+
+  /* Gradient border animation */
+  .gradient-border {
+    position: relative;
+    background: linear-gradient(var(--background), var(--background)) padding-box,
+                linear-gradient(135deg, hsl(210 85% 45%), hsl(185 75% 50%)) border-box;
+    border: 2px solid transparent;
+  }
+
+  /* Image hover zoom effect */
+  .image-zoom {
+    @apply overflow-hidden;
+  }
+
+  .image-zoom img {
+    @apply transition-transform duration-500;
+  }
+
+  .image-zoom:hover img {
+    transform: scale(1.08);
+  }
+
+  /* Staggered animation helper */
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+
+  /* Focus ring animation for form fields */
+  .focus-ring-animate {
+    @apply transition-all duration-300;
+  }
+
+  .focus-ring-animate:focus {
+    box-shadow: 0 0 0 3px hsl(185 75% 50% / 0.3);
+    border-color: hsl(185 75% 50%);
+  }
+
+  /* Subtle parallax background */
+  .parallax-bg {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 }

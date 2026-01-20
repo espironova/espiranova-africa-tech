@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink, Calendar, Users, TrendingUp } from "lucide-react";
 import { SEO } from "@/components/SEO";
+import { Link } from "react-router-dom";
 
 const PortfolioPage = () => {
   const projects = [
@@ -101,17 +102,17 @@ const PortfolioPage = () => {
       {/* Hero Section */}
       <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
         <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-hero-move"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-hero-move scale-105"
           style={{ backgroundImage: `url(/lovable-uploads/680b85d9-b389-4be9-9b2a-7638c311663e.png)` }}
           role="img"
           aria-label="EspiraNova featured work in logistics, invoicing, inventory, legal tech"
         />
-        <div className="absolute inset-0 bg-black/60" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
         <div className="relative z-10 container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
             Featured Work
           </h1>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto">
+          <p className="text-xl text-white/90 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Discover our portfolio of successful projects that showcase our expertise in 
             creating innovative digital solutions for diverse industries.
           </p>
@@ -123,8 +124,12 @@ const PortfolioPage = () => {
         <div className="container mx-auto px-6">
           <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
             {stats.map((stat, index) => (
-              <Card key={index} className="p-6 text-center bg-card border-0 hover:shadow-card transition-all duration-300">
-                <stat.icon className="w-12 h-12 text-primary mx-auto mb-4" />
+              <Card 
+                key={index} 
+                className="p-6 text-center bg-card border-0 hover:shadow-cyan transition-all duration-500 group hover:scale-105 hover:-translate-y-2 animate-fade-in"
+                style={{ animationDelay: `${index * 150}ms` }}
+              >
+                <stat.icon className="w-12 h-12 text-primary mx-auto mb-4 transition-transform duration-300 group-hover:scale-110" />
                 <div className="text-3xl font-bold text-foreground mb-2">{stat.value}</div>
                 <p className="text-muted-foreground">{stat.label}</p>
               </Card>
@@ -138,22 +143,28 @@ const PortfolioPage = () => {
         <div className="container mx-auto px-6">
           <div className="grid gap-12 max-w-7xl mx-auto">
             {projects.map((project, index) => (
-              <Card key={project.id} className={`overflow-hidden border-0 bg-card hover:shadow-card transition-all duration-300 ${
-                index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
-              } lg:flex`}>
-                <div className="lg:w-1/2 relative overflow-hidden">
+              <Card 
+                key={project.id} 
+                className={`overflow-hidden border-0 bg-card hover:shadow-cyan transition-all duration-500 group animate-fade-in ${
+                  index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'
+                } lg:flex`}
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="lg:w-1/2 relative overflow-hidden image-zoom">
                   <img 
                     src={project.image} 
                     alt={project.title}
                     title={`${project.title} by EspiraNova - ${project.category}`}
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-64 sm:h-72 lg:h-80 xl:h-96 object-contain bg-muted/50 transition-transform duration-300 hover:scale-105"
+                    className="w-full h-64 sm:h-72 lg:h-80 xl:h-96 object-contain bg-muted/50 transition-transform duration-500"
                   />
+                  {/* Overlay on hover */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
                 <div className="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
                   <div className="mb-4">
-                    <span className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full">
+                    <span className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full transition-all duration-300 hover:bg-primary/20">
                       {project.category}
                     </span>
                     <span className={`ml-2 text-sm font-medium px-3 py-1 rounded-full ${
@@ -165,15 +176,15 @@ const PortfolioPage = () => {
                     </span>
                   </div>
                   
-                  <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-foreground">{project.title}</h3>
+                  <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors duration-300">{project.title}</h3>
                   <p className="text-muted-foreground leading-relaxed mb-6">{project.description}</p>
                   
                   <div className="mb-6">
                     <h4 className="font-semibold text-foreground mb-3">Key Features:</h4>
                     <div className="grid grid-cols-2 gap-2">
                       {project.features.map((feature, idx) => (
-                        <div key={idx} className="flex items-center gap-2 text-sm text-muted-foreground">
-                          <div className="w-1.5 h-1.5 bg-primary rounded-full"></div>
+                        <div key={idx} className="flex items-center gap-2 text-sm text-muted-foreground group/item">
+                          <div className="w-1.5 h-1.5 bg-primary rounded-full transition-transform duration-300 group-hover/item:scale-150"></div>
                           {feature}
                         </div>
                       ))}
@@ -182,8 +193,8 @@ const PortfolioPage = () => {
                   
                   
                   <a href={project.url} target="_blank" rel="noopener noreferrer">
-                    <Button variant="hero" className="w-fit">
-                      View Project <ExternalLink className="w-4 h-4 ml-2" />
+                    <Button variant="hero" className="w-fit group/btn hover:shadow-glow transition-all duration-300">
+                      View Project <ExternalLink className="w-4 h-4 ml-2 transition-transform duration-300 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1" />
                     </Button>
                   </a>
                 </div>
@@ -196,16 +207,18 @@ const PortfolioPage = () => {
       {/* CTA Section */}
       <section className="py-20 bg-background">
         <div className="container mx-auto px-6">
-          <Card className="p-8 md:p-12 bg-gradient-hero text-center max-w-4xl mx-auto">
+          <Card className="p-8 md:p-12 bg-gradient-hero text-center max-w-4xl mx-auto hover:shadow-intense transition-all duration-500">
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
               Ready to Start Your Project?
             </h3>
             <p className="text-white/90 text-lg leading-relaxed mb-8">
               Join our growing list of satisfied clients. Let's build something amazing together.
             </p>
-            <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary">
-              Discuss Your Project
-            </Button>
+            <Link to="/contact">
+              <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary transition-all duration-300 hover:scale-105">
+                Discuss Your Project
+              </Button>
+            </Link>
           </Card>
         </div>
       </section>

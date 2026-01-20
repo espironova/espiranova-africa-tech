@@ -30,35 +30,42 @@ export const Hero = () => {
 
   return (
     <section 
-      className="relative min-h-screen flex items-center -mt-24 pt-24"
-      style={{
-        backgroundColor: 'hsl(215 50% 8%)',
-        backgroundImage: `
-          linear-gradient(
-            to bottom,
-            hsla(215, 50%, 8%, 0.9),
-            hsla(215, 50%, 8%, 0.95)
-          ),
-          radial-gradient(
-            ellipse 80% 50% at 70% 20%,
-            hsla(185, 75%, 50%, 0.15),
-            transparent 50%
-          ),
-          radial-gradient(
-            ellipse 60% 40% at 20% 80%,
-            hsla(210, 85%, 45%, 0.1),
-            transparent 50%
-          ),
-          linear-gradient(
-            160deg,
-            transparent 40%,
-            hsla(185, 75%, 50%, 0.05) 45%,
-            transparent 50%
-          )
-        `
-      }}
+      className="relative min-h-screen flex items-center -mt-24 pt-24 overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-8 py-24 lg:py-32 w-full">
+      {/* Background Image with Blur */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-105"
+        style={{
+          backgroundImage: `url(/lovable-uploads/hero-tech-bg.jpg)`,
+          filter: 'blur(3px)',
+        }}
+      />
+      
+      {/* Dark Overlay for text readability */}
+      <div 
+        className="absolute inset-0"
+        style={{
+          background: `
+            linear-gradient(
+              to bottom,
+              hsla(215, 50%, 8%, 0.85),
+              hsla(215, 50%, 8%, 0.9)
+            ),
+            radial-gradient(
+              ellipse 80% 50% at 70% 20%,
+              hsla(185, 75%, 50%, 0.15),
+              transparent 50%
+            ),
+            radial-gradient(
+              ellipse 60% 40% at 20% 80%,
+              hsla(210, 85%, 45%, 0.1),
+              transparent 50%
+            )
+          `
+        }}
+      />
+      
+      <div className="max-w-7xl mx-auto px-8 py-24 lg:py-32 w-full relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Column - Text Content */}
           <div className="text-left">
@@ -89,7 +96,8 @@ export const Hero = () => {
                     : "opacity-0 -translate-y-4"
                 }`}
                 style={{
-                  transitionTimingFunction: 'cubic-bezier(0.22, 1, 0.36, 1)'
+                  transitionTimingFunction: 'cubic-bezier(0.22, 1, 0.36, 1)',
+                  textShadow: '0 0 30px hsla(185, 75%, 50%, 0.5)'
                 }}
               >
                 {rotatingPhrases[currentIndex]}
@@ -104,7 +112,7 @@ export const Hero = () => {
               <Link to="/contact">
                 <Button 
                   size="lg" 
-                  className="bg-brand-cyan hover:bg-brand-light-cyan text-brand-navy px-10 py-6 text-lg font-semibold transition-all duration-300 hover:shadow-lg"
+                  className="bg-brand-cyan hover:bg-brand-light-cyan text-brand-navy px-10 py-6 text-lg font-semibold transition-all duration-300 hover:shadow-glow hover:scale-105 btn-magnetic"
                 >
                   Book a Consultation
                 </Button>
@@ -117,15 +125,15 @@ export const Hero = () => {
             className="relative animate-fade-in lg:order-last order-first"
             style={{ animationDelay: '0.4s' }}
           >
-            <div className="relative">
+            <div className="relative group">
               <img
                 src="/lovable-uploads/hero-business-meeting.png"
                 alt="Business professionals collaborating in a modern meeting"
-                className="w-full h-auto rounded-2xl shadow-2xl"
+                className="w-full h-auto rounded-2xl shadow-2xl transition-transform duration-500 group-hover:scale-[1.02]"
               />
               {/* Subtle glow effect behind image */}
               <div 
-                className="absolute -inset-4 -z-10 rounded-3xl opacity-30"
+                className="absolute -inset-4 -z-10 rounded-3xl opacity-30 transition-opacity duration-500 group-hover:opacity-50"
                 style={{
                   background: 'radial-gradient(ellipse at center, hsla(185, 75%, 50%, 0.3), transparent 70%)'
                 }}

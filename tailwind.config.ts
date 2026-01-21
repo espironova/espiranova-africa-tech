@@ -31,7 +31,9 @@ export default {
 					blue: 'hsl(var(--brand-blue))',
 					cyan: 'hsl(var(--brand-cyan))',
 					'light-cyan': 'hsl(var(--brand-light-cyan))',
-					sky: 'hsl(var(--brand-sky))'
+					sky: 'hsl(var(--brand-sky))',
+					mustard: 'hsl(var(--brand-mustard))',
+					'mustard-dark': 'hsl(var(--brand-mustard-dark))'
 				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',

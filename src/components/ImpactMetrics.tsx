@@ -5,14 +5,13 @@ interface Metric {
   numericValue: number;
   suffix: string;
   label: string;
-  description: string;
 }
 
 const metrics: Metric[] = [
-  { value: "50", numericValue: 50, suffix: "+", label: "Projects Delivered", description: "Custom solutions built" },
-  { value: "100", numericValue: 100, suffix: "%", label: "Client Satisfaction", description: "Happy customers" },
-  { value: "2-4", numericValue: 3, suffix: " weeks", label: "Average Delivery", description: "Fast turnaround" },
-  { value: "3", numericValue: 3, suffix: "+", label: "African Markets", description: "Kenya, Uganda, Tanzania" },
+  { value: "50+", numericValue: 50, suffix: "+", label: "Happy Clients" },
+  { value: "100+", numericValue: 100, suffix: "+", label: "Projects Delivered" },
+  { value: "5+", numericValue: 5, suffix: "+", label: "Years Experience" },
+  { value: "98%", numericValue: 98, suffix: "%", label: "Client Satisfaction" },
 ];
 
 export const ImpactMetrics = () => {
@@ -64,64 +63,74 @@ export const ImpactMetrics = () => {
   return (
     <section 
       ref={sectionRef}
-      className="relative py-24 md:py-32 bg-brand-navy overflow-hidden"
+      className="relative py-16 md:py-20 bg-brand-navy overflow-hidden"
     >
-      {/* Background Pattern */}
+      {/* Subtle Pattern Background */}
       <div className="absolute inset-0 opacity-[0.02]" style={{
         backgroundImage: `
-          linear-gradient(hsl(185 75% 50%) 1px, transparent 1px),
-          linear-gradient(90deg, hsl(185 75% 50%) 1px, transparent 1px)
+          radial-gradient(circle at 25% 25%, hsl(185 75% 50%) 2px, transparent 2px),
+          radial-gradient(circle at 75% 75%, hsl(45 85% 55%) 1px, transparent 1px)
         `,
-        backgroundSize: '80px 80px',
+        backgroundSize: '60px 60px',
       }} />
-      
-      {/* Gradient Orbs */}
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-brand-cyan/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-brand-blue/10 rounded-full blur-3xl" />
 
-      <div className="container mx-auto px-6 relative z-10">
+      {/* Gradient Orbs */}
+      <div className="absolute top-0 left-1/4 w-72 h-72 bg-brand-cyan/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-brand-mustard/5 rounded-full blur-3xl" />
+
+      <div className="max-w-6xl mx-auto px-6 relative z-10">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <span className="inline-block px-4 py-2 rounded-full border border-brand-cyan/30 bg-brand-cyan/5 text-brand-cyan text-sm font-medium tracking-wide uppercase mb-6">
-            Our Impact
-          </span>
-          <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-            Numbers That <span className="text-brand-cyan">Matter</span>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold">
+            <span className="text-white">OUR </span>
+            <span className="text-brand-cyan relative inline-block">
+              IMPACT
+              <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-brand-cyan via-brand-mustard to-brand-cyan rounded-full" />
+            </span>
           </h2>
         </div>
 
         {/* Metrics Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
           {metrics.map((metric, index) => (
-            <div 
-              key={index}
-              className={`relative group ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`}
+            <div
+              key={metric.label}
+              className={`relative group text-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm transition-all duration-500 hover:bg-white/10 hover:border-brand-cyan/30 ${
+                isVisible ? 'animate-fade-in-up' : 'opacity-0'
+              }`}
               style={{ animationDelay: `${index * 150}ms` }}
             >
-              {/* Card */}
-              <div className="relative p-6 md:p-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm hover:border-brand-cyan/30 hover:bg-white/10 transition-all duration-500 text-center">
-                {/* Glow on hover */}
-                <div className="absolute inset-0 rounded-2xl bg-brand-cyan/10 opacity-0 group-hover:opacity-100 blur-xl transition-opacity duration-500 -z-10" />
-                
-                {/* Number */}
-                <div className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-2 tracking-tight">
-                  {index === 2 ? "2-4" : counts[index]}
-                  <span className="text-brand-cyan">{metric.suffix}</span>
-                </div>
-                
-                {/* Label */}
-                <div className="text-white font-semibold mb-1">{metric.label}</div>
-                <div className="text-white/50 text-sm">{metric.description}</div>
+              {/* Hexagon Background Accent */}
+              <div className="absolute -top-3 -right-3 w-12 h-12 opacity-20 group-hover:opacity-40 transition-opacity">
+                <svg viewBox="0 0 100 100" className="w-full h-full fill-brand-cyan">
+                  <polygon points="50 1, 95 25, 95 75, 50 99, 5 75, 5 25" />
+                </svg>
               </div>
+
+              {/* Number */}
+              <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+                <span className="text-brand-cyan">{counts[index]}</span>
+                <span className="text-brand-mustard">{metric.suffix}</span>
+              </div>
+
+              {/* Label */}
+              <p className="text-white/70 text-sm font-medium">
+                {metric.label}
+              </p>
+
+              {/* Hover glow */}
+              <div className="absolute inset-0 rounded-2xl bg-brand-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10 blur-xl" />
             </div>
           ))}
         </div>
       </div>
 
       {/* Diagonal Divider */}
-      <div className="absolute bottom-0 left-0 right-0 h-24 bg-background" style={{
-        clipPath: 'polygon(0 100%, 100% 100%, 100% 0)',
-      }} />
+      <div className="absolute bottom-0 left-0 right-0">
+        <svg viewBox="0 0 1440 60" fill="none" preserveAspectRatio="none" className="w-full h-8 md:h-12">
+          <path d="M0 60L1440 0V60H0Z" fill="hsl(215 50% 12%)" />
+        </svg>
+      </div>
     </section>
   );
 };

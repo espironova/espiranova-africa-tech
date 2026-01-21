@@ -132,7 +132,7 @@ export const Footer = () => {
                   <div className="w-8 h-8 rounded-lg bg-brand-cyan/10 flex items-center justify-center">
                     <MapPin className="w-4 h-4 text-brand-cyan" />
                   </div>
-                  <span className="text-sm">Nairobi, Kenya</span>
+                  <span className="text-sm">The Piano, Westlands, Nairobi, Kenya</span>
                 </div>
               </div>
             </div>
@@ -144,14 +144,6 @@ export const Footer = () => {
               <p className="text-muted-foreground text-sm">
                 © {new Date().getFullYear()} EspiraNova. All rights reserved.
               </p>
-              <div className="flex gap-6">
-                <Link to="#" className="text-muted-foreground hover:text-brand-cyan transition-colors duration-300 text-sm">
-                  Privacy Policy
-                </Link>
-                <Link to="#" className="text-muted-foreground hover:text-brand-cyan transition-colors duration-300 text-sm">
-                  Terms of Service
-                </Link>
-              </div>
             </div>
           </div>
         </div>

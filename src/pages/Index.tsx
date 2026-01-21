@@ -12,22 +12,22 @@ import { ImpactMetrics } from "@/components/ImpactMetrics";
 const Index = () => {
   const painPoints = [
     { 
-      image: "/lovable-uploads/267d3f46-0425-4e4e-9aa7-5f4fb5be3322.png",
+      image: "/lovable-uploads/messy-spreadsheet.jpg",
       label: "Messy Spreadsheets",
       description: "Data scattered across Excel files"
     },
     { 
-      image: "/lovable-uploads/680b85d9-b389-4be9-9b2a-7638c311663e.png",
+      image: "/lovable-uploads/paper-forms.png",
       label: "Paper Forms",
       description: "Stacks of documents everywhere"
     },
     { 
-      image: "/lovable-uploads/b945bafd-eeaa-47d9-b5cb-ca4debdfb7b1.png",
+      image: "/lovable-uploads/whatsapp-chaos.avif",
       label: "WhatsApp Chaos",
       description: "Business running on chat"
     },
     { 
-      image: "/lovable-uploads/22e49366-a76a-4bd7-bb52-0fbfc7f05334.png",
+      image: "/lovable-uploads/outdated-websites.png",
       label: "Outdated Websites",
       description: "Sites that don't work for you"
     },
@@ -86,7 +86,7 @@ const Index = () => {
       <ImpactMetrics />
       
       {/* Pain Points Section - Bold Design */}
-      <section className="relative py-24 md:py-32 bg-background overflow-hidden">
+      <section className="relative py-16 md:py-24 bg-background overflow-hidden">
         {/* Geometric Pattern Background */}
         <div className="absolute inset-0 geometric-pattern" />
         
@@ -95,20 +95,20 @@ const Index = () => {
         
         <div className="container mx-auto px-6 relative z-10">
           {/* Section Header */}
-          <div className="text-center mb-16 max-w-3xl mx-auto">
-            <span className="inline-block px-4 py-2 rounded-full border border-destructive/30 bg-destructive/5 text-destructive text-sm font-medium tracking-wide uppercase mb-6">
+          <div className="text-center mb-12 max-w-3xl mx-auto">
+            <span className="inline-block px-4 py-2 rounded-full border border-destructive/30 bg-destructive/5 text-destructive text-sm font-medium tracking-wide uppercase mb-4">
               The Problem
             </span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground mb-6 tracking-tight">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-4 tracking-tight">
               Still Trapped in <span className="text-destructive">The Past?</span>
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-base text-muted-foreground">
               These are the tools holding your business back. Sound familiar?
             </p>
           </div>
           
           {/* Pain Points Grid - Image Based */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 max-w-6xl mx-auto mb-12">
             {painPoints.map((point, index) => (
               <Card 
                 key={index}
@@ -116,7 +116,7 @@ const Index = () => {
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 {/* Image */}
-                <div className="relative h-48 overflow-hidden">
+                <div className="relative h-40 overflow-hidden">
                   <img 
                     src={point.image}
                     alt={point.label}
@@ -129,8 +129,8 @@ const Index = () => {
                 </div>
                 
                 {/* Content */}
-                <div className="p-5">
-                  <h3 className="text-lg font-bold text-foreground mb-1 group-hover:text-destructive transition-colors duration-300">
+                <div className="p-4">
+                  <h3 className="text-base font-bold text-foreground mb-1 group-hover:text-destructive transition-colors duration-300">
                     {point.label}
                   </h3>
                   <p className="text-sm text-muted-foreground">{point.description}</p>
@@ -144,15 +144,15 @@ const Index = () => {
           
           {/* Solution Statement */}
           <div className="text-center max-w-4xl mx-auto">
-            <Card className="relative p-8 md:p-12 bg-gradient-to-r from-brand-cyan/10 via-brand-blue/10 to-brand-cyan/10 border-brand-cyan/20 overflow-hidden group hover:shadow-cyan transition-all duration-500">
+            <Card className="relative p-6 md:p-10 bg-gradient-to-r from-brand-cyan/10 via-brand-blue/10 to-brand-cyan/10 border-brand-cyan/20 overflow-hidden group hover:shadow-cyan transition-all duration-500">
               {/* Animated Border */}
               <div className="absolute inset-0 rounded-lg border-2 border-transparent bg-gradient-to-r from-brand-cyan via-brand-blue to-brand-cyan bg-clip-border opacity-20" />
               
-              <p className="text-xl md:text-2xl lg:text-3xl font-bold text-foreground leading-relaxed">
+              <p className="text-lg md:text-xl lg:text-2xl font-bold text-foreground leading-relaxed">
                 We replace all that with{" "}
                 <span className="text-brand-cyan">simple, custom-built systems</span>
                 {" "}— designed specifically for{" "}
-                <span className="text-brand-cyan">YOUR</span> business.
+                <span className="text-brand-mustard">YOUR</span> business.
               </p>
             </Card>
           </div>
@@ -160,7 +160,7 @@ const Index = () => {
       </section>
 
       {/* Core Services - Visual Cards */}
-      <section className="relative py-24 md:py-32 bg-brand-navy overflow-hidden">
+      <section className="relative py-16 md:py-24 bg-brand-navy overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-[0.02]" style={{
           backgroundImage: `
@@ -176,20 +176,20 @@ const Index = () => {
 
         <div className="container mx-auto px-6 relative z-10">
           {/* Section Header */}
-          <div className="text-center mb-16">
-            <span className="inline-block px-4 py-2 rounded-full border border-brand-cyan/30 bg-brand-cyan/5 text-brand-cyan text-sm font-medium tracking-wide uppercase mb-6">
+          <div className="text-center mb-12">
+            <span className="inline-block px-4 py-2 rounded-full border border-brand-cyan/30 bg-brand-cyan/5 text-brand-cyan text-sm font-medium tracking-wide uppercase mb-4">
               What We Build
             </span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 tracking-tight">
-              Solutions That <span className="text-brand-cyan">Actually Work</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 tracking-tight">
+              Solutions That <span className="text-brand-mustard">Actually Work</span>
             </h2>
-            <p className="text-lg text-white/60 max-w-2xl mx-auto">
+            <p className="text-base text-white/60 max-w-2xl mx-auto">
               Real projects. Real results. See what we can build for you.
             </p>
           </div>
           
           {/* Services Grid - Visual */}
-          <div className="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-5 max-w-5xl mx-auto">
             {coreServices.map((service, index) => (
               <Link 
                 key={index}
@@ -198,7 +198,7 @@ const Index = () => {
               >
                 <Card className="relative overflow-hidden border-0 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-500 h-full">
                   {/* Image */}
-                  <div className="relative h-56 overflow-hidden">
+                  <div className="relative h-48 overflow-hidden">
                     <img 
                       src={service.image}
                       alt={service.title}
@@ -214,12 +214,12 @@ const Index = () => {
                   </div>
                   
                   {/* Content */}
-                  <div className="p-6">
-                    <div className="text-brand-cyan text-sm font-medium mb-1">{service.subtitle}</div>
-                    <h3 className="text-2xl font-bold text-white mb-2 group-hover:text-brand-cyan transition-colors duration-300">
+                  <div className="p-5">
+                    <div className="text-brand-mustard text-sm font-medium mb-1">{service.subtitle}</div>
+                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-brand-cyan transition-colors duration-300">
                       {service.title}
                     </h3>
-                    <p className="text-white/60">{service.description}</p>
+                    <p className="text-white/60 text-sm">{service.description}</p>
                   </div>
                   
                   {/* Hover Border */}
@@ -229,11 +229,11 @@ const Index = () => {
             ))}
           </div>
           
-          <div className="text-center mt-12">
+          <div className="text-center mt-10">
             <Link to="/services">
               <Button 
                 size="lg" 
-                className="bg-brand-cyan hover:bg-brand-light-cyan text-brand-navy px-10 py-7 text-lg font-bold transition-all duration-300 hover:scale-105 group"
+                className="bg-brand-cyan hover:bg-brand-light-cyan text-brand-navy px-8 py-6 text-base font-bold transition-all duration-300 hover:scale-105 group"
               >
                 View All Services
                 <ArrowRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
@@ -249,31 +249,31 @@ const Index = () => {
       </section>
 
       {/* Why EspiraNova - Bold Design */}
-      <section className="relative py-24 md:py-32 bg-background overflow-hidden">
+      <section className="relative py-16 md:py-24 bg-background overflow-hidden">
         <div className="container mx-auto px-6 relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+          <div className="grid lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             {/* Left - Text Content */}
             <div>
-              <span className="inline-block px-4 py-2 rounded-full border border-brand-cyan/30 bg-brand-cyan/5 text-brand-cyan text-sm font-medium tracking-wide uppercase mb-6">
+              <span className="inline-block px-4 py-2 rounded-full border border-brand-cyan/30 bg-brand-cyan/5 text-brand-cyan text-sm font-medium tracking-wide uppercase mb-4">
                 Why Choose Us
               </span>
-              <h2 className="text-4xl md:text-5xl font-black text-foreground mb-8 tracking-tight">
-                Not Your Typical <span className="text-brand-cyan">Tech Company</span>
+              <h2 className="text-3xl md:text-4xl font-black text-foreground mb-6 tracking-tight">
+                Not Your Typical <span className="text-brand-mustard">Tech Company</span>
               </h2>
               
-              <div className="space-y-6">
+              <div className="space-y-5">
                 {whyReasons.map((reason, index) => (
                   <div 
                     key={index}
                     className="flex gap-4 items-start group animate-fade-in"
                     style={{ animationDelay: `${index * 150}ms` }}
                   >
-                    <div className="w-12 h-12 rounded-xl bg-brand-cyan/10 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-cyan/20 transition-colors duration-300">
-                      <span className="text-brand-cyan font-bold text-lg">0{index + 1}</span>
+                    <div className="w-10 h-10 rounded-xl bg-brand-cyan/10 flex items-center justify-center flex-shrink-0 group-hover:bg-brand-mustard/20 transition-colors duration-300">
+                      <span className="text-brand-cyan font-bold text-base group-hover:text-brand-mustard transition-colors duration-300">0{index + 1}</span>
                     </div>
                     <div>
-                      <h3 className="text-lg font-bold text-foreground mb-1">{reason.title}</h3>
-                      <p className="text-muted-foreground">{reason.description}</p>
+                      <h3 className="text-base font-bold text-foreground mb-1">{reason.title}</h3>
+                      <p className="text-sm text-muted-foreground">{reason.description}</p>
                     </div>
                   </div>
                 ))}
@@ -292,57 +292,57 @@ const Index = () => {
                 <div className="absolute inset-0 bg-gradient-to-tr from-brand-navy/60 via-transparent to-transparent" />
                 
                 {/* Floating Stats Card */}
-                <div className="absolute bottom-6 left-6 right-6 p-6 rounded-xl bg-white/10 backdrop-blur-md border border-white/20">
+                <div className="absolute bottom-4 left-4 right-4 p-4 rounded-xl bg-white/10 backdrop-blur-md border border-white/20">
                   <div className="flex justify-between items-center">
                     <div>
-                      <div className="text-3xl font-black text-white">50+</div>
-                      <div className="text-white/70 text-sm">Projects Completed</div>
+                      <div className="text-2xl font-black text-white">50<span className="text-brand-mustard">+</span></div>
+                      <div className="text-white/70 text-xs">Projects Completed</div>
                     </div>
-                    <div className="w-px h-12 bg-white/20" />
+                    <div className="w-px h-10 bg-white/20" />
                     <div>
-                      <div className="text-3xl font-black text-white">100%</div>
-                      <div className="text-white/70 text-sm">Client Satisfaction</div>
+                      <div className="text-2xl font-black text-white">100<span className="text-brand-mustard">%</span></div>
+                      <div className="text-white/70 text-xs">Client Satisfaction</div>
                     </div>
                   </div>
                 </div>
               </div>
               
               {/* Decorative Elements */}
-              <div className="absolute -top-4 -right-4 w-24 h-24 border-2 border-brand-cyan/30 rounded-xl rotate-12" />
-              <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-brand-cyan/20 rounded-full blur-xl" />
+              <div className="absolute -top-3 -right-3 w-20 h-20 border-2 border-brand-mustard/30 rounded-xl rotate-12" />
+              <div className="absolute -bottom-3 -left-3 w-14 h-14 bg-brand-cyan/20 rounded-full blur-xl" />
             </div>
           </div>
         </div>
       </section>
       
       {/* Featured Projects */}
-      <section className="relative py-24 md:py-32 bg-muted/30 overflow-hidden">
+      <section className="relative py-16 md:py-24 bg-muted/30 overflow-hidden">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-96 h-96 rounded-full bg-brand-blue/20 blur-3xl" />
           <div className="absolute bottom-0 left-0 w-96 h-96 rounded-full bg-brand-cyan/20 blur-3xl" />
         </div>
         
         <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center mb-16">
-            <span className="inline-block px-4 py-2 rounded-full border border-brand-cyan/30 bg-brand-cyan/5 text-brand-cyan text-sm font-medium tracking-wide uppercase mb-6">
+          <div className="text-center mb-12">
+            <span className="inline-block px-4 py-2 rounded-full border border-brand-cyan/30 bg-brand-cyan/5 text-brand-cyan text-sm font-medium tracking-wide uppercase mb-4">
               Our Portfolio
             </span>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-black text-foreground mb-6 tracking-tight">
-              Featured <span className="text-brand-cyan">Work</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-4 tracking-tight">
+              Featured <span className="text-brand-mustard">Work</span>
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
               See how we've helped businesses eliminate manual work and build systems that actually work.
             </p>
           </div>
           
           <FeaturedWorkCarousel />
           
-          <div className="text-center mt-12">
+          <div className="text-center mt-10">
             <Link to="/portfolio">
               <Button 
                 variant="outline" 
                 size="lg" 
-                className="border-brand-cyan/50 text-brand-cyan hover:bg-brand-cyan/10 hover:border-brand-cyan px-10 py-7 text-lg font-semibold transition-all duration-300"
+                className="border-brand-cyan/50 text-brand-cyan hover:bg-brand-cyan/10 hover:border-brand-cyan px-8 py-6 text-base font-semibold transition-all duration-300"
               >
                 View All Projects
                 <ArrowRight className="w-5 h-5 ml-2" />

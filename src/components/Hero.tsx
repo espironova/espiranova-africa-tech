@@ -166,7 +166,7 @@ export const Hero = () => {
               </div>
               {/* Static "with impact" */}
               <span 
-                className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-medium text-white tracking-wide animate-fade-in"
+                className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-brand-mustard tracking-wide animate-fade-in"
                 style={{ animationDelay: '0.2s' }}
               >
                 with impact

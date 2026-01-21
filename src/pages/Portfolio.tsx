@@ -100,7 +100,7 @@ const PortfolioPage = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-hero-move scale-105"
           style={{ backgroundImage: `url(/lovable-uploads/680b85d9-b389-4be9-9b2a-7638c311663e.png)` }}
@@ -109,10 +109,10 @@ const PortfolioPage = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
         <div className="relative z-10 container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
-            Featured Work
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 animate-fade-in">
+            Featured <span className="text-brand-mustard">Work</span>
           </h1>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <p className="text-lg text-white/90 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Discover our portfolio of successful projects that showcase our expertise in 
             creating innovative digital solutions for diverse industries.
           </p>
@@ -120,18 +120,20 @@ const PortfolioPage = () => {
       </section>
 
       {/* Stats Section */}
-      <section className="py-16 bg-background">
+      <section className="py-12 bg-background">
         <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {stats.map((stat, index) => (
               <Card 
                 key={index} 
-                className="p-6 text-center bg-card border-0 hover:shadow-cyan transition-all duration-500 group hover:scale-105 hover:-translate-y-2 animate-fade-in"
+                className="p-5 text-center bg-card border-0 hover:shadow-cyan transition-all duration-500 group hover:scale-105 hover:-translate-y-2 animate-fade-in"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                <stat.icon className="w-12 h-12 text-primary mx-auto mb-4 transition-transform duration-300 group-hover:scale-110" />
-                <div className="text-3xl font-bold text-foreground mb-2">{stat.value}</div>
-                <p className="text-muted-foreground">{stat.label}</p>
+                <stat.icon className="w-10 h-10 text-brand-cyan mx-auto mb-3 transition-transform duration-300 group-hover:scale-110" />
+                <div className="text-2xl font-bold text-foreground mb-1">
+                  {stat.value.replace('+', '')}<span className="text-brand-mustard">+</span>
+                </div>
+                <p className="text-sm text-muted-foreground">{stat.label}</p>
               </Card>
             ))}
           </div>
@@ -139,9 +141,9 @@ const PortfolioPage = () => {
       </section>
 
       {/* Projects Grid */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-6">
-          <div className="grid gap-12 max-w-7xl mx-auto">
+          <div className="grid gap-10 max-w-7xl mx-auto">
             {projects.map((project, index) => (
               <Card 
                 key={project.id} 
@@ -157,34 +159,34 @@ const PortfolioPage = () => {
                     title={`${project.title} by EspiraNova - ${project.category}`}
                     loading="lazy"
                     decoding="async"
-                    className="w-full h-64 sm:h-72 lg:h-80 xl:h-96 object-contain bg-muted/50 transition-transform duration-500"
+                    className="w-full h-56 sm:h-64 lg:h-72 xl:h-80 object-contain bg-muted/50 transition-transform duration-500"
                   />
                   {/* Overlay on hover */}
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
-                <div className="lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center">
-                  <div className="mb-4">
-                    <span className="text-sm font-medium text-primary bg-primary/10 px-3 py-1 rounded-full transition-all duration-300 hover:bg-primary/20">
+                <div className="lg:w-1/2 p-6 lg:p-10 flex flex-col justify-center">
+                  <div className="mb-3">
+                    <span className="text-xs font-medium text-brand-cyan bg-brand-cyan/10 px-3 py-1 rounded-full transition-all duration-300 hover:bg-brand-cyan/20">
                       {project.category}
                     </span>
-                    <span className={`ml-2 text-sm font-medium px-3 py-1 rounded-full ${
+                    <span className={`ml-2 text-xs font-medium px-3 py-1 rounded-full ${
                       project.status === 'Live' 
-                        ? 'text-success bg-success/10' 
+                        ? 'text-brand-mustard bg-brand-mustard/10 border border-brand-mustard/30' 
                         : 'text-accent bg-accent/10'
                     }`}>
                       {project.status}
                     </span>
                   </div>
                   
-                  <h3 className="text-2xl lg:text-3xl font-bold mb-4 text-foreground group-hover:text-primary transition-colors duration-300">{project.title}</h3>
-                  <p className="text-muted-foreground leading-relaxed mb-6">{project.description}</p>
+                  <h3 className="text-xl lg:text-2xl font-bold mb-3 text-foreground group-hover:text-brand-cyan transition-colors duration-300">{project.title}</h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed mb-5">{project.description}</p>
                   
-                  <div className="mb-6">
-                    <h4 className="font-semibold text-foreground mb-3">Key Features:</h4>
-                    <div className="grid grid-cols-2 gap-2">
+                  <div className="mb-5">
+                    <h4 className="font-semibold text-foreground mb-2 text-sm">Key Features:</h4>
+                    <div className="grid grid-cols-2 gap-1.5">
                       {project.features.map((feature, idx) => (
                         <div key={idx} className="flex items-center gap-2 text-sm text-muted-foreground group/item">
-                          <div className="w-1.5 h-1.5 bg-primary rounded-full transition-transform duration-300 group-hover/item:scale-150"></div>
+                          <div className="w-1.5 h-1.5 bg-brand-mustard rounded-full transition-transform duration-300 group-hover/item:scale-150"></div>
                           {feature}
                         </div>
                       ))}
@@ -205,17 +207,17 @@ const PortfolioPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-background">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-6">
-          <Card className="p-8 md:p-12 bg-gradient-hero text-center max-w-4xl mx-auto hover:shadow-intense transition-all duration-500">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Ready to Start Your Project?
+          <Card className="p-6 md:p-10 bg-gradient-hero text-center max-w-4xl mx-auto hover:shadow-intense transition-all duration-500">
+            <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+              Ready to Start <span className="text-brand-mustard">Your Project?</span>
             </h3>
-            <p className="text-white/90 text-lg leading-relaxed mb-8">
+            <p className="text-white/90 text-base leading-relaxed mb-6">
               Join our growing list of satisfied clients. Let's build something amazing together.
             </p>
             <Link to="/contact">
-              <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary transition-all duration-300 hover:scale-105">
+              <Button variant="outline" size="lg" className="bg-white/10 border-brand-mustard text-white hover:bg-brand-mustard hover:text-brand-navy transition-all duration-300 hover:scale-105">
                 Discuss Your Project
               </Button>
             </Link>

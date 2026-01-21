@@ -134,7 +134,7 @@ const ServicesPage = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-hero-move scale-105"
           style={{ backgroundImage: `url(/lovable-uploads/dad02b7e-ac50-4612-8d4e-b6d45e772c11.png)` }}
@@ -143,10 +143,10 @@ const ServicesPage = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
         <div className="relative z-10 container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 animate-fade-in">
-            Solutions That Actually Solve Problems
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 animate-fade-in">
+            Solutions That <span className="text-brand-mustard">Actually Solve</span> Problems
           </h1>
-          <p className="text-xl text-white/90 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <p className="text-lg text-white/90 max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Choose from focused service packages designed for African SMEs. 
             No fluff, just working systems delivered fast.
           </p>
@@ -154,48 +154,48 @@ const ServicesPage = () => {
       </section>
 
       {/* Service Packages */}
-      <section className="py-20 bg-background relative overflow-hidden">
+      <section className="py-16 bg-background relative overflow-hidden">
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-1/4 right-1/4 w-96 h-96 rounded-full bg-gradient-primary opacity-10 blur-3xl"></div>
           <div className="absolute bottom-1/4 left-1/4 w-96 h-96 rounded-full bg-gradient-accent opacity-10 blur-3xl"></div>
         </div>
         
         <div className="container mx-auto px-6 relative z-10">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
               Our Service Packages
             </h2>
-            <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+            <div className="w-24 h-1 bg-gradient-to-r from-brand-cyan to-brand-mustard mx-auto mb-6"></div>
+            <p className="text-base text-muted-foreground max-w-3xl mx-auto">
               Each package is designed to deliver real results. Pick what fits your needs.
             </p>
           </div>
           
-          <div className="space-y-8 max-w-5xl mx-auto">
+          <div className="space-y-6 max-w-5xl mx-auto">
             {packages.map((pkg, index) => (
               <Card 
                 key={pkg.id} 
-                className={`p-6 md:p-8 hover:shadow-cyan transition-all duration-500 border-0 bg-card/80 backdrop-blur-sm animate-fade-in relative overflow-hidden group hover:-translate-y-1 ${pkg.badge === 'FLAGSHIP' ? 'ring-2 ring-primary' : ''}`}
+                className={`p-5 md:p-6 hover:shadow-cyan transition-all duration-500 border-0 bg-card/80 backdrop-blur-sm animate-fade-in relative overflow-hidden group hover:-translate-y-1 ${pkg.badge === 'FLAGSHIP' ? 'ring-2 ring-brand-mustard' : ''}`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 {/* Hover gradient overlay */}
                 <div className="absolute inset-0 bg-gradient-to-br from-brand-blue/5 to-brand-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
                 {pkg.badge && (
-                  <div className={`absolute top-4 right-4 px-3 py-1 rounded-full text-xs font-bold animate-pulse-glow ${pkg.badge === 'FLAGSHIP' ? 'bg-primary text-primary-foreground' : 'bg-accent text-accent-foreground'}`}>
+                  <div className={`absolute top-3 right-3 px-3 py-1 rounded-full text-xs font-bold animate-pulse-glow ${pkg.badge === 'FLAGSHIP' ? 'bg-brand-mustard text-brand-navy' : 'bg-brand-cyan text-brand-navy'}`}>
                     {pkg.badge}
                   </div>
                 )}
                 
-                <div className="grid md:grid-cols-3 gap-6 relative z-10">
+                <div className="grid md:grid-cols-3 gap-5 relative z-10">
                   {/* Left: Icon, Title, Meta */}
                   <div className="md:col-span-1">
-                    <div className="w-14 h-14 rounded-lg bg-gradient-primary mb-4 flex items-center justify-center group-hover:shadow-glow transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
-                      <pkg.icon className="w-7 h-7 text-white" />
+                    <div className="w-12 h-12 rounded-lg bg-gradient-to-r from-brand-cyan to-brand-light-cyan mb-3 flex items-center justify-center group-hover:shadow-glow transition-all duration-300 group-hover:scale-110 group-hover:rotate-3">
+                      <pkg.icon className="w-6 h-6 text-white" />
                     </div>
-                    <h3 className="text-xl md:text-2xl font-bold mb-2 text-foreground">{pkg.title}</h3>
+                    <h3 className="text-lg md:text-xl font-bold mb-2 text-foreground">{pkg.title}</h3>
                     <div className="flex items-center gap-2 text-sm text-muted-foreground mb-2">
-                      <Clock className="w-4 h-4" />
+                      <Clock className="w-4 h-4 text-brand-mustard" />
                       <span>{pkg.timeline}</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -206,8 +206,8 @@ const ServicesPage = () => {
                   
                   {/* Middle: Description & Features */}
                   <div className="md:col-span-1">
-                    <p className="text-muted-foreground mb-4">{pkg.description}</p>
-                    <ul className="space-y-2">
+                    <p className="text-sm text-muted-foreground mb-3">{pkg.description}</p>
+                    <ul className="space-y-1.5">
                       {pkg.features.map((feature, idx) => (
                         <li key={idx} className="flex items-center gap-2 text-sm text-foreground group/item">
                           <CheckCircle className="w-4 h-4 text-success flex-shrink-0 transition-transform duration-300 group-hover/item:scale-110" />
@@ -220,11 +220,11 @@ const ServicesPage = () => {
                   {/* Right: Results & CTA */}
                   <div className="md:col-span-1 flex flex-col justify-between">
                     {pkg.results && (
-                      <div className="mb-4">
-                        <p className="text-sm font-semibold text-foreground mb-3">Results you'll see:</p>
-                        <ul className="space-y-2">
+                      <div className="mb-3">
+                        <p className="text-sm font-semibold text-foreground mb-2">Results you'll see:</p>
+                        <ul className="space-y-1.5">
                           {pkg.results.map((result, idx) => (
-                            <li key={idx} className="flex items-center gap-2 text-sm text-success">
+                            <li key={idx} className="flex items-center gap-2 text-sm text-brand-mustard">
                               <result.icon className="w-4 h-4 flex-shrink-0" />
                               {result.text}
                             </li>
@@ -246,28 +246,28 @@ const ServicesPage = () => {
       </section>
 
       {/* Our Approach */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-6">
           <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+            <div className="text-center mb-12">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-foreground">
                 How We Work
               </h2>
-              <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              <div className="w-24 h-1 bg-gradient-to-r from-brand-cyan to-brand-mustard mx-auto mb-6"></div>
+              <p className="text-base text-muted-foreground max-w-3xl mx-auto">
                 We're not like other developers. Here's what makes working with us different.
               </p>
             </div>
             
-            <div className="grid md:grid-cols-2 gap-6">
+            <div className="grid md:grid-cols-2 gap-4">
               {approach.map((item, index) => (
                 <div 
                   key={index} 
-                  className="flex items-start gap-4 p-4 rounded-lg bg-card/50 hover:bg-card transition-all duration-300 hover:shadow-card group animate-fade-in"
+                  className="flex items-start gap-3 p-4 rounded-lg bg-card/50 hover:bg-card transition-all duration-300 hover:shadow-card group animate-fade-in"
                   style={{ animationDelay: `${index * 100}ms` }}
                 >
-                  <CheckCircle className="w-6 h-6 text-success mt-1 flex-shrink-0 transition-transform duration-300 group-hover:scale-110" />
-                  <p className="text-foreground">{item}</p>
+                  <CheckCircle className="w-5 h-5 text-brand-mustard mt-0.5 flex-shrink-0 transition-transform duration-300 group-hover:scale-110" />
+                  <p className="text-sm text-foreground">{item}</p>
                 </div>
               ))}
             </div>
@@ -276,18 +276,18 @@ const ServicesPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-background">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-6">
-          <Card className="p-8 md:p-12 bg-gradient-hero text-center max-w-4xl mx-auto hover:shadow-intense transition-all duration-500">
-            <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Not Sure Which Package is Right for You?
+          <Card className="p-6 md:p-10 bg-gradient-hero text-center max-w-4xl mx-auto hover:shadow-intense transition-all duration-500">
+            <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+              Not Sure Which Package is <span className="text-brand-mustard">Right for You?</span>
             </h3>
-            <p className="text-white/90 text-lg leading-relaxed mb-8">
+            <p className="text-white/90 text-base leading-relaxed mb-6">
               Get a free automation assessment. We'll analyze your current processes 
               and recommend the best solution for your business.
             </p>
             <Link to="/contact">
-              <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-primary transition-all duration-300 hover:scale-105">
+              <Button variant="outline" size="lg" className="bg-white/10 border-brand-mustard text-white hover:bg-brand-mustard hover:text-brand-navy transition-all duration-300 hover:scale-105">
                 Get Free Assessment <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </Link>

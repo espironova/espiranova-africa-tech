@@ -11,19 +11,19 @@ const AboutPage = () => {
       icon: Lightbulb,
       title: "Inspiration",
       description: "Sparking creativity and growth in every solution.",
-      gradient: "from-accent to-accent/80"
+      gradient: "from-brand-mustard to-brand-mustard-dark"
     },
     {
       icon: Shield,
       title: "Integrity",
       description: "Building trust through transparent communication.",
-      gradient: "from-primary to-primary-glow"
+      gradient: "from-brand-cyan to-brand-light-cyan"
     },
     {
       icon: Zap,
       title: "Innovation",
       description: "Pioneering cutting-edge technology for the future.",
-      gradient: "from-success to-success/80"
+      gradient: "from-brand-blue to-brand-deep-blue"
     }
   ];
 
@@ -38,7 +38,7 @@ const AboutPage = () => {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-hero-move scale-105"
           style={{ backgroundImage: `url(/lovable-uploads/93de2e72-0ee8-43e9-aafb-0e4b80c79f3a.png)` }}
@@ -47,28 +47,28 @@ const AboutPage = () => {
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/60 to-black/70" />
         <div className="relative z-10 container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 animate-fade-in">
-            About EspiraNova
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4 animate-fade-in">
+            About <span className="text-brand-mustard">EspiraNova</span>
           </h1>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
+          <p className="text-lg text-white/90 max-w-2xl mx-auto animate-fade-in" style={{ animationDelay: '0.2s' }}>
             Igniting digital transformation across Africa with passion, expertise, and innovation.
           </p>
         </div>
       </section>
 
       {/* Who We Are */}
-      <section className="py-20 bg-background">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
                 Who We Are
               </h2>
-              <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>
+              <div className="w-24 h-1 bg-gradient-to-r from-brand-cyan to-brand-mustard mx-auto mb-6"></div>
             </div>
             
-            <Card className="p-8 md:p-12 shadow-card border-0 bg-card hover:shadow-elegant transition-all duration-500">
-              <p className="text-lg leading-relaxed text-muted-foreground mb-6">
+            <Card className="p-6 md:p-10 shadow-card border-0 bg-card hover:shadow-elegant transition-all duration-500">
+              <p className="text-base leading-relaxed text-muted-foreground mb-6">
                 <strong className="text-foreground">EspiraNova</strong> is an innovative technology solutions provider 
                 committed to igniting digital transformation across Africa. Born from a passion to inspire progress 
                 through intuitive software, we fuse cutting-edge AI, robust API development, and bespoke applications 
@@ -76,9 +76,9 @@ const AboutPage = () => {
               </p>
               
               
-              <div className="bg-gradient-hero p-6 rounded-lg hover:shadow-glow transition-all duration-300">
-                <h3 className="text-2xl font-bold text-white mb-4">Our Vision</h3>
-                <p className="text-white/90 text-lg">
+              <div className="bg-gradient-hero p-5 rounded-lg hover:shadow-glow transition-all duration-300">
+                <h3 className="text-xl font-bold text-white mb-3">Our Vision</h3>
+                <p className="text-white/90 text-base">
                   To be the catalyst for new possibilities, empowering businesses with simple, impactful technology.
                 </p>
               </div>
@@ -88,30 +88,30 @@ const AboutPage = () => {
       </section>
 
       {/* Values */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-16 bg-muted/30">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
               Our Values
             </h2>
-            <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <div className="w-24 h-1 bg-gradient-to-r from-brand-cyan to-brand-mustard mx-auto mb-6"></div>
+            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
               The principles that guide everything we do
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {values.map((value, index) => (
               <Card 
                 key={index} 
-                className="p-8 text-center hover:shadow-card transition-all duration-500 border-0 bg-card group hover:scale-105 hover:-translate-y-2 animate-fade-in"
+                className="p-6 text-center hover:shadow-card transition-all duration-500 border-0 bg-card group hover:scale-105 hover:-translate-y-2 animate-fade-in"
                 style={{ animationDelay: `${index * 150}ms` }}
               >
-                <div className={`w-16 h-16 rounded-full bg-gradient-to-r ${value.gradient} mx-auto mb-6 flex items-center justify-center group-hover:shadow-glow transition-all duration-300 animate-float group-hover:animate-none`}>
-                  <value.icon className="w-8 h-8 text-white" />
+                <div className={`w-14 h-14 rounded-full bg-gradient-to-r ${value.gradient} mx-auto mb-5 flex items-center justify-center group-hover:shadow-glow transition-all duration-300 animate-float group-hover:animate-none`}>
+                  <value.icon className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="text-xl font-bold mb-4 text-foreground">{value.title}</h3>
-                <p className="text-muted-foreground leading-relaxed">{value.description}</p>
+                <h3 className="text-lg font-bold mb-3 text-foreground">{value.title}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">{value.description}</p>
               </Card>
             ))}
           </div>
@@ -119,14 +119,14 @@ const AboutPage = () => {
       </section>
 
       {/* Our Partners */}
-      <section className="py-20 bg-background">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
               Our Partners
             </h2>
-            <div className="w-24 h-1 bg-gradient-primary mx-auto mb-8"></div>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            <div className="w-24 h-1 bg-gradient-to-r from-brand-cyan to-brand-mustard mx-auto mb-6"></div>
+            <p className="text-base text-muted-foreground max-w-2xl mx-auto">
               Trusted by businesses and organizations across Africa
             </p>
           </div>
@@ -141,7 +141,7 @@ const AboutPage = () => {
                 title="Package Yangu Logistics - Logistics Platform by EspiraNova"
                 loading="lazy"
                 decoding="async"
-                className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110"
+                className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110"
               />
               <img 
                 src="/lovable-uploads/cozy-invoice-screenshot.png" 
@@ -149,7 +149,7 @@ const AboutPage = () => {
                 title="Cozy Invoice - Invoicing Management Software by EspiraNova"
                 loading="lazy"
                 decoding="async"
-                className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110"
+                className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110"
               />
               <img 
                 src="/lovable-uploads/glorious-mission-outreach.jpg" 
@@ -157,14 +157,14 @@ const AboutPage = () => {
                 title="Glorious Mission Outreach - Church Digital Solutions by EspiraNova"
                 loading="lazy"
                 decoding="async"
-                className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110"
+                className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110"
               />
               <img
                 src={sharedLogo}
                 alt="Shared partner logo"
                 loading="lazy"
                 decoding="async"
-                className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110"
+                className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain opacity-90 hover:opacity-100 transition-all duration-300 hover:scale-110"
               />
 
               {/* Duplicate set for seamless loop */}
@@ -174,7 +174,7 @@ const AboutPage = () => {
                 aria-hidden="true"
                 loading="lazy"
                 decoding="async"
-                className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90"
+                className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain opacity-90"
               />
               <img 
                 src="/lovable-uploads/cozy-invoice-screenshot.png" 
@@ -182,7 +182,7 @@ const AboutPage = () => {
                 aria-hidden="true"
                 loading="lazy"
                 decoding="async"
-                className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90"
+                className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain opacity-90"
               />
               <img 
                 src="/lovable-uploads/glorious-mission-outreach.jpg" 
@@ -190,7 +190,7 @@ const AboutPage = () => {
                 aria-hidden="true"
                 loading="lazy"
                 decoding="async"
-                className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90"
+                className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain opacity-90"
               />
               <img
                 src={sharedLogo}
@@ -198,7 +198,7 @@ const AboutPage = () => {
                 aria-hidden="true"
                 loading="lazy"
                 decoding="async"
-                className="h-20 sm:h-24 md:h-28 lg:h-32 w-auto object-contain opacity-90"
+                className="h-16 sm:h-20 md:h-24 lg:h-28 w-auto object-contain opacity-90"
               />
             </div>
           </div>
@@ -206,14 +206,14 @@ const AboutPage = () => {
       </section>
 
       {/* Our Roots */}
-      <section className="py-20 bg-background">
+      <section className="py-16 bg-background">
         <div className="container mx-auto px-6">
           <div className="max-w-4xl mx-auto">
-            <Card className="p-8 md:p-12 bg-gradient-hero text-center hover:shadow-intense transition-all duration-500">
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                Our Roots
+            <Card className="p-6 md:p-10 bg-gradient-hero text-center hover:shadow-intense transition-all duration-500">
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+                Our <span className="text-brand-mustard">Roots</span>
               </h3>
-              <p className="text-white/90 text-lg leading-relaxed">
+              <p className="text-white/90 text-base leading-relaxed">
                 Rooted in Kenya, EspiraNova harnesses industry knowledge and faith-inspired resilience 
                 to empower communities, mentoring youth and peers toward a brighter future. We believe 
                 in the transformative power of technology to create opportunities and drive sustainable 

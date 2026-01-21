@@ -17,6 +17,19 @@ const rotatingWords = [
   { text: "DOMINATE", style: "font-black text-white [text-shadow:_-1px_-1px_0_hsl(185_75%_50%),_1px_-1px_0_hsl(185_75%_50%),_-1px_1px_0_hsl(185_75%_50%),_1px_1px_0_hsl(185_75%_50%)]" },
 ];
 
+// SVG Components for geometric shapes
+const Hexagon = ({ className, style }: { className?: string; style?: React.CSSProperties }) => (
+  <svg viewBox="0 0 100 100" className={className} style={style} fill="currentColor">
+    <polygon points="50 1 95 25 95 75 50 99 5 75 5 25" />
+  </svg>
+);
+
+const Triangle = ({ className, style }: { className?: string; style?: React.CSSProperties }) => (
+  <svg viewBox="0 0 100 100" className={className} style={style} fill="currentColor">
+    <polygon points="50 5 95 95 5 95" />
+  </svg>
+);
+
 export const Hero = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
@@ -48,14 +61,13 @@ export const Hero = () => {
   return (
     <section 
       ref={heroRef}
-      className="relative min-h-screen flex items-center -mt-24 pt-24 overflow-hidden"
+      className="relative min-h-[90vh] flex items-center -mt-24 pt-24 overflow-hidden"
     >
-      {/* Background Image with Blur */}
+      {/* Background Image with Ken Burns Animation */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat scale-110"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-ken-burns"
         style={{
-          backgroundImage: `url(/lovable-uploads/hero-tech-bg.jpg)`,
-          filter: 'blur(4px)',
+          backgroundImage: `url(/lovable-uploads/hero-background.jpeg)`,
         }}
       />
       
@@ -63,7 +75,7 @@ export const Hero = () => {
       <div 
         className="absolute inset-0 animate-gradient-shift"
         style={{
-          background: 'linear-gradient(135deg, hsl(215 50% 12% / 0.95) 0%, hsl(210 75% 25% / 0.9) 50%, hsl(215 50% 12% / 0.95) 100%)',
+          background: 'linear-gradient(135deg, hsl(215 50% 12% / 0.92) 0%, hsl(210 75% 25% / 0.88) 50%, hsl(215 50% 12% / 0.92) 100%)',
           backgroundSize: '200% 200%',
           animation: 'gradientShift 15s ease infinite',
         }}
@@ -104,7 +116,19 @@ export const Hero = () => {
         backgroundSize: '60px 60px',
       }} />
 
-      {/* Floating Geometric Shapes */}
+      {/* Floating Geometric Shapes - Hexagons */}
+      <Hexagon className="absolute top-[15%] left-[8%] w-16 h-16 text-brand-cyan/10 animate-float-rotate" />
+      <Hexagon className="absolute bottom-[25%] right-[12%] w-20 h-20 text-brand-mustard/15 animate-scale-pulse" />
+      <Hexagon className="absolute top-[40%] right-[5%] w-12 h-12 text-brand-cyan/8 animate-drift-diagonal" />
+      <Hexagon className="absolute bottom-[35%] left-[15%] w-10 h-10 text-brand-blue/10 animate-float-rotate" style={{ animationDelay: '2s' }} />
+      
+      {/* Floating Geometric Shapes - Triangles */}
+      <Triangle className="absolute top-[20%] right-[18%] w-14 h-14 text-brand-blue/10 animate-drift-diagonal rotate-12" />
+      <Triangle className="absolute bottom-[30%] left-[5%] w-16 h-16 text-brand-cyan/12 animate-float-rotate rotate-45" style={{ animationDelay: '1s' }} />
+      <Triangle className="absolute top-[55%] left-[25%] w-8 h-8 text-brand-mustard/10 animate-scale-pulse rotate-180" style={{ animationDelay: '3s' }} />
+      <Triangle className="absolute bottom-[45%] right-[25%] w-10 h-10 text-brand-light-cyan/8 animate-drift-diagonal" style={{ animationDelay: '4s' }} />
+
+      {/* Additional floating elements */}
       <div className="absolute top-1/4 left-[10%] w-16 h-16 border border-brand-cyan/20 rotate-45 animate-float-gentle opacity-40" />
       <div className="absolute top-1/3 right-[15%] w-12 h-12 border border-brand-mustard/30 rounded-full animate-float opacity-30" />
       <div className="absolute bottom-1/4 left-[20%] w-10 h-10 bg-brand-cyan/10 rotate-12 animate-float-gentle opacity-40" style={{ animationDelay: '2s' }} />
@@ -113,37 +137,41 @@ export const Hero = () => {
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full relative z-10">
         <div className="text-center max-w-5xl mx-auto">
-          {/* ESPIRANOVA Eyebrow */}
-          <div className="flex items-center justify-center gap-4 mb-8 animate-fade-in">
+          {/* ESPIRANOVA Eyebrow - Moved Higher */}
+          <div className="flex items-center justify-center gap-4 mb-6 animate-fade-in">
             <div className="h-px w-12 md:w-20 bg-gradient-to-r from-transparent to-brand-cyan" />
             <span className="text-brand-cyan text-sm md:text-base font-semibold tracking-[0.3em] uppercase">ESPIRANOVA</span>
             <div className="h-px w-12 md:w-20 bg-gradient-to-l from-transparent to-brand-cyan" />
           </div>
           
-          {/* Main Headline - Rotating Word */}
+          {/* Main Headline - Single Line with Rotating Word */}
           <h1 className="mb-6">
-            <div className="relative h-[1.2em] overflow-hidden mb-2">
-              {rotatingWords.map((word, index) => (
-                <span 
-                  key={word.text}
-                  className={`absolute inset-0 flex justify-center text-4xl md:text-5xl lg:text-6xl tracking-tight transition-all duration-700 ease-out ${word.style} ${
-                    index === currentWordIndex 
-                      ? 'translate-y-0 opacity-100' 
-                      : index === (currentWordIndex - 1 + rotatingWords.length) % rotatingWords.length
-                        ? '-translate-y-full opacity-0'
-                        : 'translate-y-full opacity-0'
-                  }`}
-                >
-                  {word.text}
-                </span>
-              ))}
+            <div className="flex items-center justify-center gap-3 md:gap-4 flex-wrap">
+              {/* Rotating Word Container */}
+              <div className="relative h-[1.2em] w-[200px] md:w-[280px] lg:w-[320px] overflow-hidden">
+                {rotatingWords.map((word, index) => (
+                  <span 
+                    key={word.text}
+                    className={`absolute inset-0 flex justify-center items-center text-3xl md:text-4xl lg:text-5xl tracking-tight transition-all duration-700 ease-out ${word.style} ${
+                      index === currentWordIndex 
+                        ? 'translate-y-0 opacity-100' 
+                        : index === (currentWordIndex - 1 + rotatingWords.length) % rotatingWords.length
+                          ? '-translate-y-full opacity-0'
+                          : 'translate-y-full opacity-0'
+                    }`}
+                  >
+                    {word.text}
+                  </span>
+                ))}
+              </div>
+              {/* Static "with impact" */}
+              <span 
+                className="text-2xl md:text-3xl lg:text-4xl font-light text-white/90 tracking-wide animate-fade-in"
+                style={{ animationDelay: '0.2s' }}
+              >
+                with impact
+              </span>
             </div>
-            <span 
-              className="block text-3xl md:text-4xl lg:text-5xl font-light text-white/90 tracking-wide animate-fade-in"
-              style={{ animationDelay: '0.2s' }}
-            >
-              with impact
-            </span>
           </h1>
 
           {/* Subtitle */}
@@ -174,7 +202,7 @@ export const Hero = () => {
               <Button 
                 variant="outline" 
                 size="lg"
-                className="border-brand-cyan/50 text-brand-cyan hover:bg-brand-cyan/20 hover:border-brand-cyan hover:text-white px-8 py-6 text-base font-medium transition-all duration-300 backdrop-blur-sm"
+                className="border-brand-cyan/60 text-brand-cyan hover:bg-brand-cyan/20 hover:border-brand-cyan hover:text-white px-8 py-6 text-base font-medium transition-all duration-300 backdrop-blur-sm bg-white/5"
               >
                 View Our Work
               </Button>

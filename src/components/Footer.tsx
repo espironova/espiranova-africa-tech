@@ -126,7 +126,7 @@ export const Footer = () => {
                   <div className="w-8 h-8 rounded-lg bg-brand-cyan/10 flex items-center justify-center">
                     <Phone className="w-4 h-4 text-brand-cyan" />
                   </div>
-                  <span className="text-sm">+254 783238429</span>
+                  <span className="text-sm">(+254)710143491 | (+254)734894774 | (+254)783238429</span>
                 </div>
                 <div className="flex items-center gap-3 text-muted-foreground group">
                   <div className="w-8 h-8 rounded-lg bg-brand-cyan/10 flex items-center justify-center">

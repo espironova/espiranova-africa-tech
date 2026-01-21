@@ -145,14 +145,14 @@ export const Hero = () => {
           </div>
           
           {/* Main Headline - Single Line with Rotating Word */}
-          <h1 className="mb-6">
-            <div className="flex items-center justify-center gap-3 md:gap-4 flex-wrap">
+          <h1 className="mb-8">
+            <div className="flex items-center justify-center gap-4 md:gap-6">
               {/* Rotating Word Container */}
-              <div className="relative h-[1.2em] w-[200px] md:w-[280px] lg:w-[320px] overflow-hidden">
+              <div className="relative h-[1.3em] w-[280px] md:w-[380px] lg:w-[450px] overflow-hidden">
                 {rotatingWords.map((word, index) => (
                   <span 
                     key={word.text}
-                    className={`absolute inset-0 flex justify-center items-center text-3xl md:text-4xl lg:text-5xl tracking-tight transition-all duration-700 ease-out ${word.style} ${
+                    className={`absolute inset-0 flex justify-center items-center text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold tracking-tight transition-all duration-700 ease-out ${word.style} ${
                       index === currentWordIndex 
                         ? 'translate-y-0 opacity-100' 
                         : index === (currentWordIndex - 1 + rotatingWords.length) % rotatingWords.length
@@ -166,7 +166,7 @@ export const Hero = () => {
               </div>
               {/* Static "with impact" */}
               <span 
-                className="text-2xl md:text-3xl lg:text-4xl font-light text-white/90 tracking-wide animate-fade-in"
+                className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium text-white tracking-wide animate-fade-in"
                 style={{ animationDelay: '0.2s' }}
               >
                 with impact

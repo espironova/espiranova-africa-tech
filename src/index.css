@@ -24,6 +24,8 @@ All colors MUST be HSL - Based on EspiraNova Logo Colors
     --brand-cyan: 185 75% 50%;
     --brand-light-cyan: 190 85% 65%;
     --brand-sky: 195 90% 85%;
+    --brand-mustard: 45 85% 55%;
+    --brand-mustard-dark: 40 80% 45%;
 
     --primary: 210 85% 45%;
     --primary-foreground: 0 0% 100%;
@@ -55,6 +57,7 @@ All colors MUST be HSL - Based on EspiraNova Logo Colors
     --gradient-interactive: linear-gradient(135deg, hsl(210 85% 45%), hsl(185 75% 50%), hsl(210 85% 45%));
     --gradient-hover: linear-gradient(135deg, hsl(185 75% 55%), hsl(190 85% 65%));
     --gradient-navy: linear-gradient(135deg, hsl(215 50% 8%), hsl(215 50% 15%));
+    --gradient-mustard: linear-gradient(135deg, hsl(45 85% 55%), hsl(40 80% 45%));
     
     /* Shadows - Brand themed */
     --shadow-glow: 0 0 40px hsl(185 75% 50% / 0.4);
@@ -62,6 +65,7 @@ All colors MUST be HSL - Based on EspiraNova Logo Colors
     --shadow-elegant: 0 20px 40px -10px hsl(215 50% 12% / 0.2);
     --shadow-intense: 0 0 60px hsl(185 75% 50% / 0.5);
     --shadow-cyan: 0 10px 40px -10px hsl(185 75% 50% / 0.4);
+    --shadow-mustard: 0 10px 40px -10px hsl(45 85% 55% / 0.4);
     
     /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);

@@ -17,12 +17,12 @@ const ContactPage = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: ["+254 783238429"],
+      details: ["(+254)710143491 | (+254)734894774 | (+254)783238429"],
     },
     {
       icon: Mail,
       title: "Email",
-      details: ["info@espiranova.com"],
+      details: ["espiranova2@gmail.com"],
     },
     {
       icon: Clock,

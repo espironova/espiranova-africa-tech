@@ -38,6 +38,7 @@ const ContactPage = () => {
         description="Contact EspiraNova for custom software development, web applications, mobile apps, and AI solutions. Located in Nairobi, Kenya. Get a free consultation for your technology project."
         keywords="contact EspiraNova, software development consultation, technology solutions Kenya, custom software quote, web development services, API development"
         url="https://espiranova.co.ke/contact"
+        breadcrumbs={[{ name: "Contact", url: "https://espiranova.co.ke/contact" }]}
       />
       <Navigation />
       

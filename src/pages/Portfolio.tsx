@@ -95,7 +95,8 @@ const PortfolioPage = () => {
         title="Portfolio - Successful Projects & Case Studies"
         description="Explore EspiraNova's portfolio of successful technology projects including logistics platforms, invoicing systems, inventory management, and digital solutions across various industries in Africa."
         keywords="portfolio, case studies, software projects, web applications, mobile apps, technology solutions, client work, African tech projects"
-        url="https://espiranova.com/portfolio"
+        url="https://espiranova.co.ke/portfolio"
+        breadcrumbs={[{ name: "Portfolio", url: "https://espiranova.co.ke/portfolio" }]}
       />
       <Navigation />
       

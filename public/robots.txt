@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://espiranova.com/sitemap.xml
+Sitemap: https://espiranova.co.ke/sitemap.xml

@@ -130,6 +130,7 @@ const ServicesPage = () => {
         description="Focused service packages designed for African SMEs. From automation sprints to full digital migration, we help you eliminate manual work with simple systems."
         keywords="SME automation packages, business system upgrade, digital migration Kenya, AI micro-apps, managed hosting Africa"
         url="https://espiranova.co.ke/services"
+        breadcrumbs={[{ name: "Services", url: "https://espiranova.co.ke/services" }]}
       />
       <Navigation />
       

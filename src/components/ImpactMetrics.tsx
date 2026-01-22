@@ -63,10 +63,10 @@ export const ImpactMetrics = () => {
   return (
     <section 
       ref={sectionRef}
-      className="relative py-16 md:py-20 bg-brand-navy overflow-hidden"
+      className="relative py-16 md:py-20 bg-gradient-to-b from-slate-50 to-white overflow-hidden"
     >
       {/* Subtle Pattern Background */}
-      <div className="absolute inset-0 opacity-[0.02]" style={{
+      <div className="absolute inset-0 opacity-[0.03]" style={{
         backgroundImage: `
           radial-gradient(circle at 25% 25%, hsl(185 75% 50%) 2px, transparent 2px),
           radial-gradient(circle at 75% 75%, hsl(45 85% 55%) 1px, transparent 1px)
@@ -75,14 +75,14 @@ export const ImpactMetrics = () => {
       }} />
 
       {/* Gradient Orbs */}
-      <div className="absolute top-0 left-1/4 w-72 h-72 bg-brand-cyan/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-brand-mustard/5 rounded-full blur-3xl" />
+      <div className="absolute top-0 left-1/4 w-72 h-72 bg-brand-cyan/20 rounded-full blur-3xl" />
+      <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-brand-mustard/10 rounded-full blur-3xl" />
 
       <div className="max-w-6xl mx-auto px-6 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold">
-            <span className="text-white">OUR </span>
+            <span className="text-brand-navy">OUR </span>
             <span className="text-brand-cyan relative inline-block">
               IMPACT
               <div className="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-brand-cyan via-brand-mustard to-brand-cyan rounded-full" />
@@ -95,7 +95,7 @@ export const ImpactMetrics = () => {
           {metrics.map((metric, index) => (
             <div
               key={metric.label}
-              className={`relative group text-center p-6 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm transition-all duration-500 hover:bg-white/10 hover:border-brand-cyan/30 ${
+              className={`relative group text-center p-6 rounded-2xl bg-white shadow-lg border border-slate-200 transition-all duration-500 hover:shadow-xl hover:border-brand-cyan/30 ${
                 isVisible ? 'animate-fade-in-up' : 'opacity-0'
               }`}
               style={{ animationDelay: `${index * 150}ms` }}
@@ -108,13 +108,13 @@ export const ImpactMetrics = () => {
               </div>
 
               {/* Number */}
-              <div className="text-3xl md:text-4xl font-bold text-white mb-2">
+              <div className="text-3xl md:text-4xl font-bold text-brand-navy mb-2">
                 <span className="text-brand-cyan">{counts[index]}</span>
                 <span className="text-brand-mustard">{metric.suffix}</span>
               </div>
 
               {/* Label */}
-              <p className="text-white/70 text-sm font-medium">
+              <p className="text-slate-600 text-sm font-medium">
                 {metric.label}
               </p>
 

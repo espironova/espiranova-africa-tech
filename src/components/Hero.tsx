@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
+import { motion } from "framer-motion";
 
 const marqueeItems = [
   "Smart digital solutions",
@@ -16,6 +17,10 @@ const rotatingWords = [
   { text: "AUTOMATE", style: "font-bold text-brand-mustard" },
   { text: "DOMINATE", style: "font-black text-white [text-shadow:_-1px_-1px_0_hsl(185_75%_50%),_1px_-1px_0_hsl(185_75%_50%),_-1px_1px_0_hsl(185_75%_50%),_1px_1px_0_hsl(185_75%_50%)]" },
 ];
+
+// Premium easing curves
+const smoothOut = [0.22, 1, 0.36, 1];
+const overshoot = [0.25, 1.2, 0.25, 1];
 
 // SVG Components for geometric shapes
 const Hexagon = ({ className, style }: { className?: string; style?: React.CSSProperties }) => (
@@ -137,18 +142,28 @@ export const Hero = () => {
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-6 lg:px-12 w-full relative z-10">
         <div className="text-center max-w-5xl mx-auto">
-          {/* ESPIRANOVA Eyebrow - Moved Higher */}
-          <div className="flex items-center justify-center gap-4 mb-6 animate-fade-in">
+          {/* ESPIRANOVA Eyebrow - Premium Entrance */}
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.92 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, ease: smoothOut }}
+            className="flex items-center justify-center gap-4 mb-6"
+          >
             <div className="h-px w-12 md:w-20 bg-gradient-to-r from-transparent to-brand-cyan" />
             <span className="text-brand-cyan text-sm md:text-base font-semibold tracking-[0.3em] uppercase">ESPIRANOVA</span>
             <div className="h-px w-12 md:w-20 bg-gradient-to-l from-transparent to-brand-cyan" />
-          </div>
+          </motion.div>
           
           {/* Main Headline - Single Line with Rotating Word */}
           <h1 className="mb-8">
             <div className="flex items-center justify-center gap-4 md:gap-6">
-              {/* Rotating Word Container - Fixed dimensions to prevent clipping */}
-              <div className="relative h-[50px] md:h-[60px] lg:h-[72px] xl:h-[85px] w-[200px] md:w-[280px] lg:w-[350px] xl:w-[420px] overflow-hidden">
+              {/* Rotating Word Container - Animated Entrance */}
+              <motion.div 
+                initial={{ opacity: 0, y: 60 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.5, ease: overshoot }}
+                className="relative h-[50px] md:h-[60px] lg:h-[72px] xl:h-[85px] w-[200px] md:w-[280px] lg:w-[350px] xl:w-[420px] overflow-hidden"
+              >
                 {rotatingWords.map((word, index) => (
                   <span 
                     key={word.text}
@@ -163,30 +178,36 @@ export const Hero = () => {
                     {word.text}
                   </span>
                 ))}
-              </div>
-              {/* Static "with impact" */}
-              <span 
-                className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-brand-mustard tracking-wide animate-fade-in"
-                style={{ animationDelay: '0.2s' }}
+              </motion.div>
+              {/* Static "with impact" - Animated Entrance */}
+              <motion.span 
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.8, ease: smoothOut }}
+                className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-brand-mustard tracking-wide"
               >
                 with impact
-              </span>
+              </motion.span>
             </div>
           </h1>
 
-          {/* Subtitle */}
-          <p 
-            className="text-base md:text-lg text-white/70 font-light max-w-2xl mx-auto mb-10 animate-fade-in leading-relaxed"
-            style={{ animationDelay: '0.3s' }}
+          {/* Subtitle - Gentle Slide Up */}
+          <motion.p 
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 1.2, ease: smoothOut }}
+            className="text-base md:text-lg text-white/70 font-light max-w-2xl mx-auto mb-10 leading-relaxed"
           >
             We design modern websites and build simple systems that eliminate manual work 
             for growing African businesses.
-          </p>
+          </motion.p>
 
-          {/* CTA Buttons */}
-          <div 
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 animate-fade-in"
-            style={{ animationDelay: '0.4s' }}
+          {/* CTA Buttons - Slide Up Together */}
+          <motion.div 
+            initial={{ opacity: 0, y: 25 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 1.6, ease: smoothOut }}
+            className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
           >
             <Link to="/contact">
               <Button 
@@ -207,12 +228,17 @@ export const Hero = () => {
                 View Our Work
               </Button>
             </Link>
-          </div>
+          </motion.div>
         </div>
       </div>
 
-      {/* Horizontal Scrolling Marquee */}
-      <div className="absolute bottom-0 left-0 right-0 py-4 border-t border-white/10 bg-brand-navy/50 backdrop-blur-sm">
+      {/* Horizontal Scrolling Marquee - Fade In Last */}
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 2.0 }}
+        className="absolute bottom-0 left-0 right-0 py-4 border-t border-white/10 bg-brand-navy/50 backdrop-blur-sm"
+      >
         <div className="marquee-container">
           <div className="marquee-content">
             {/* First set */}
@@ -235,15 +261,20 @@ export const Hero = () => {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-20 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+      {/* Scroll Indicator - Fade In */}
+      <motion.div 
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5, delay: 2.2 }}
+        className="absolute bottom-20 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
+      >
         <span className="text-white/40 text-xs uppercase tracking-widest">Scroll</span>
         <div className="w-5 h-8 border border-white/30 rounded-full flex justify-center pt-1.5">
           <div className="w-1 h-2 bg-brand-cyan rounded-full animate-bounce" />
         </div>
-      </div>
+      </motion.div>
 
       {/* CSS for gradient animation */}
       <style>{`

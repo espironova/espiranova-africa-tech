@@ -25,15 +25,13 @@ const ServicesPage = () => {
       id: "automation-sprint",
       icon: Zap,
       title: "SME Automation Sprint",
-      badge: "FLAGSHIP",
       timeline: "2–4 weeks",
       idealFor: "SMEs stuck in Excel, paper, WhatsApp",
       description: "Get a custom web app that eliminates repetitive admin work.",
       features: [
         "Simple custom web app",
         "Automated workflows",
-        "Admin dashboard",
-        "Hosted on Vercel + custom domain"
+        "Admin dashboard"
       ],
       results: [
         { icon: TrendingDown, text: "40–70% reduction in admin work" },
@@ -104,7 +102,6 @@ const ServicesPage = () => {
       idealFor: "All businesses needing reliable hosting",
       description: "Keep your systems running smoothly with managed hosting and support.",
       features: [
-        "Vercel hosting",
         "Custom domain",
         "SSL & monitoring",
         "Minor updates included"
@@ -116,7 +113,6 @@ const ServicesPage = () => {
 
   const approach = [
     "We start by understanding your actual workflow, not just your wishlist",
-    "AI-assisted development means faster builds at lower cost",
     "You get a working system in weeks, not months",
     "We train your team and provide ongoing support",
     "Built specifically for Kenyan and African business contexts",

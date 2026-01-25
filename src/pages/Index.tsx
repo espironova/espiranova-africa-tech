@@ -8,6 +8,11 @@ import { Link } from "react-router-dom";
 import { SEO } from "@/components/SEO";
 import { FeaturedWorkCarousel } from "@/components/FeaturedWorkCarousel";
 import { ImpactMetrics } from "@/components/ImpactMetrics";
+import { motion } from "framer-motion";
+
+// Premium easing curves
+const smoothOut = [0.22, 1, 0.36, 1];
+const overshoot = [0.25, 1.2, 0.25, 1];
 
 const Index = () => {
   const painPoints = [
@@ -65,9 +70,8 @@ const Index = () => {
   ];
 
   const whyReasons = [
-    { title: "2-4 Week Delivery", description: "Fast turnaround without sacrificing quality" },
+    { title: "Efficient Project Delivery", description: "Fast turnaround without sacrificing quality" },
     { title: "Africa-First Approach", description: "Built specifically for Kenyan & African contexts" },
-    { title: "AI-Powered Development", description: "Smart workflows that deliver better systems faster" },
     { title: "Ongoing Support", description: "We don't disappear after launch" },
   ];
 
@@ -177,69 +181,104 @@ const Index = () => {
         <div className="container mx-auto px-6 relative z-10">
           {/* Section Header */}
           <div className="text-center mb-12">
-            <span className="inline-block px-4 py-2 rounded-full border border-brand-cyan/30 bg-brand-cyan/5 text-brand-cyan text-sm font-medium tracking-wide uppercase mb-4">
+            <motion.span
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: smoothOut }}
+              viewport={{ once: true, margin: "-100px" }}
+              className="inline-block px-4 py-2 rounded-full border border-brand-cyan/30 bg-brand-cyan/5 text-brand-cyan text-sm font-medium tracking-wide uppercase mb-4"
+            >
               What We Build
-            </span>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 tracking-tight">
+            </motion.span>
+            <motion.h2
+              initial={{ opacity: 0, y: 60, scale: 0.97 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{ duration: 0.8, ease: [0.33, 1, 0.68, 1] }}
+              viewport={{ once: true, margin: "-100px" }}
+              className="text-3xl md:text-4xl lg:text-5xl font-black text-white mb-4 tracking-tight"
+            >
               Solutions That <span className="text-brand-mustard">Actually Work</span>
-            </h2>
-            <p className="text-base text-white/60 max-w-2xl mx-auto">
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.3, ease: smoothOut }}
+              viewport={{ once: true, margin: "-100px" }}
+              className="text-base text-white/60 max-w-2xl mx-auto"
+            >
               Real projects. Real results. See what we can build for you.
-            </p>
+            </motion.p>
           </div>
           
           {/* Services Grid - Visual */}
           <div className="grid md:grid-cols-2 gap-5 max-w-5xl mx-auto">
             {coreServices.map((service, index) => (
-              <Link 
+              <motion.div
                 key={index}
-                to={service.link}
-                className="group"
+                initial={{ opacity: 0, y: 80, scale: 0.95 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ 
+                  duration: 0.7, 
+                  delay: 0.5 + index * 0.25,
+                  ease: overshoot 
+                }}
+                viewport={{ once: true, margin: "-50px" }}
               >
-                <Card className="relative overflow-hidden border-0 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-500 h-full">
-                  {/* Image */}
-                  <div className="relative h-48 overflow-hidden">
-                    <img 
-                      src={service.image}
-                      alt={service.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                    {/* Gradient Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/50 to-transparent" />
-                    
-                    {/* Floating Arrow */}
-                    <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-brand-cyan/20 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1">
-                      <ExternalLink className="w-5 h-5 text-brand-cyan" />
+                <Link 
+                  to={service.link}
+                  className="group block h-full"
+                >
+                  <Card className="relative overflow-hidden border-0 bg-white/5 backdrop-blur-sm hover:bg-white/10 transition-all duration-500 h-full hover:shadow-[0_0_40px_rgba(0,188,212,0.15)]">
+                    {/* Image */}
+                    <div className="relative h-48 overflow-hidden">
+                      <img 
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      />
+                      {/* Gradient Overlay */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/50 to-transparent" />
+                      
+                      {/* Floating Arrow */}
+                      <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-brand-cyan/20 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 group-hover:translate-x-1">
+                        <ExternalLink className="w-5 h-5 text-brand-cyan" />
+                      </div>
                     </div>
-                  </div>
-                  
-                  {/* Content */}
-                  <div className="p-5">
-                    <div className="text-brand-mustard text-sm font-medium mb-1">{service.subtitle}</div>
-                    <h3 className="text-xl font-bold text-white mb-2 group-hover:text-brand-cyan transition-colors duration-300">
-                      {service.title}
-                    </h3>
-                    <p className="text-white/60 text-sm">{service.description}</p>
-                  </div>
-                  
-                  {/* Hover Border */}
-                  <div className="absolute inset-0 border-2 border-transparent group-hover:border-brand-cyan/30 rounded-lg transition-colors duration-300 pointer-events-none" />
-                </Card>
-              </Link>
+                    
+                    {/* Content */}
+                    <div className="p-5">
+                      <div className="text-brand-mustard text-sm font-medium mb-1">{service.subtitle}</div>
+                      <h3 className="text-xl font-bold text-white mb-2 group-hover:text-brand-cyan transition-colors duration-300">
+                        {service.title}
+                      </h3>
+                      <p className="text-white/60 text-sm">{service.description}</p>
+                    </div>
+                    
+                    {/* Hover Border */}
+                    <div className="absolute inset-0 border-2 border-transparent group-hover:border-brand-cyan/30 rounded-lg transition-colors duration-300 pointer-events-none" />
+                  </Card>
+                </Link>
+              </motion.div>
             ))}
           </div>
           
-          <div className="text-center mt-10">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, delay: 1.6, ease: smoothOut }}
+            viewport={{ once: true }}
+            className="text-center mt-10"
+          >
             <Link to="/services">
               <Button 
                 size="lg" 
-                className="bg-brand-cyan hover:bg-brand-light-cyan text-brand-navy px-8 py-6 text-base font-bold transition-all duration-300 hover:scale-105 group"
+                className="bg-brand-cyan hover:bg-brand-light-cyan text-brand-navy px-8 py-6 text-base font-bold transition-all duration-300 hover:scale-105 hover:shadow-[0_0_30px_rgba(0,188,212,0.4)] group"
               >
                 View All Services
                 <ArrowRight className="w-5 h-5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
               </Button>
             </Link>
-          </div>
+          </motion.div>
         </div>
         
         {/* Diagonal Divider */}

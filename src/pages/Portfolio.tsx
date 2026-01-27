@@ -28,7 +28,7 @@ const PortfolioPage = () => {
       
       features: ["Invoice templates", "Client management", "Payment tracking", "Multi-currency support"],
       status: "Live",
-      url: "https://cozyinvoicekeeper-one.vercel.app/"
+      url: "https://cozy-invoice.vercel.app/"
     },
     {
       id: 3,
